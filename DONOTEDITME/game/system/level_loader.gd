@@ -7,6 +7,10 @@ class_name LevelLoader
 
 const LEVEL_END_TIME: float = 1
 
+@export var main_menu_scene: PackedScene
+@export var world_map_scene: PackedScene
+@export var level_array: Array[PackedScene]
+
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 
 var level_loaded: int = -1
@@ -21,8 +25,10 @@ func reload_level() -> void:
 
 
 ## Method stub for me to implement later when stringing all the levels together
-func load_level(level: PackedScene) -> void:
+func load_level(index: int) -> void:
 	get_tree().paused = true
+	loading = true
+	level_loaded = index
 	animation_player.play("CLOSE")
 
 
@@ -39,19 +45,37 @@ func end_level() -> void:
 
 func level_end_timer_end() -> void:
 	animation_player.play("CLOSE")
-	reload_level() # Temporary, replace with returning to the map later
 
 
 func _on_animation_finished(anim_name):
-	if anim_name == "CLOSE" and reloading:
-		var _reload = get_tree().reload_current_scene()
-		reloading = false
+	if anim_name == "CLOSE":
+		if reloading:
+			var _reload = get_tree().reload_current_scene()
+			reloading = false
+		elif loading:
+			var level = level_array[level_loaded].instantiate()
+			get_tree().current_scene.queue_free()
+			level.tree_entered.connect(_on_enter_tree.bind(level))
+			get_tree().root.call_deferred("add_child", level)
+			animation_player.play("OPEN")
+		else:
+			get_tree().paused = false
+			var main_menu = main_menu_scene.instantiate()
+			main_menu.tree_entered.connect(_on_enter_tree.bind(main_menu))
+			get_tree().current_scene.queue_free()
+			get_tree().root.call_deferred("add_child", main_menu)
+
+
+func _on_enter_tree(scene):
+	get_tree().current_scene = scene
+	animation_player.play("OPEN")
+	get_tree().paused = false
+	if loading:
+		sound_player.load_music_stream(scene.music_stream)
+		loading = false
+	
 
 
 func _on_scene_loaded(level: Level):
 	get_tree().paused = false
 	animation_player.play("OPEN")
-	
-	if level_loaded != level.level_id:
-		sound_player.load_music_stream(level.music_stream)
-		level_loaded = level.level_id

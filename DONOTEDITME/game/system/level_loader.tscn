@@ -1,7 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://dajyvpt4404ft"]
+[gd_scene load_steps=10 format=3 uid="uid://dajyvpt4404ft"]
 
 [ext_resource type="Script" path="res://DONOTEDITME/game/system/level_loader.gd" id="1_uvpqj"]
 [ext_resource type="Shader" path="res://DONOTEDITME/assets/shaders/diamond_sweep.gdshader" id="2_4icfv"]
+[ext_resource type="PackedScene" uid="uid://frfab2iw5pom" path="res://DONOTEDITME/menu/main_menu.tscn" id="2_12xsm"]
+[ext_resource type="PackedScene" uid="uid://dl58qldrbrnkn" path="res://DONOTEDITME/game/level/test_environment.tscn" id="3_bf328"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_v61qb"]
 shader = ExtResource("2_4icfv")
@@ -66,6 +68,8 @@ _data = {
 process_mode = 3
 layer = 3
 script = ExtResource("1_uvpqj")
+main_menu_scene = ExtResource("2_12xsm")
+level_array = Array[PackedScene]([ExtResource("3_bf328")])
 
 [node name="Sweep" type="ColorRect" parent="."]
 material = SubResource("ShaderMaterial_v61qb")
