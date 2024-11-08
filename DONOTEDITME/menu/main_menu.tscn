@@ -1,0 +1,121 @@
+[gd_scene load_steps=10 format=3 uid="uid://frfab2iw5pom"]
+
+[ext_resource type="Texture2D" uid="uid://dck54f5ajpuuo" path="res://DONOTEDITME/assets/menu/main_menu/title.png" id="1_it7dx"]
+[ext_resource type="Theme" uid="uid://dicrejglob83v" path="res://DONOTEDITME/assets/menu/ui_theme.tres" id="2_vyy2r"]
+[ext_resource type="PackedScene" uid="uid://b4vi3t5tdfr67" path="res://DONOTEDITME/menu/background_effect/game_jam_jar.glb" id="3_7lmgf"]
+[ext_resource type="Shader" path="res://DONOTEDITME/menu/background_effect/repeat_pan.gdshader" id="4_xw2a2"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fl52y"]
+shader = ExtResource("4_xw2a2")
+shader_parameter/tiles = 5
+shader_parameter/seconds_per_cycle = -1.9
+shader_parameter/pixel_color = Color(0.165452, 0, 0.00870163, 1)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_i0xn8"]
+viewport_path = NodePath("VBoxContainer/SubViewport")
+
+[sub_resource type="Animation" id="Animation_hrh2g"]
+resource_name = "JAR_ROTATION"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "rotation_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("game_jam_jar")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1, 1, 1, 0, 1, 0, 0, 2, 1, 0, 0, 0, -1)
+
+[sub_resource type="Animation" id="Animation_7skhc"]
+length = 0.001
+tracks/0/type = "rotation_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("game_jam_jar")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_uk0mp"]
+_data = {
+"JAR_ROTATION": SubResource("Animation_hrh2g"),
+"RESET": SubResource("Animation_7skhc")
+}
+
+[node name="MainMenu" type="CanvasLayer"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0845064, 0, 0.00476346, 1)
+
+[node name="Background" type="TextureRect" parent="."]
+material = SubResource("ShaderMaterial_fl52y")
+offset_right = 1151.0
+offset_bottom = 647.0
+texture = SubResource("ViewportTexture_i0xn8")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -332.5
+offset_top = 71.0
+offset_right = 332.5
+offset_bottom = 305.0
+grow_horizontal = 2
+texture = ExtResource("1_it7dx")
+expand_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -249.0
+offset_top = -286.0
+offset_right = 241.0
+offset_bottom = -51.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("2_vyy2r")
+
+[node name="PlayButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Play"
+
+[node name="SettingsButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Settings"
+
+[node name="QuitButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Quit"
+
+[node name="SubViewport" type="SubViewport" parent="VBoxContainer"]
+transparent_bg = true
+
+[node name="game_jam_jar" parent="VBoxContainer/SubViewport" instance=ExtResource("3_7lmgf")]
+
+[node name="GameJam" parent="VBoxContainer/SubViewport/game_jam_jar" index="0"]
+transform = Transform3D(0.903335, -0.428935, 0, 0.428935, 0.903335, 0, 0, 0, 1, 0.151692, -0.249845, 0)
+
+[node name="Camera3D" type="Camera3D" parent="VBoxContainer/SubViewport"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.82534)
+projection = 1
+size = 3.65486
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="VBoxContainer/SubViewport"]
+libraries = {
+"": SubResource("AnimationLibrary_uk0mp")
+}
+autoplay = "JAR_ROTATION"
+
+[editable path="VBoxContainer/SubViewport/game_jam_jar"]
