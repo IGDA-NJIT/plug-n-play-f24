@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://frfab2iw5pom"]
+[gd_scene load_steps=13 format=3 uid="uid://frfab2iw5pom"]
 
 [ext_resource type="Texture2D" uid="uid://dck54f5ajpuuo" path="res://DONOTEDITME/assets/menu/main_menu/title.png" id="1_it7dx"]
 [ext_resource type="Theme" uid="uid://dicrejglob83v" path="res://DONOTEDITME/assets/menu/ui_theme.tres" id="2_vyy2r"]
@@ -12,7 +12,7 @@ shader_parameter/seconds_per_cycle = -1.9
 shader_parameter/pixel_color = Color(0.165452, 0, 0.00870163, 1)
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_i0xn8"]
-viewport_path = NodePath("VBoxContainer/SubViewport")
+viewport_path = NodePath("Main/VBoxContainer/SubViewport")
 
 [sub_resource type="Animation" id="Animation_hrh2g"]
 resource_name = "JAR_ROTATION"
@@ -42,6 +42,62 @@ _data = {
 "RESET": SubResource("Animation_7skhc")
 }
 
+[sub_resource type="Animation" id="Animation_tvop5"]
+resource_name = "OPEN"
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:position:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-400, -0.25, 0, 0.25, 0, 75, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.5)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("VBoxContainer:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(800, -0.25, 0, 0.25, 0, 362, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.5)
+}
+
+[sub_resource type="Animation" id="Animation_1xsjs"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:position:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("VBoxContainer:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_65jcl"]
+_data = {
+"OPEN": SubResource("Animation_tvop5"),
+"RESET": SubResource("Animation_1xsjs")
+}
+
 [node name="MainMenu" type="CanvasLayer"]
 
 [node name="ColorRect" type="ColorRect" parent="."]
@@ -58,64 +114,84 @@ offset_right = 1151.0
 offset_bottom = 647.0
 texture = SubResource("ViewportTexture_i0xn8")
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="Main" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Main"]
+layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -332.5
-offset_top = 71.0
-offset_right = 332.5
-offset_bottom = 305.0
+offset_left = -332.0
+offset_right = 333.0
+offset_bottom = 234.0
 grow_horizontal = 2
 texture = ExtResource("1_it7dx")
 expand_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="VBoxContainer" type="VBoxContainer" parent="Main"]
+layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -249.0
-offset_top = -286.0
+offset_top = -648.0
 offset_right = 241.0
-offset_bottom = -51.0
+offset_bottom = -413.0
 grow_horizontal = 2
 grow_vertical = 0
 theme = ExtResource("2_vyy2r")
 
-[node name="PlayButton" type="Button" parent="VBoxContainer"]
+[node name="PlayButton" type="Button" parent="Main/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 text = "Play"
 
-[node name="SettingsButton" type="Button" parent="VBoxContainer"]
+[node name="SettingsButton" type="Button" parent="Main/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 text = "Settings"
 
-[node name="QuitButton" type="Button" parent="VBoxContainer"]
+[node name="SettingsButton2" type="Button" parent="Main/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Credits"
+
+[node name="QuitButton" type="Button" parent="Main/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 text = "Quit"
 
-[node name="SubViewport" type="SubViewport" parent="VBoxContainer"]
+[node name="SubViewport" type="SubViewport" parent="Main/VBoxContainer"]
 transparent_bg = true
 
-[node name="game_jam_jar" parent="VBoxContainer/SubViewport" instance=ExtResource("3_7lmgf")]
+[node name="game_jam_jar" parent="Main/VBoxContainer/SubViewport" instance=ExtResource("3_7lmgf")]
 
-[node name="GameJam" parent="VBoxContainer/SubViewport/game_jam_jar" index="0"]
+[node name="GameJam" parent="Main/VBoxContainer/SubViewport/game_jam_jar" index="0"]
 transform = Transform3D(0.903335, -0.428935, 0, 0.428935, 0.903335, 0, 0, 0, 1, 0.151692, -0.249845, 0)
 
-[node name="Camera3D" type="Camera3D" parent="VBoxContainer/SubViewport"]
+[node name="Camera3D" type="Camera3D" parent="Main/VBoxContainer/SubViewport"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.82534)
 projection = 1
 size = 3.65486
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="VBoxContainer/SubViewport"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Main/VBoxContainer/SubViewport"]
 libraries = {
 "": SubResource("AnimationLibrary_uk0mp")
 }
 autoplay = "JAR_ROTATION"
 
-[editable path="VBoxContainer/SubViewport/game_jam_jar"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Main"]
+libraries = {
+"": SubResource("AnimationLibrary_65jcl")
+}
+autoplay = "OPEN"
+
+[editable path="Main/VBoxContainer/SubViewport/game_jam_jar"]
