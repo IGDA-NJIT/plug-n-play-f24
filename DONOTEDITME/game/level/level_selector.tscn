@@ -482,13 +482,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, -30)
 
 [node name="WorldSelector" type="Node" parent="." node_paths=PackedStringArray("cartridge_models", "left_pos", "right_pos", "center_pos", "offscreen_left_pos", "offscreen_right_pos", "desc_label", "title_label", "flash_anim_player")]
 script = ExtResource("6_an3ix")
-cartridge_models = [NodePath("../CartridgeWorld/FranceDefanceCart"), NodePath("../CartridgeWorld/SebenElebenCart"), NodePath("../CartridgeWorld/GiveThanksCart"), NodePath("../CartridgeWorld/SkybeamCart"), NodePath("../CartridgeWorld/GravityCart"), NodePath("../CartridgeWorld/Tutorial"), NodePath("../CartridgeWorld/OSIDLevelCart"), NodePath("../CartridgeWorld/DarkMythicLevelCart"), NodePath("../CartridgeWorld/ConglomerateLevelCart")]
+cartridge_models = [NodePath("../CartridgeWorld/FranceDefanceCart"), NodePath("../CartridgeWorld/SebenElebenCart"), NodePath("../CartridgeWorld/GiveThanksCart"), NodePath("../CartridgeWorld/SkybeamCart"), NodePath("../CartridgeWorld/GravityCart"), NodePath("../CartridgeWorld/Tutorial"), NodePath("../CartridgeWorld/OSIDLevelCart"), NodePath("../CartridgeWorld/ConglomerateLevelCart"), NodePath("../CartridgeWorld/DarkMythicLevelCart")]
 left_pos = NodePath("../CartridgeWorld/LeftPos")
 right_pos = NodePath("../CartridgeWorld/RightPos")
 center_pos = NodePath("../CartridgeWorld/CenterPos")
 offscreen_left_pos = NodePath("../CartridgeWorld/OffscreenLeftPos")
 offscreen_right_pos = NodePath("../CartridgeWorld/OffscreenRightPos")
-level_data = Array[ExtResource("9_cgn2m")]([ExtResource("10_nrhwd"), ExtResource("11_666f1"), ExtResource("12_53gy8"), ExtResource("13_ltjyu"), ExtResource("14_xgxy4"), ExtResource("15_mga3b"), ExtResource("16_uy030"), ExtResource("17_g4eet"), ExtResource("18_rgdy8")])
+level_data = Array[ExtResource("9_cgn2m")]([ExtResource("10_nrhwd"), ExtResource("11_666f1"), ExtResource("12_53gy8"), ExtResource("13_ltjyu"), ExtResource("14_xgxy4"), ExtResource("15_mga3b"), ExtResource("16_uy030"), ExtResource("18_rgdy8"), ExtResource("17_g4eet")])
 desc_label = NodePath("../DisplayViewport/TVScreen/Description")
 title_label = NodePath("../DisplayViewport/TVScreen/Title")
 flash_anim_player = NodePath("../DisplayViewport/TVScreen/AnimationPlayer")

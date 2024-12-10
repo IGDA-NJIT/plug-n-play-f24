@@ -70,6 +70,7 @@ func _on_animation_finished(anim_name):
 				level = world_map_scene.instantiate()
 			else:
 				level = level_array[level_loaded].instantiate()
+			print("Now loading " + str(level_loaded) + " " + str(level_array[level_loaded]))
 			get_tree().current_scene.queue_free()
 			level.tree_entered.connect(_on_enter_tree.bind(level))
 			get_tree().root.call_deferred("add_child", level)
