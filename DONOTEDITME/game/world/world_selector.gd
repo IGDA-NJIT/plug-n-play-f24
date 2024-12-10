@@ -46,7 +46,6 @@ func change_index(d: int) -> int:
 		if idx >= len(cartridge_models):
 			idx = 0
 	
-	print(idx)
 	return idx
 
 
@@ -65,7 +64,7 @@ func _ready() -> void:
 	update_crt()
 	
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if changeable:
 		if (Input.is_action_just_pressed("player_right")):
 			changeable = false

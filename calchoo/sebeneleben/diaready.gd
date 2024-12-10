@@ -12,12 +12,12 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if not get_tree().paused:
 		dialogue_button.grab_focus()
 
 
-func _on_char_displayed(idx):
+func _on_char_displayed(_idx):
 	# you can use the idx parameter to check the index of the character displayed
 	if %DialogueBox.speaker_label.text == "Jammy":
 		audio_player.volume_db = -10

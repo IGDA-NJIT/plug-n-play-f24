@@ -17,7 +17,7 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	position.x = clampf(%Player.global_position.x, min_x, max_x)
 	position.y = clampf(%Player.global_position.y, min_y, max_y)
 	queue_redraw()

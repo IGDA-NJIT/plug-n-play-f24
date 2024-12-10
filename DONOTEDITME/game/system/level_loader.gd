@@ -94,7 +94,7 @@ func _on_enter_tree(scene):
 	
 
 
-func _on_scene_loaded(level):
+func _on_scene_loaded(_level):
 	get_tree().paused = false
 	animation_player.play("OPEN")
 

@@ -55,7 +55,7 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	$Spike.position.y += down
 	if die:
 		wait = false
@@ -99,13 +99,13 @@ func _process(delta: float) -> void:
 		await get_tree().create_timer(1).timeout
 		wait = true
 
-func _on_give_body_entered(body: Node2D) -> void:
+func _on_give_body_entered(_body: Node2D) -> void:
 	if wait:
 		die = true
 		diec += 1
 
 
-func _on_thanks_body_entered(body: Node2D) -> void:
+func _on_thanks_body_entered(_body: Node2D) -> void:
 	if wait:
 		live = true
 		livec +=1

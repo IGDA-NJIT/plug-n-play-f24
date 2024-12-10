@@ -92,7 +92,7 @@ var once = false
 func _ready() -> void:
 	pass
 	
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if jamin and Input.is_action_just_pressed("player_input_1") and %pageshow.visible == false:
 		for i in range(3):
 			$sfx.stream = fuckyou[randi()%9]
@@ -131,12 +131,12 @@ func _on_area_2d_2_body_exited(body: Node2D) -> void:
 	body.global_position -= Vector2(1600,0)
 
 
-func _on_area_2d_3_body_entered(body: Node2D) -> void:
+func _on_area_2d_3_body_entered(_body: Node2D) -> void:
 	%interact.text = "J to write"
 	jamin = true
 
 
-func _on_area_2d_3_body_exited(body: Node2D) -> void:
+func _on_area_2d_3_body_exited(_body: Node2D) -> void:
 	if %interact == null:
 		jamin = false
 		return

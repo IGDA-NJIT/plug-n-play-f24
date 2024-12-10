@@ -23,7 +23,7 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	if Input.is_action_just_pressed("ui_cancel") and not level_loader.reloading and not level_loader.loading:
 		if not get_tree().paused:
 			anim_player.play("OPEN")
@@ -53,7 +53,7 @@ func _on_animation_finished(anim_name):
 		get_tree().paused = false
 
 
-func _on_slider_changed(value: float):
+func _on_slider_changed(_value: float):
 	if loaded:
 		sound_player.update_sound(self)
 

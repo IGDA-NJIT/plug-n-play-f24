@@ -11,7 +11,7 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("player_input_1"):
 		if  entered:
 			if !once:
@@ -45,13 +45,13 @@ func goin():
 		inside = false
 
 
-func _on_door_body_entered(body: Node2D) -> void:
+func _on_door_body_entered(_body: Node2D) -> void:
 	entered = true
 		
 	
 
 
-func _on_door_body_exited(body: Node2D) -> void:
+func _on_door_body_exited(_body: Node2D) -> void:
 	entered = false
 	%interact.text = ""
 
@@ -64,13 +64,13 @@ func _on_topleave_body_exited(body: Node2D) -> void:
 			goin()
 		
 
-func _on_miku_body_entered(body: Node2D) -> void:
+func _on_miku_body_entered(_body: Node2D) -> void:
 	mik = true
 	%interact.text = "J to talk"
 	
 	
 
 
-func _on_miku_body_exited(body: Node2D) -> void:
+func _on_miku_body_exited(_body: Node2D) -> void:
 	mik = false
 	%interact.text = ""
