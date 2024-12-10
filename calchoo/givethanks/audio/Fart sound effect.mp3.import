@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://bx1b26okmw6r7"
-path="res://.godot/imported/Fart sound effect.mp3-94c3dac58a50c3e75077d128338e133e.mp3str"
+path="res://.godot/imported/Fart sound effect.mp3-34cbe3309d6066ec0c430c722607e3e3.mp3str"
 
 [deps]
 
-source_file="res://dev/givethanks/audio/Fart sound effect.mp3"
-dest_files=["res://.godot/imported/Fart sound effect.mp3-94c3dac58a50c3e75077d128338e133e.mp3str"]
+source_file="res://calchoo/givethanks/audio/Fart sound effect.mp3"
+dest_files=["res://.godot/imported/Fart sound effect.mp3-34cbe3309d6066ec0c430c722607e3e3.mp3str"]
 
 [params]
 

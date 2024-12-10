@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://ciq5l4hlwe4co"
-path="res://.godot/imported/Lego yoda death sound.mp3-96458811e7931bc18eb1c3d359217b99.mp3str"
+path="res://.godot/imported/Lego yoda death sound.mp3-d4cfdaee76564249a74976c0210ceed2.mp3str"
 
 [deps]
 
-source_file="res://dev/givethanks/audio/Lego yoda death sound.mp3"
-dest_files=["res://.godot/imported/Lego yoda death sound.mp3-96458811e7931bc18eb1c3d359217b99.mp3str"]
+source_file="res://calchoo/givethanks/audio/Lego yoda death sound.mp3"
+dest_files=["res://.godot/imported/Lego yoda death sound.mp3-d4cfdaee76564249a74976c0210ceed2.mp3str"]
 
 [params]
 

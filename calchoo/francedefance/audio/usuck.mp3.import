@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://dp8pipqoty510"
-path="res://.godot/imported/usuck.mp3-cf65048fe3d5d932cc9938b760b0a2d1.mp3str"
+path="res://.godot/imported/usuck.mp3-639c709fa863d0b4100b045772bc9423.mp3str"
 
 [deps]
 
-source_file="res://dev/francedefance/audio/usuck.mp3"
-dest_files=["res://.godot/imported/usuck.mp3-cf65048fe3d5d932cc9938b760b0a2d1.mp3str"]
+source_file="res://calchoo/francedefance/audio/usuck.mp3"
+dest_files=["res://.godot/imported/usuck.mp3-639c709fa863d0b4100b045772bc9423.mp3str"]
 
 [params]
 

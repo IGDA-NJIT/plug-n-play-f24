@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://byd5baryck6ga"
-path="res://.godot/imported/French meme song (earrape).mp3-04f24883251b839d23d25f742fd8e55c.mp3str"
+path="res://.godot/imported/French meme song (earrape).mp3-edb473f830e0ef0943933764fcfd878f.mp3str"
 
 [deps]
 
-source_file="res://dev/francedefance/audio/French meme song (earrape).mp3"
-dest_files=["res://.godot/imported/French meme song (earrape).mp3-04f24883251b839d23d25f742fd8e55c.mp3str"]
+source_file="res://calchoo/francedefance/audio/French meme song (earrape).mp3"
+dest_files=["res://.godot/imported/French meme song (earrape).mp3-edb473f830e0ef0943933764fcfd878f.mp3str"]
 
 [params]
 

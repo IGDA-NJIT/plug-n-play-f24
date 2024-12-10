@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c58eb74ur6ajx"
-path="res://.godot/imported/page9.jpg-2e86a30d9d2043c77b2adf9099696dd8.ctex"
+path="res://.godot/imported/page9.jpg-3b573df07a555a7aa3197d369ac13e6a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://dev/skybeam/assets/pages/page9.jpg"
-dest_files=["res://.godot/imported/page9.jpg-2e86a30d9d2043c77b2adf9099696dd8.ctex"]
+source_file="res://calchoo/skybeam/assets/pages/page9.jpg"
+dest_files=["res://.godot/imported/page9.jpg-3b573df07a555a7aa3197d369ac13e6a.ctex"]
 
 [params]
 

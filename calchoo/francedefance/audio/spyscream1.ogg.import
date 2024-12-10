@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://cwblxmvgcfbh1"
-path="res://.godot/imported/spyscream1.ogg-18c0d11e316022692a19ed58cf20b138.oggvorbisstr"
+path="res://.godot/imported/spyscream1.ogg-c4c3dc2f72efa910d1dbbea3465f3bae.oggvorbisstr"
 
 [deps]
 
-source_file="res://dev/francedefance/audio/spyscream1.ogg"
-dest_files=["res://.godot/imported/spyscream1.ogg-18c0d11e316022692a19ed58cf20b138.oggvorbisstr"]
+source_file="res://calchoo/francedefance/audio/spyscream1.ogg"
+dest_files=["res://.godot/imported/spyscream1.ogg-c4c3dc2f72efa910d1dbbea3465f3bae.oggvorbisstr"]
 
 [params]
 

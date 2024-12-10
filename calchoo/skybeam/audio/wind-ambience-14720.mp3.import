@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://cs2uyu01d1vr1"
-path="res://.godot/imported/wind-ambience-14720.mp3-ea16352a3cb2164a8b2f673f9785eac1.mp3str"
+path="res://.godot/imported/wind-ambience-14720.mp3-7ec7b3a3b10a0743ee0625b5fd85c12a.mp3str"
 
 [deps]
 
-source_file="res://dev/skybeam/audio/wind-ambience-14720.mp3"
-dest_files=["res://.godot/imported/wind-ambience-14720.mp3-ea16352a3cb2164a8b2f673f9785eac1.mp3str"]
+source_file="res://calchoo/skybeam/audio/wind-ambience-14720.mp3"
+dest_files=["res://.godot/imported/wind-ambience-14720.mp3-7ec7b3a3b10a0743ee0625b5fd85c12a.mp3str"]
 
 [params]
 

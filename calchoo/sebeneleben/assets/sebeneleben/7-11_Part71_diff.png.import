@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://tofslth0rky0"
-path.s3tc="res://.godot/imported/7-11_Part71_diff.png-1fb0ff676d0f8e94c4137253e4632aa4.s3tc.ctex"
+path.s3tc="res://.godot/imported/7-11_Part71_diff.png-e3858e07d7b5147b616ada71b180d15d.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://dev/sebeneleben/assets/sebeneleben/7-11_Part71_diff.png"
-dest_files=["res://.godot/imported/7-11_Part71_diff.png-1fb0ff676d0f8e94c4137253e4632aa4.s3tc.ctex"]
+source_file="res://calchoo/sebeneleben/assets/sebeneleben/7-11_Part71_diff.png"
+dest_files=["res://.godot/imported/7-11_Part71_diff.png-e3858e07d7b5147b616ada71b180d15d.s3tc.ctex"]
 
 [params]
 

@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dk1jvx41lt8wm"
-path="res://.godot/imported/stand.glb-e73a4ee23e94d291ae3a227df2300ce4.scn"
+path="res://.godot/imported/stand.glb-7897bce480f70a9f155bcd7d5a736b84.scn"
 
 [deps]
 
-source_file="res://dev/francedefance/assets/models/stand/stand.glb"
-dest_files=["res://.godot/imported/stand.glb-e73a4ee23e94d291ae3a227df2300ce4.scn"]
+source_file="res://calchoo/francedefance/assets/models/stand/stand.glb"
+dest_files=["res://.godot/imported/stand.glb-7897bce480f70a9f155bcd7d5a736b84.scn"]
 
 [params]
 

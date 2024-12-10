@@ -13,38 +13,38 @@ var once = false
 var once2 = false
 var wait = true
 
-var torki = load("res://dev/givethanks/assets/torky.jpg")
-var me = load("res://dev/givethanks/assets/me.jpg")
-var alex = load("res://dev/givethanks/assets/alekj.jpg")
-var brine = load("res://dev/givethanks/assets/DSC_0150.jpg")
-var seb = load("res://dev/givethanks/assets/image.jpg")
-var ltg = load("res://dev/givethanks/assets/low-tier-god-2-1081105726.jpg")
-var win = load("res://dev/givethanks/assets/ty].jpg")
+var torki = load("res://calchoo/givethanks/assets/torky.jpg")
+var me = load("res://calchoo/givethanks/assets/me.jpg")
+var alex = load("res://calchoo/givethanks/assets/alekj.jpg")
+var brine = load("res://calchoo/givethanks/assets/DSC_0150.jpg")
+var seb = load("res://calchoo/givethanks/assets/image.jpg")
+var ltg = load("res://calchoo/givethanks/assets/low-tier-god-2-1081105726.jpg")
+var win = load("res://calchoo/givethanks/assets/ty].jpg")
 var ppl = [torki,me,alex,brine,seb,ltg,win]
 
-var turk = load("res://dev/givethanks/audio/turkey-leg---roblox.mp3")
-var mee = load("res://dev/givethanks/audio/zaoshanghao.mp3")
-var aleks = load("res://dev/givethanks/audio/Hey All Scott Here.mp3")
-var brin = load("res://dev/givethanks/audio/Fart sound effect.mp3")
-var sebin = load("res://dev/givethanks/audio/Wii sports wow.mp3")
-var ltgbruh = load("res://dev/givethanks/audio/Vine Boom Sound Effect (Longer Verison For Real) (Read Description Please).mp3")
-var winning = load("res://dev/givethanks/audio/Kids Cheering - FNAF 1 Sound Effects.mp3")
+var turk = load("res://calchoo/givethanks/audio/turkey-leg---roblox.mp3")
+var mee = load("res://calchoo/givethanks/audio/zaoshanghao.mp3")
+var aleks = load("res://calchoo/givethanks/audio/Hey All Scott Here.mp3")
+var brin = load("res://calchoo/givethanks/audio/Fart sound effect.mp3")
+var sebin = load("res://calchoo/givethanks/audio/Wii sports wow.mp3")
+var ltgbruh = load("res://calchoo/givethanks/audio/Vine Boom Sound Effect (Longer Verison For Real) (Read Description Please).mp3")
+var winning = load("res://calchoo/givethanks/audio/Kids Cheering - FNAF 1 Sound Effects.mp3")
 var intro = [turk,mee,aleks,brin,sebin,ltgbruh,winning]
 
-var torkdie = load("res://dev/givethanks/audio/Destroy Sound effect TF2.mp3")
-var medie = load("res://dev/givethanks/audio/tyler1 scream.mp3")
-var alekdie = load("res://dev/givethanks/audio/cat scream.mp3")
-var drinded = load("res://dev/givethanks/audio/engineer scream.mp3")
-var sebdie = load("res://dev/givethanks/audio/tom scott scream.mp3")
-var ltgdie = load("res://dev/givethanks/audio/ltg-shares-some-motivational-words.mp3")
+var torkdie = load("res://calchoo/givethanks/audio/Destroy Sound effect TF2.mp3")
+var medie = load("res://calchoo/givethanks/audio/tyler1 scream.mp3")
+var alekdie = load("res://calchoo/givethanks/audio/cat scream.mp3")
+var drinded = load("res://calchoo/givethanks/audio/engineer scream.mp3")
+var sebdie = load("res://calchoo/givethanks/audio/tom scott scream.mp3")
+var ltgdie = load("res://calchoo/givethanks/audio/ltg-shares-some-motivational-words.mp3")
 var diesounds = [torkdie,medie,alekdie,drinded,sebdie,ltgdie,winning]
 
-var torklive = load("res://dev/givethanks/audio/bong.mp3")
-var melive = load("res://dev/givethanks/audio/Samsung notification sound effect ( no copyright).mp3")
-var aleklive = load("res://dev/givethanks/audio/Nice Shot! - Wii Sports Golf Announcer Voice.mp3")
-var drinliv = load("res://dev/givethanks/audio/Cartoon Slipping _ Sound Effect.mp3")
-var seblive = load("res://dev/givethanks/audio/Cr1tikal disappears.mp3")
-var ltglive = load("res://dev/givethanks/audio/youservepurpose.mp3")
+var torklive = load("res://calchoo/givethanks/audio/bong.mp3")
+var melive = load("res://calchoo/givethanks/audio/Samsung notification sound effect ( no copyright).mp3")
+var aleklive = load("res://calchoo/givethanks/audio/Nice Shot! - Wii Sports Golf Announcer Voice.mp3")
+var drinliv = load("res://calchoo/givethanks/audio/Cartoon Slipping _ Sound Effect.mp3")
+var seblive = load("res://calchoo/givethanks/audio/Cr1tikal disappears.mp3")
+var ltglive = load("res://calchoo/givethanks/audio/youservepurpose.mp3")
 var livesounds = [torklive,melive,aleklive,drinliv,seblive,ltglive,winning]
 
 # Called when the node enters the scene tree for the first time.

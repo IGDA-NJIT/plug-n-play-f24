@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://cmv0yonjpqsoj"
-path="res://.godot/imported/coward.mp3-2e518210e8c12444b50cf0b2bcc9e3f8.mp3str"
+path="res://.godot/imported/coward.mp3-ad8cfcb61e9fbaa0cf10f64b9d705218.mp3str"
 
 [deps]
 
-source_file="res://dev/francedefance/audio/coward.mp3"
-dest_files=["res://.godot/imported/coward.mp3-2e518210e8c12444b50cf0b2bcc9e3f8.mp3str"]
+source_file="res://calchoo/francedefance/audio/coward.mp3"
+dest_files=["res://.godot/imported/coward.mp3-ad8cfcb61e9fbaa0cf10f64b9d705218.mp3str"]
 
 [params]
 

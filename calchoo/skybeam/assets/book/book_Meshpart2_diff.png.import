@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://djyw27dfgpuk6"
-path.s3tc="res://.godot/imported/book_Meshpart2_diff.png-1cdab8ae3a9c542d4c3f486027de7224.s3tc.ctex"
+path.s3tc="res://.godot/imported/book_Meshpart2_diff.png-aad34fe7a9b44f9cf876ee4b91adae24.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://dev/skybeam/assets/book/book_Meshpart2_diff.png"
-dest_files=["res://.godot/imported/book_Meshpart2_diff.png-1cdab8ae3a9c542d4c3f486027de7224.s3tc.ctex"]
+source_file="res://calchoo/skybeam/assets/book/book_Meshpart2_diff.png"
+dest_files=["res://.godot/imported/book_Meshpart2_diff.png-aad34fe7a9b44f9cf876ee4b91adae24.s3tc.ctex"]
 
 [params]
 

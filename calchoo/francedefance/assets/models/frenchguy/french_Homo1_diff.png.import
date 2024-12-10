@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bq7es6eokraye"
-path.s3tc="res://.godot/imported/french_Homo1_diff.png-ac78cdd48bb3ef1d02bfea5a5b2ff891.s3tc.ctex"
+path.s3tc="res://.godot/imported/french_Homo1_diff.png-53a82e3e8b5a0e5cf14482b264e7d1ec.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://dev/francedefance/assets/models/frenchguy/french_Homo1_diff.png"
-dest_files=["res://.godot/imported/french_Homo1_diff.png-ac78cdd48bb3ef1d02bfea5a5b2ff891.s3tc.ctex"]
+source_file="res://calchoo/francedefance/assets/models/frenchguy/french_Homo1_diff.png"
+dest_files=["res://.godot/imported/french_Homo1_diff.png-53a82e3e8b5a0e5cf14482b264e7d1ec.s3tc.ctex"]
 
 [params]
 

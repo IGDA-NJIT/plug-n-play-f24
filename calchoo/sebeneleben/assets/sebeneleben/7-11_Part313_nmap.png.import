@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b75lrfht4pios"
-path.s3tc="res://.godot/imported/7-11_Part313_nmap.png-606cebfe30325451257f9bdd840f802d.s3tc.ctex"
+path.s3tc="res://.godot/imported/7-11_Part313_nmap.png-3adfbf6a93cd6a190ded596c187ed015.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://dev/sebeneleben/assets/sebeneleben/7-11_Part313_nmap.png"
-dest_files=["res://.godot/imported/7-11_Part313_nmap.png-606cebfe30325451257f9bdd840f802d.s3tc.ctex"]
+source_file="res://calchoo/sebeneleben/assets/sebeneleben/7-11_Part313_nmap.png"
+dest_files=["res://.godot/imported/7-11_Part313_nmap.png-3adfbf6a93cd6a190ded596c187ed015.s3tc.ctex"]
 
 [params]
 

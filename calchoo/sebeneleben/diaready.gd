@@ -1,9 +1,9 @@
 extends Control
 
 @onready var audio_player = $sf
-var miku = load("res://dev/sebeneleben/audio/mikudayo.wav")
-var jam = load("res://dev/sebeneleben/audio/lilguynoise.wav")
-var french = load("res://dev/francedefance/audio/Snort_ (Spy Voice Lines).mp3")
+var miku = load("res://calchoo/sebeneleben/audio/mikudayo.wav")
+var jam = load("res://calchoo/sebeneleben/audio/lilguynoise.wav")
+var french = load("res://calchoo/francedefance/audio/Snort_ (Spy Voice Lines).mp3")
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	%DialogueBox.custom_effects[0].char_displayed.connect(_on_char_displayed)

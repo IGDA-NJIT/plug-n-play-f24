@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://davk2chf67gjj"
-path="res://.godot/imported/Ahhh (Disappearing Scream Meme) - Sound Effect.mp3-41f4b9cca5d1e7ec6dfc0f33822a2bf0.mp3str"
+path="res://.godot/imported/Ahhh (Disappearing Scream Meme) - Sound Effect.mp3-bf926fa915f5b243b36b45a76bce7f38.mp3str"
 
 [deps]
 
-source_file="res://dev/givethanks/audio/Ahhh (Disappearing Scream Meme) - Sound Effect.mp3"
-dest_files=["res://.godot/imported/Ahhh (Disappearing Scream Meme) - Sound Effect.mp3-41f4b9cca5d1e7ec6dfc0f33822a2bf0.mp3str"]
+source_file="res://calchoo/givethanks/audio/Ahhh (Disappearing Scream Meme) - Sound Effect.mp3"
+dest_files=["res://.godot/imported/Ahhh (Disappearing Scream Meme) - Sound Effect.mp3-bf926fa915f5b243b36b45a76bce7f38.mp3str"]
 
 [params]
 

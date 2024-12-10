@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c2tog87t4q040"
-path.s3tc="res://.godot/imported/Hair1_diff.png-eed32f7ff67cb2a11f599ec9f403f18a.s3tc.ctex"
+path.s3tc="res://.godot/imported/Hair1_diff.png-9cf5b43ad79e722fba939d91f0d88bc0.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://dev/sebeneleben/assets/miku/Hair1_diff.png"
-dest_files=["res://.godot/imported/Hair1_diff.png-eed32f7ff67cb2a11f599ec9f403f18a.s3tc.ctex"]
+source_file="res://calchoo/sebeneleben/assets/miku/Hair1_diff.png"
+dest_files=["res://.godot/imported/Hair1_diff.png-9cf5b43ad79e722fba939d91f0d88bc0.s3tc.ctex"]
 
 [params]
 

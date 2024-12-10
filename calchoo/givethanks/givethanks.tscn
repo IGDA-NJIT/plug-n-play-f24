@@ -1,14 +1,14 @@
 [gd_scene load_steps=14 format=4 uid="uid://b4e0xkinhu4s2"]
 
 [ext_resource type="Script" path="res://DONOTEDITME/game/system/level.gd" id="1_wwfj7"]
-[ext_resource type="Script" path="res://dev/givethanks/thedoer.gd" id="2_0g07n"]
-[ext_resource type="Texture2D" uid="uid://d1mwmgonjtstr" path="res://dev/givethanks/assets/SQSQAsQAsqaSAD.jpg" id="2_kymia"]
+[ext_resource type="Script" path="res://calchoo/givethanks/thedoer.gd" id="2_0g07n"]
+[ext_resource type="Texture2D" uid="uid://d1mwmgonjtstr" path="res://calchoo/givethanks/assets/SQSQAsQAsqaSAD.jpg" id="2_kymia"]
 [ext_resource type="PackedScene" uid="uid://cavhiq8b25tph" path="res://DONOTEDITME/menu/pause_menu.tscn" id="2_v0ysf"]
 [ext_resource type="PackedScene" uid="uid://bipl7yj7vdf1m" path="res://DONOTEDITME/game/level/level_end_marker.tscn" id="3_an7qo"]
 [ext_resource type="TileSet" uid="uid://b7temyiqwjg58" path="res://DONOTEDITME/game/level/tilesets/kenney_tileset_compilation.tres" id="3_sfxq1"]
 [ext_resource type="PackedScene" uid="uid://xb5i5ynpctpq" path="res://DONOTEDITME/game/player/player.tscn" id="4_f3tyl"]
-[ext_resource type="Texture2D" uid="uid://dsvlpbc45y5pe" path="res://dev/givethanks/assets/image.jpg" id="4_ty78e"]
-[ext_resource type="Texture2D" uid="uid://cnutfnh0gp8p3" path="res://dev/givethanks/assets/gibthanks.jpg" id="4_vhk7v"]
+[ext_resource type="Texture2D" uid="uid://dsvlpbc45y5pe" path="res://calchoo/givethanks/assets/image.jpg" id="4_ty78e"]
+[ext_resource type="Texture2D" uid="uid://cnutfnh0gp8p3" path="res://calchoo/givethanks/assets/gibthanks.jpg" id="4_vhk7v"]
 [ext_resource type="PackedScene" uid="uid://xrv5a4vk77ic" path="res://DONOTEDITME/game/player/player_follow_camera.tscn" id="5_bkaht"]
 [ext_resource type="PackedScene" uid="uid://bl3agpu5ucmfe" path="res://DONOTEDITME/game/level/hazards/tiles/spike.tscn" id="7_njiko"]
 

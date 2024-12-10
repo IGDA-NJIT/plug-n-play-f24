@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b6pnau0te6bs2"
-path.s3tc="res://.godot/imported/french_Union1_diff.png-64441e1f8be9cfd6ff4882fe5765b230.s3tc.ctex"
+path.s3tc="res://.godot/imported/french_Union1_diff.png-3010eeb51a7a9f615725a9747d757829.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://dev/francedefance/assets/models/frenchguy/french_Union1_diff.png"
-dest_files=["res://.godot/imported/french_Union1_diff.png-64441e1f8be9cfd6ff4882fe5765b230.s3tc.ctex"]
+source_file="res://calchoo/francedefance/assets/models/frenchguy/french_Union1_diff.png"
+dest_files=["res://.godot/imported/french_Union1_diff.png-3010eeb51a7a9f615725a9747d757829.s3tc.ctex"]
 
 [params]
 

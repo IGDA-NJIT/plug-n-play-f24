@@ -5,18 +5,18 @@
 [ext_resource type="TileSet" uid="uid://b7temyiqwjg58" path="res://DONOTEDITME/game/level/tilesets/kenney_tileset_compilation.tres" id="3_pgpks"]
 [ext_resource type="PackedScene" uid="uid://xb5i5ynpctpq" path="res://DONOTEDITME/game/player/player.tscn" id="4_dgfsp"]
 [ext_resource type="PackedScene" uid="uid://xrv5a4vk77ic" path="res://DONOTEDITME/game/player/player_follow_camera.tscn" id="5_1uoeb"]
-[ext_resource type="Script" path="res://dev/skybeam/root_node.gd" id="6_1tc31"]
-[ext_resource type="Shader" path="res://dev/skybeam/grass/grass_shader.gdshader" id="6_g46l7"]
+[ext_resource type="Script" path="res://calchoo/skybeam/root_node.gd" id="6_1tc31"]
+[ext_resource type="Shader" path="res://calchoo/skybeam/grass/grass_shader.gdshader" id="6_g46l7"]
 [ext_resource type="PackedScene" uid="uid://bipl7yj7vdf1m" path="res://DONOTEDITME/game/level/level_end_marker.tscn" id="7_3us7a"]
-[ext_resource type="ArrayMesh" uid="uid://er8nljgvawhk" path="res://dev/skybeam/grass/GrassMesh.res" id="7_c1x1o"]
-[ext_resource type="AudioStream" uid="uid://c6y20spvogtvp" path="res://dev/skybeam/audio/ambientpiano.ogg" id="7_r0j0q"]
-[ext_resource type="PackedScene" uid="uid://nmuu4dqch4yb" path="res://dev/skybeam/assets/table/table.glb" id="8_cgf7f"]
-[ext_resource type="AudioStream" uid="uid://cs2uyu01d1vr1" path="res://dev/skybeam/audio/wind-ambience-14720.mp3" id="8_fkosa"]
-[ext_resource type="PackedScene" uid="uid://cebqea6xclrfh" path="res://dev/skybeam/assets/chair/chair.glb" id="9_j5swb"]
-[ext_resource type="PackedScene" uid="uid://d35lythn6opss" path="res://dev/skybeam/assets/book/book.glb" id="10_e856p"]
-[ext_resource type="PackedScene" uid="uid://clxf6ejcewkmc" path="res://dev/skybeam/assets/lantern/lantern.glb" id="11_nuum7"]
-[ext_resource type="AudioStream" uid="uid://shgsyc3fbh1" path="res://dev/skybeam/audio/writing sounds/calvin-scribble-1.mp3" id="15_ddh3k"]
-[ext_resource type="Texture2D" uid="uid://h8y6iunrag75" path="res://dev/skybeam/assets/pages/page29.jpg" id="16_sk78g"]
+[ext_resource type="ArrayMesh" uid="uid://er8nljgvawhk" path="res://calchoo/skybeam/grass/GrassMesh.res" id="7_c1x1o"]
+[ext_resource type="AudioStream" uid="uid://c6y20spvogtvp" path="res://calchoo/skybeam/audio/ambientpiano.ogg" id="7_r0j0q"]
+[ext_resource type="PackedScene" uid="uid://nmuu4dqch4yb" path="res://calchoo/skybeam/assets/table/table.glb" id="8_cgf7f"]
+[ext_resource type="AudioStream" uid="uid://cs2uyu01d1vr1" path="res://calchoo/skybeam/audio/wind-ambience-14720.mp3" id="8_fkosa"]
+[ext_resource type="PackedScene" uid="uid://cebqea6xclrfh" path="res://calchoo/skybeam/assets/chair/chair.glb" id="9_j5swb"]
+[ext_resource type="PackedScene" uid="uid://d35lythn6opss" path="res://calchoo/skybeam/assets/book/book.glb" id="10_e856p"]
+[ext_resource type="PackedScene" uid="uid://clxf6ejcewkmc" path="res://calchoo/skybeam/assets/lantern/lantern.glb" id="11_nuum7"]
+[ext_resource type="AudioStream" uid="uid://shgsyc3fbh1" path="res://calchoo/skybeam/audio/writing sounds/calvin-scribble-1.mp3" id="15_ddh3k"]
+[ext_resource type="Texture2D" uid="uid://h8y6iunrag75" path="res://calchoo/skybeam/assets/pages/page29.jpg" id="16_sk78g"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_uyw15"]
 viewport_path = NodePath("SubViewport")
@@ -350,12 +350,10 @@ endoflevel = ExtResource("7_3us7a")
 [node name="bgm" type="AudioStreamPlayer" parent="RootNode"]
 stream = ExtResource("7_r0j0q")
 volume_db = -10.0
-bus = &"New Bbgms"
 
 [node name="bgm3" type="AudioStreamPlayer" parent="RootNode"]
 stream = ExtResource("8_fkosa")
 volume_db = 10.0
-bus = &"New Bbgms"
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="RootNode"]
 environment = SubResource("Environment_25ph3")

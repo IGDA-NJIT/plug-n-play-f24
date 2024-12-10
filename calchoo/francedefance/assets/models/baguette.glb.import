@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cfxl447y8mfts"
-path="res://.godot/imported/baguette.glb-a4d8238aa9f88d4587d103f22b08be68.scn"
+path="res://.godot/imported/baguette.glb-4085142c06802fd893530c617917ec58.scn"
 
 [deps]
 
-source_file="res://dev/francedefance/assets/models/baguette.glb"
-dest_files=["res://.godot/imported/baguette.glb-a4d8238aa9f88d4587d103f22b08be68.scn"]
+source_file="res://calchoo/francedefance/assets/models/baguette.glb"
+dest_files=["res://.godot/imported/baguette.glb-4085142c06802fd893530c617917ec58.scn"]
 
 [params]
 

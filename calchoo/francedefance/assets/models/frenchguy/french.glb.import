@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dq6kf8bcc6qdk"
-path="res://.godot/imported/french.glb-a8da4d8ec4821c95c94415c0106a5944.scn"
+path="res://.godot/imported/french.glb-0a9374f20b751ceed8bae7862930b1a4.scn"
 
 [deps]
 
-source_file="res://dev/francedefance/assets/models/frenchguy/french.glb"
-dest_files=["res://.godot/imported/french.glb-a8da4d8ec4821c95c94415c0106a5944.scn"]
+source_file="res://calchoo/francedefance/assets/models/frenchguy/french.glb"
+dest_files=["res://.godot/imported/french.glb-0a9374f20b751ceed8bae7862930b1a4.scn"]
 
 [params]
 

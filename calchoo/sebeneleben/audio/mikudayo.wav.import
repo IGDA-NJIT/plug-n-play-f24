@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://6ri6jyhvsjt7"
-path="res://.godot/imported/mikudayo.wav-3b3a807f77e527567e1cb4dbf504f17f.sample"
+path="res://.godot/imported/mikudayo.wav-9046bfa5b7ca159c347871cb738aa850.sample"
 
 [deps]
 
-source_file="res://dev/sebeneleben/audio/mikudayo.wav"
-dest_files=["res://.godot/imported/mikudayo.wav-3b3a807f77e527567e1cb4dbf504f17f.sample"]
+source_file="res://calchoo/sebeneleben/audio/mikudayo.wav"
+dest_files=["res://.godot/imported/mikudayo.wav-9046bfa5b7ca159c347871cb738aa850.sample"]
 
 [params]
 

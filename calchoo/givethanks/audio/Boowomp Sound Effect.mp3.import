@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://dtlrx78bmorwg"
-path="res://.godot/imported/Boowomp Sound Effect.mp3-639e4ddae82587a681c19bcea36685c4.mp3str"
+path="res://.godot/imported/Boowomp Sound Effect.mp3-7e22c93fc3571a707570d3f8f89077a2.mp3str"
 
 [deps]
 
-source_file="res://dev/givethanks/audio/Boowomp Sound Effect.mp3"
-dest_files=["res://.godot/imported/Boowomp Sound Effect.mp3-639e4ddae82587a681c19bcea36685c4.mp3str"]
+source_file="res://calchoo/givethanks/audio/Boowomp Sound Effect.mp3"
+dest_files=["res://.godot/imported/Boowomp Sound Effect.mp3-7e22c93fc3571a707570d3f8f89077a2.mp3str"]
 
 [params]
 

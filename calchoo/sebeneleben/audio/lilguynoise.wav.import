@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://btkjnv8pms2nn"
-path="res://.godot/imported/lilguynoise.wav-9de4d49397ae8b7b89938ff4ff6f2e6c.sample"
+path="res://.godot/imported/lilguynoise.wav-fde0e0dafdce1e6c4472f5ebc654ea55.sample"
 
 [deps]
 
-source_file="res://dev/sebeneleben/audio/lilguynoise.wav"
-dest_files=["res://.godot/imported/lilguynoise.wav-9de4d49397ae8b7b89938ff4ff6f2e6c.sample"]
+source_file="res://calchoo/sebeneleben/audio/lilguynoise.wav"
+dest_files=["res://.godot/imported/lilguynoise.wav-fde0e0dafdce1e6c4472f5ebc654ea55.sample"]
 
 [params]
 

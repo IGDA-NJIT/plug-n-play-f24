@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://hi3ujkkjvw3q"
-path.s3tc="res://.godot/imported/baguette_Baguette1_nmap.png-0dd5e4af5904661c54774ff2cfc3635d.s3tc.ctex"
+path.s3tc="res://.godot/imported/baguette_Baguette1_nmap.png-0d3b4b95ea42350b2fa7cce6219993bd.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://dev/francedefance/assets/models/baguette_Baguette1_nmap.png"
-dest_files=["res://.godot/imported/baguette_Baguette1_nmap.png-0dd5e4af5904661c54774ff2cfc3635d.s3tc.ctex"]
+source_file="res://calchoo/francedefance/assets/models/baguette_Baguette1_nmap.png"
+dest_files=["res://.godot/imported/baguette_Baguette1_nmap.png-0d3b4b95ea42350b2fa7cce6219993bd.s3tc.ctex"]
 
 [params]
 

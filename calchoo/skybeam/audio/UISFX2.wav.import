@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://celvaktcmmlpo"
-path="res://.godot/imported/UISFX2.wav-c75df73643a9496aa09ec8856399a3a8.sample"
+path="res://.godot/imported/UISFX2.wav-3e3952aa94b7a1ff44490fb224f99863.sample"
 
 [deps]
 
-source_file="res://dev/skybeam/audio/UISFX2.wav"
-dest_files=["res://.godot/imported/UISFX2.wav-c75df73643a9496aa09ec8856399a3a8.sample"]
+source_file="res://calchoo/skybeam/audio/UISFX2.wav"
+dest_files=["res://.godot/imported/UISFX2.wav-3e3952aa94b7a1ff44490fb224f99863.sample"]
 
 [params]
 

@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ntgl4x5dclke"
-path.s3tc="res://.godot/imported/7-11_Ringmesh1_diff.png-f76c92493ed8ca104e3f2f93060f718f.s3tc.ctex"
+path.s3tc="res://.godot/imported/7-11_Ringmesh1_diff.png-7a6106a0ca5d1e76f47deffe02b90b30.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://dev/sebeneleben/assets/sebeneleben/7-11_Ringmesh1_diff.png"
-dest_files=["res://.godot/imported/7-11_Ringmesh1_diff.png-f76c92493ed8ca104e3f2f93060f718f.s3tc.ctex"]
+source_file="res://calchoo/sebeneleben/assets/sebeneleben/7-11_Ringmesh1_diff.png"
+dest_files=["res://.godot/imported/7-11_Ringmesh1_diff.png-7a6106a0ca5d1e76f47deffe02b90b30.s3tc.ctex"]
 
 [params]
 

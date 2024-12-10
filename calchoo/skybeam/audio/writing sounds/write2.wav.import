@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://qeut5mixwl6y"
-path="res://.godot/imported/write2.wav-d497296643c7660f938a6e5732d5a3bb.sample"
+path="res://.godot/imported/write2.wav-80f1a243b35ab189eebffe33705f134b.sample"
 
 [deps]
 
-source_file="res://dev/skybeam/audio/writing sounds/write2.wav"
-dest_files=["res://.godot/imported/write2.wav-d497296643c7660f938a6e5732d5a3bb.sample"]
+source_file="res://calchoo/skybeam/audio/writing sounds/write2.wav"
+dest_files=["res://.godot/imported/write2.wav-80f1a243b35ab189eebffe33705f134b.sample"]
 
 [params]
 

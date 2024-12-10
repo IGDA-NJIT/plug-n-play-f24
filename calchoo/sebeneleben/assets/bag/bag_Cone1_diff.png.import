@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b1lecf8eciud7"
-path.s3tc="res://.godot/imported/bag_Cone1_diff.png-1ec1879b39b6f3d84f93cfdbc557abd1.s3tc.ctex"
+path.s3tc="res://.godot/imported/bag_Cone1_diff.png-9deac0efd17d77506d870b262d1d6bac.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://dev/sebeneleben/assets/bag/bag_Cone1_diff.png"
-dest_files=["res://.godot/imported/bag_Cone1_diff.png-1ec1879b39b6f3d84f93cfdbc557abd1.s3tc.ctex"]
+source_file="res://calchoo/sebeneleben/assets/bag/bag_Cone1_diff.png"
+dest_files=["res://.godot/imported/bag_Cone1_diff.png-9deac0efd17d77506d870b262d1d6bac.s3tc.ctex"]
 
 [params]
 

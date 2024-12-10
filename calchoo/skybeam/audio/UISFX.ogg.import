@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://clhn21tq362lj"
-path="res://.godot/imported/UISFX.ogg-95769240c334f368b2c9e91caf387878.oggvorbisstr"
+path="res://.godot/imported/UISFX.ogg-5458ae72c63b3ffb5d4c85a5a419eb11.oggvorbisstr"
 
 [deps]
 
-source_file="res://dev/skybeam/audio/UISFX.ogg"
-dest_files=["res://.godot/imported/UISFX.ogg-95769240c334f368b2c9e91caf387878.oggvorbisstr"]
+source_file="res://calchoo/skybeam/audio/UISFX.ogg"
+dest_files=["res://.godot/imported/UISFX.ogg-5458ae72c63b3ffb5d4c85a5a419eb11.oggvorbisstr"]
 
 [params]
 

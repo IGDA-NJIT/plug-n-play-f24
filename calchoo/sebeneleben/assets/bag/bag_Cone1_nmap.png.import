@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b2pj0ta6y5gsh"
-path.s3tc="res://.godot/imported/bag_Cone1_nmap.png-d0a948762999bdb890e99d3e559483df.s3tc.ctex"
+path.s3tc="res://.godot/imported/bag_Cone1_nmap.png-5b785b45081c50fdec4160925d82e3c4.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://dev/sebeneleben/assets/bag/bag_Cone1_nmap.png"
-dest_files=["res://.godot/imported/bag_Cone1_nmap.png-d0a948762999bdb890e99d3e559483df.s3tc.ctex"]
+source_file="res://calchoo/sebeneleben/assets/bag/bag_Cone1_nmap.png"
+dest_files=["res://.godot/imported/bag_Cone1_nmap.png-5b785b45081c50fdec4160925d82e3c4.s3tc.ctex"]
 
 [params]
 

@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://b2upk3i5lfwxu"
-path="res://.godot/imported/calvin-scribble-7.mp3-85e46d50ca16d4805254412f1ee9edac.mp3str"
+path="res://.godot/imported/calvin-scribble-7.mp3-78d279d7f9757f72be7780d9d651b6ce.mp3str"
 
 [deps]
 
-source_file="res://dev/skybeam/audio/writing sounds/calvin-scribble-7.mp3"
-dest_files=["res://.godot/imported/calvin-scribble-7.mp3-85e46d50ca16d4805254412f1ee9edac.mp3str"]
+source_file="res://calchoo/skybeam/audio/writing sounds/calvin-scribble-7.mp3"
+dest_files=["res://.godot/imported/calvin-scribble-7.mp3-78d279d7f9757f72be7780d9d651b6ce.mp3str"]
 
 [params]
 

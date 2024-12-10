@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://xiwjsff7alo"
-path.s3tc="res://.godot/imported/stand_Part1_nmap.png-4dcdd86c89b1eaa178eb03085aebaef0.s3tc.ctex"
+path.s3tc="res://.godot/imported/stand_Part1_nmap.png-24b5b14fbf997267881d249a1ccd2d3c.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://dev/francedefance/assets/models/stand/stand_Part1_nmap.png"
-dest_files=["res://.godot/imported/stand_Part1_nmap.png-4dcdd86c89b1eaa178eb03085aebaef0.s3tc.ctex"]
+source_file="res://calchoo/francedefance/assets/models/stand/stand_Part1_nmap.png"
+dest_files=["res://.godot/imported/stand_Part1_nmap.png-24b5b14fbf997267881d249a1ccd2d3c.s3tc.ctex"]
 
 [params]
 

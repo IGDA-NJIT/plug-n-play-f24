@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://dxtm1qrmci6r8"
-path="res://.godot/imported/shield_break.mp3-048149db9977fa2619e6f85f0ab270f7.mp3str"
+path="res://.godot/imported/shield_break.mp3-9a92183efadb47d6d2f943519259728d.mp3str"
 
 [deps]
 
-source_file="res://dev/sounds/shield_break.mp3"
-dest_files=["res://.godot/imported/shield_break.mp3-048149db9977fa2619e6f85f0ab270f7.mp3str"]
+source_file="res://thatmysticshadow/sounds/shield_break.mp3"
+dest_files=["res://.godot/imported/shield_break.mp3-9a92183efadb47d6d2f943519259728d.mp3str"]
 
 [params]
 

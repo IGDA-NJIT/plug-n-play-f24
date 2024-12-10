@@ -4,12 +4,11 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cyx7yrecrvslc"
-path="res://.godot/imported/grass.obj-6a5bcf368b8710017d7e310c799ec0ea.scn"
+valid=false
 
 [deps]
 
-source_file="res://dev/skybeam/grass/grass.obj"
-dest_files=["res://.godot/imported/grass.obj-6a5bcf368b8710017d7e310c799ec0ea.scn"]
+source_file="res://calchoo/skybeam/grass/grass.obj"
 
 [params]
 

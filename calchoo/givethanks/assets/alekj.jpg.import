@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://djupv7yxowgrd"
-path="res://.godot/imported/alekj.jpg-976740a56678838699747874478e9603.ctex"
+path="res://.godot/imported/alekj.jpg-5703cb76b550af2d33480a90854fa2eb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://dev/givethanks/assets/alekj.jpg"
-dest_files=["res://.godot/imported/alekj.jpg-976740a56678838699747874478e9603.ctex"]
+source_file="res://calchoo/givethanks/assets/alekj.jpg"
+dest_files=["res://.godot/imported/alekj.jpg-5703cb76b550af2d33480a90854fa2eb.ctex"]
 
 [params]
 

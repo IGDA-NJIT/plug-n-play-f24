@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://c8g8tfn5ntsaa"
-path="res://.godot/imported/Nice Shot! - Wii Sports Golf Announcer Voice.mp3-f10a141de933788dc49dd5d2286c51e3.mp3str"
+path="res://.godot/imported/Nice Shot! - Wii Sports Golf Announcer Voice.mp3-881298c735747242344a40d3da562744.mp3str"
 
 [deps]
 
-source_file="res://dev/givethanks/audio/Nice Shot! - Wii Sports Golf Announcer Voice.mp3"
-dest_files=["res://.godot/imported/Nice Shot! - Wii Sports Golf Announcer Voice.mp3-f10a141de933788dc49dd5d2286c51e3.mp3str"]
+source_file="res://calchoo/givethanks/audio/Nice Shot! - Wii Sports Golf Announcer Voice.mp3"
+dest_files=["res://.godot/imported/Nice Shot! - Wii Sports Golf Announcer Voice.mp3-881298c735747242344a40d3da562744.mp3str"]
 
 [params]
 

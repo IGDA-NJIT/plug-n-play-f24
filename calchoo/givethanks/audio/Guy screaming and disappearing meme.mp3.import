@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://omhgg3o3pimw"
-path="res://.godot/imported/Guy screaming and disappearing meme.mp3-55d9414752e83174b507d82d89aa9b53.mp3str"
+path="res://.godot/imported/Guy screaming and disappearing meme.mp3-800d337cc0323bf6495c255d11d4fc8e.mp3str"
 
 [deps]
 
-source_file="res://dev/givethanks/audio/Guy screaming and disappearing meme.mp3"
-dest_files=["res://.godot/imported/Guy screaming and disappearing meme.mp3-55d9414752e83174b507d82d89aa9b53.mp3str"]
+source_file="res://calchoo/givethanks/audio/Guy screaming and disappearing meme.mp3"
+dest_files=["res://.godot/imported/Guy screaming and disappearing meme.mp3-800d337cc0323bf6495c255d11d4fc8e.mp3str"]
 
 [params]
 

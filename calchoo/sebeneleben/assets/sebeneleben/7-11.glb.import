@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cx5uiuvi2cqsa"
-path="res://.godot/imported/7-11.glb-ba83e5568ce91dd03b62a3db8d6555cf.scn"
+path="res://.godot/imported/7-11.glb-45d279a772904992483c4550e6dc5f3b.scn"
 
 [deps]
 
-source_file="res://dev/sebeneleben/assets/sebeneleben/7-11.glb"
-dest_files=["res://.godot/imported/7-11.glb-ba83e5568ce91dd03b62a3db8d6555cf.scn"]
+source_file="res://calchoo/sebeneleben/assets/sebeneleben/7-11.glb"
+dest_files=["res://.godot/imported/7-11.glb-45d279a772904992483c4550e6dc5f3b.scn"]
 
 [params]
 

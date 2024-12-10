@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://70kkv8o3vxn8"
-path.s3tc="res://.godot/imported/Face1_diff.png-4847774277c85729f10713e0c778d71d.s3tc.ctex"
+path.s3tc="res://.godot/imported/Face1_diff.png-2518597e340b93fd70577669bed224a6.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://dev/sebeneleben/assets/miku/Face1_diff.png"
-dest_files=["res://.godot/imported/Face1_diff.png-4847774277c85729f10713e0c778d71d.s3tc.ctex"]
+source_file="res://calchoo/sebeneleben/assets/miku/Face1_diff.png"
+dest_files=["res://.godot/imported/Face1_diff.png-2518597e340b93fd70577669bed224a6.s3tc.ctex"]
 
 [params]
 

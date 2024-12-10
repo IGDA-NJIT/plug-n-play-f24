@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cpxgngo5sg4hs"
-path.s3tc="res://.godot/imported/chair_Part1_nmap.png-8bb37842b18ae20e61a4aa67bd44d10f.s3tc.ctex"
+path.s3tc="res://.godot/imported/chair_Part1_nmap.png-144f2b1e88b5c5a1d6e2d5101237a91f.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://dev/skybeam/assets/chair/chair_Part1_nmap.png"
-dest_files=["res://.godot/imported/chair_Part1_nmap.png-8bb37842b18ae20e61a4aa67bd44d10f.s3tc.ctex"]
+source_file="res://calchoo/skybeam/assets/chair/chair_Part1_nmap.png"
+dest_files=["res://.godot/imported/chair_Part1_nmap.png-144f2b1e88b5c5a1d6e2d5101237a91f.s3tc.ctex"]
 
 [params]
 

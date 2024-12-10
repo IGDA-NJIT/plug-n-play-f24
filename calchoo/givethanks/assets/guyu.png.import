@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://duewrtsp0xvrv"
-path="res://.godot/imported/guyu.png-4af5dd824699d366b2e8f44c9281bb61.ctex"
+path="res://.godot/imported/guyu.png-0b3c32699abecf1b9a75f1c08dd5fd36.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://dev/givethanks/assets/guyu.png"
-dest_files=["res://.godot/imported/guyu.png-4af5dd824699d366b2e8f44c9281bb61.ctex"]
+source_file="res://calchoo/givethanks/assets/guyu.png"
+dest_files=["res://.godot/imported/guyu.png-0b3c32699abecf1b9a75f1c08dd5fd36.ctex"]
 
 [params]
 

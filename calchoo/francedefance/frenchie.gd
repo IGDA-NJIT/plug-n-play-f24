@@ -24,13 +24,13 @@ func _process(delta: float) -> void:
 			picked = true
 			var ow = randi()%3
 			if ow == 0:
-				$yell.set_stream(load("res://dev/francedefance/audio/coward.mp3"))
+				$yell.set_stream(load("res://calchoo/francedefance/audio/coward.mp3"))
 				$yell.play()
 			elif ow == 1:
-				$yell.set_stream(load("res://dev/francedefance/audio/disgust.mp3"))
+				$yell.set_stream(load("res://calchoo/francedefance/audio/disgust.mp3"))
 				$yell.play()
 			elif ow == 2:
-				$yell.set_stream(load("res://dev/francedefance/audio/usuck.mp3"))
+				$yell.set_stream(load("res://calchoo/francedefance/audio/usuck.mp3"))
 				$yell.play()
 			
 	if Input.is_action_pressed("player_input_2"):
@@ -42,10 +42,10 @@ func _process(delta: float) -> void:
 				self.linear_velocity = Vector2(2000,-1000)
 			var ow = randi()%2
 			if ow == 0:
-				$yell.set_stream(load("res://dev/francedefance/audio/spyscream2.mp3"))
+				$yell.set_stream(load("res://calchoo/francedefance/audio/spyscream2.mp3"))
 				$yell.play()
 			elif ow == 1:
-				$yell.set_stream(load("res://dev/francedefance/audio/spyscream1.ogg"))
+				$yell.set_stream(load("res://calchoo/francedefance/audio/spyscream1.ogg"))
 				$yell.play()
 			self.set_collision_mask_value(2,false)
 			self.set_collision_mask_value(1,true)

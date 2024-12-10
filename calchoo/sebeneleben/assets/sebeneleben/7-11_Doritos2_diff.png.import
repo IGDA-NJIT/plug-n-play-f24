@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ch020p2ou72h8"
-path.s3tc="res://.godot/imported/7-11_Doritos2_diff.png-46f2ce8761f42f3f3bca2d2f8bc722e0.s3tc.ctex"
+path.s3tc="res://.godot/imported/7-11_Doritos2_diff.png-1f0e6ad3d11fab9b06c2c9960e4ec04f.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://dev/sebeneleben/assets/sebeneleben/7-11_Doritos2_diff.png"
-dest_files=["res://.godot/imported/7-11_Doritos2_diff.png-46f2ce8761f42f3f3bca2d2f8bc722e0.s3tc.ctex"]
+source_file="res://calchoo/sebeneleben/assets/sebeneleben/7-11_Doritos2_diff.png"
+dest_files=["res://.godot/imported/7-11_Doritos2_diff.png-1f0e6ad3d11fab9b06c2c9960e4ec04f.s3tc.ctex"]
 
 [params]
 

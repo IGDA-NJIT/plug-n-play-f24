@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://dfln61ycvmdrw"
-path="res://.godot/imported/tyler1 scream.mp3-c037ac1b343bf772e172154be3858325.mp3str"
+path="res://.godot/imported/tyler1 scream.mp3-c6662586b4475628d02acf307dccb1b1.mp3str"
 
 [deps]
 
-source_file="res://dev/givethanks/audio/tyler1 scream.mp3"
-dest_files=["res://.godot/imported/tyler1 scream.mp3-c037ac1b343bf772e172154be3858325.mp3str"]
+source_file="res://calchoo/givethanks/audio/tyler1 scream.mp3"
+dest_files=["res://.godot/imported/tyler1 scream.mp3-c6662586b4475628d02acf307dccb1b1.mp3str"]
 
 [params]
 

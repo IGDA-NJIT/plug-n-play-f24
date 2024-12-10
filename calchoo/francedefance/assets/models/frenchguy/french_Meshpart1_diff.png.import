@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dkgd86ii8fthk"
-path.s3tc="res://.godot/imported/french_Meshpart1_diff.png-09a1648ccb901702c8b19ee74a0dec6c.s3tc.ctex"
+path.s3tc="res://.godot/imported/french_Meshpart1_diff.png-383a52aed60e16caf8788e70b52849b4.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://dev/francedefance/assets/models/frenchguy/french_Meshpart1_diff.png"
-dest_files=["res://.godot/imported/french_Meshpart1_diff.png-09a1648ccb901702c8b19ee74a0dec6c.s3tc.ctex"]
+source_file="res://calchoo/francedefance/assets/models/frenchguy/french_Meshpart1_diff.png"
+dest_files=["res://.godot/imported/french_Meshpart1_diff.png-383a52aed60e16caf8788e70b52849b4.s3tc.ctex"]
 
 [params]
 

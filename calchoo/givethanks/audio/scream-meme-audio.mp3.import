@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://b5gn31xt485k0"
-path="res://.godot/imported/scream-meme-audio.mp3-a40bddcea8d4adcdec79cd1a2c79c24d.mp3str"
+path="res://.godot/imported/scream-meme-audio.mp3-95075ff2db8e2106fcf98cd5a03e53f0.mp3str"
 
 [deps]
 
-source_file="res://dev/givethanks/audio/scream-meme-audio.mp3"
-dest_files=["res://.godot/imported/scream-meme-audio.mp3-a40bddcea8d4adcdec79cd1a2c79c24d.mp3str"]
+source_file="res://calchoo/givethanks/audio/scream-meme-audio.mp3"
+dest_files=["res://.godot/imported/scream-meme-audio.mp3-95075ff2db8e2106fcf98cd5a03e53f0.mp3str"]
 
 [params]
 
