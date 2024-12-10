@@ -78,6 +78,7 @@ offset_bottom = 1e+11
 color = Color(0.755199, 0.920855, 1, 1)
 
 [node name="dailog" type="CanvasLayer" parent="."]
+layer = 0
 
 [node name="Control" type="Control" parent="dailog"]
 layout_mode = 3
@@ -102,6 +103,7 @@ hide_portrait = true
 custom_effects = Array[RichTextEffect]([SubResource("RichTextEffect_yx6td"), SubResource("RichTextEffect_s4sxb"), SubResource("RichTextEffect_hn6ma")])
 
 [node name="UI\'" type="CanvasLayer" parent="."]
+layer = 0
 
 [node name="time" type="Label" parent="UI\'"]
 offset_left = 12.0
@@ -143,6 +145,7 @@ layout_mode = 2
 [node name="PauseMenu" parent="." instance=ExtResource("2_xuham")]
 unique_name_in_owner = true
 editor_description = "This is the pause menu object instance. You shouldn't need to touch this at all so DO NOT TOUCH THIS."
+layer = 2
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 editor_description = "This is a TileMapLayer, each TileMapLayer can have its own sets of tiles at different z layers (so certain layers appear in front of behind of others). I've provided a bunch of tiles for you to experiment with. The only really mandatory thing to put into the level is the Level End Marker which can be placed using this tilemap via the LevelElements tileset in the TileMap settings."
