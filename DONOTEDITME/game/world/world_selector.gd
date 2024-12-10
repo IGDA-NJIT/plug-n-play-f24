@@ -75,18 +75,18 @@ func _process(delta: float) -> void:
 		elif (Input.is_action_just_pressed("player_right")):
 			changeable = false
 			
-			var rr = cartridge_models[change_index(2)]
+			var ll = cartridge_models[change_index(-2)]
 			var r = cartridge_models[change_index(1)]
 			var c = cartridge_models[index]
 			var l = cartridge_models[change_index(-1)]
-			rr.position = offscreen_right_pos.global_position
-			index = change_index(1)
+			ll.position = offscreen_left_pos.global_position
+			index = change_index(-1)
 			
 			curr_tween = get_tree().create_tween()
-			curr_tween.tween_property(rr, "position", right_pos.global_position, transition_time).set_trans(Tween.TRANS_SINE)
-			curr_tween.parallel().tween_property(r, "position", center_pos.global_position, transition_time).set_trans(Tween.TRANS_SINE)
-			curr_tween.parallel().tween_property(c, "position", left_pos.global_position, transition_time).set_trans(Tween.TRANS_SINE)
-			curr_tween.parallel().tween_property(l, "position", offscreen_left_pos.global_position, transition_time).set_trans(Tween.TRANS_SINE)
+			curr_tween.tween_property(ll, "position", left_pos.global_position, transition_time).set_trans(Tween.TRANS_SINE)
+			curr_tween.parallel().tween_property(r, "position", offscreen_right_pos.global_position, transition_time).set_trans(Tween.TRANS_SINE)
+			curr_tween.parallel().tween_property(c, "position", right_pos.global_position, transition_time).set_trans(Tween.TRANS_SINE)
+			curr_tween.parallel().tween_property(l, "position", center_pos.global_position, transition_time).set_trans(Tween.TRANS_SINE)
 			curr_tween.finished.connect(_on_tween_end)
 			curr_tween.play()
 			
