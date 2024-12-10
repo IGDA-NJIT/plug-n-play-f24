@@ -14,6 +14,9 @@ const OFF_POS = Vector3(0, 0, 20)
 @export_category("Transition Config")
 @export var transition_time: float = 1
 
+@export_category("Level References")
+@export var levels: Array[Level]
+
 var index = 0
 var changeable = true
 var curr_tween: Tween
@@ -31,8 +34,6 @@ func change_index(d: int) -> int:
 		d -= 1
 		idx += 1
 		if idx >= len(cartridge_models):
-			print(idx)
-			print("Is greater")
 			idx = 0
 	
 	print(idx)
@@ -56,8 +57,6 @@ func _process(delta: float) -> void:
 	if changeable:
 		if (Input.is_action_just_pressed("player_left")):
 			changeable = false
-			print(change_index(2))
-			print("two ahead")
 			var rr = cartridge_models[change_index(2)]
 			var r = cartridge_models[change_index(1)]
 			var c = cartridge_models[index]
@@ -90,6 +89,9 @@ func _process(delta: float) -> void:
 			curr_tween.parallel().tween_property(l, "position", offscreen_left_pos.global_position, transition_time).set_trans(Tween.TRANS_SINE)
 			curr_tween.finished.connect(_on_tween_end)
 			curr_tween.play()
+			
+		elif (Input.is_action_just_pressed("player_input_1")):
+			level_loader.load_level(index)
 
 func _on_tween_end():
 	curr_tween.finished.disconnect(_on_tween_end)

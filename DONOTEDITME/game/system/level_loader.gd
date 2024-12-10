@@ -53,7 +53,11 @@ func _on_animation_finished(anim_name):
 			var _reload = get_tree().reload_current_scene()
 			reloading = false
 		elif loading:
-			var level = level_array[level_loaded].instantiate()
+			var level = null
+			if level_loaded < 0:
+				level = world_map_scene.instantiate()
+			else:
+				level = level_array[level_loaded].instantiate()
 			get_tree().current_scene.queue_free()
 			level.tree_entered.connect(_on_enter_tree.bind(level))
 			get_tree().root.call_deferred("add_child", level)
@@ -79,3 +83,10 @@ func _on_enter_tree(scene):
 func _on_scene_loaded(level: Level):
 	get_tree().paused = false
 	animation_player.play("OPEN")
+
+
+func load_selector():
+	get_tree().paused = true
+	loading = true
+	level_loaded = -1
+	animation_player.play("CLOSE")

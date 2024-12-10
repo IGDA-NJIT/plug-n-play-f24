@@ -1,5 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://cvncuctruo4dl"]
+[gd_scene load_steps=9 format=3 uid="uid://cvncuctruo4dl"]
 
+[ext_resource type="Script" path="res://DONOTEDITME/game/system/level.gd" id="1_8u4nb"]
 [ext_resource type="PackedScene" uid="uid://b5fsvum1kt1ru" path="res://DONOTEDITME/assets/models/cartridge_skybeam.glb" id="1_hygvq"]
 [ext_resource type="PackedScene" uid="uid://bt2c3hjo55so0" path="res://DONOTEDITME/game/world/cartridge_model.tscn" id="1_kcaf1"]
 [ext_resource type="PackedScene" uid="uid://dx7i2p5h26s3w" path="res://DONOTEDITME/assets/models/cartridge_francedefance.glb" id="2_uw302"]
@@ -11,6 +12,7 @@
 viewport_path = NodePath("SubViewport")
 
 [node name="LevelSelector" type="Node2D"]
+script = ExtResource("1_8u4nb")
 
 [node name="SubViewport" type="SubViewport" parent="."]
 transparent_bg = true

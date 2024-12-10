@@ -29,7 +29,7 @@ func _on_settings_pressed():
 
 
 func _on_play_pressed():
-	level_loader.load_level(0)
+	level_loader.load_selector()
 
 
 func _on_quit_pressed():
