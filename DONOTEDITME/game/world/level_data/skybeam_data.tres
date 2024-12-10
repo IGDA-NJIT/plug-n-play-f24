@@ -1,0 +1,8 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://dpael2gy58fxv"]
+
+[ext_resource type="Script" path="res://DONOTEDITME/game/world/level_data.gd" id="1_jwxvi"]
+
+[resource]
+script = ExtResource("1_jwxvi")
+level_name = ""
+level_description = ""

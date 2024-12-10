@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cvncuctruo4dl"]
+[gd_scene load_steps=12 format=3 uid="uid://cvncuctruo4dl"]
 
 [ext_resource type="Script" path="res://DONOTEDITME/game/system/level.gd" id="1_8u4nb"]
 [ext_resource type="PackedScene" uid="uid://b5fsvum1kt1ru" path="res://DONOTEDITME/assets/models/cartridge_skybeam.glb" id="1_hygvq"]
@@ -7,19 +7,29 @@
 [ext_resource type="PackedScene" uid="uid://um6koc64pdlh" path="res://DONOTEDITME/assets/models/cartridge_sebeneleben.glb" id="3_lcwta"]
 [ext_resource type="PackedScene" uid="uid://cwrsivolan0eh" path="res://DONOTEDITME/assets/models/cartridge_givethanks.glb" id="4_vp61d"]
 [ext_resource type="Script" path="res://DONOTEDITME/game/world/world_selector.gd" id="6_an3ix"]
+[ext_resource type="Theme" uid="uid://dicrejglob83v" path="res://DONOTEDITME/assets/menu/ui_theme.tres" id="8_3n0ot"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_kl26e"]
 viewport_path = NodePath("SubViewport")
+
+[sub_resource type="LabelSettings" id="LabelSettings_0tt30"]
+line_spacing = 15.0
+font_size = 48
+outline_size = 4
+
+[sub_resource type="LabelSettings" id="LabelSettings_bi684"]
+font_size = 24
 
 [node name="LevelSelector" type="Node2D"]
 script = ExtResource("1_8u4nb")
 
 [node name="SubViewport" type="SubViewport" parent="."]
 transparent_bg = true
-size = Vector2i(576, 384)
+size = Vector2i(507, 338)
 
 [node name="Camera3D" type="Camera3D" parent="SubViewport"]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4.84581, 0, 0)
+fov = 70.0
 size = 4.85455
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="SubViewport"]
@@ -94,13 +104,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -8)
 [node name="OffscreenRightPos" type="Node3D" parent="SubViewport"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, -30)
 
-[node name="TextureRect" type="TextureRect" parent="."]
-offset_left = 61.0
-offset_top = 45.0
-offset_right = 637.0
-offset_bottom = 429.0
-texture = SubResource("ViewportTexture_kl26e")
-
 [node name="WorldSelector" type="Node" parent="." node_paths=PackedStringArray("cartridge_models", "left_pos", "right_pos", "center_pos", "offscreen_left_pos", "offscreen_right_pos")]
 script = ExtResource("6_an3ix")
 cartridge_models = [NodePath("../SubViewport/FranceDefanceCart"), NodePath("../SubViewport/SebenElebenCart"), NodePath("../SubViewport/GiveThanksCart"), NodePath("../SubViewport/SkybeamCart"), NodePath("../SubViewport/GravityCart")]
@@ -109,6 +112,54 @@ right_pos = NodePath("../SubViewport/RightPos")
 center_pos = NodePath("../SubViewport/CenterPos")
 offscreen_left_pos = NodePath("../SubViewport/OffscreenLeftPos")
 offscreen_right_pos = NodePath("../SubViewport/OffscreenRightPos")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+offset_left = 59.0
+offset_top = 66.0
+offset_right = 520.0
+offset_bottom = 373.0
+texture = SubResource("ViewportTexture_kl26e")
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -578.0
+offset_top = 70.0
+offset_right = -56.0
+offset_bottom = 363.0
+grow_horizontal = 0
+color = Color(0, 0, 0, 1)
+
+[node name="Label2" type="Label" parent="CanvasLayer"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -562.0
+offset_top = 76.0
+offset_right = -58.0
+offset_bottom = 286.0
+grow_horizontal = 0
+theme = ExtResource("8_3n0ot")
+text = "TITLE"
+label_settings = SubResource("LabelSettings_0tt30")
+autowrap_mode = 2
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -558.0
+offset_top = 144.0
+offset_right = -54.0
+offset_bottom = 354.0
+grow_horizontal = 0
+theme = ExtResource("8_3n0ot")
+text = "Who's been drawing dicks? Who's been drawing dicks? Who's been drawing dicks? Who's been drawing dicks? Who's been drawing dicks? Who's been drawing dicks? Who's been drawing dicks? Who's been drawing dicks? Who's been drawing dicks?"
+label_settings = SubResource("LabelSettings_bi684")
+autowrap_mode = 2
 
 [editable path="SubViewport/FranceDefanceCart"]
 [editable path="SubViewport/GiveThanksCart"]
