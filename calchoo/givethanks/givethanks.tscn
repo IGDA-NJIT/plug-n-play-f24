@@ -117,11 +117,13 @@ texture = ExtResource("4_ty78e")
 [node name="scream" type="AudioStreamPlayer2D" parent="subject"]
 unique_name_in_owner = true
 max_polyphony = 10
+bus = &"SFX"
 
 [node name="intro" type="AudioStreamPlayer2D" parent="subject"]
 unique_name_in_owner = true
 position = Vector2(-646.667, -2113.33)
 scale = Vector2(3.33333, 3.33333)
+bus = &"SFX"
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 editor_description = "This is a TileMapLayer, each TileMapLayer can have its own sets of tiles at different z layers (so certain layers appear in front of behind of others). I've provided a bunch of tiles for you to experiment with. The only really mandatory thing to put into the level is the Level End Marker which can be placed using this tilemap via the LevelElements tileset in the TileMap settings."

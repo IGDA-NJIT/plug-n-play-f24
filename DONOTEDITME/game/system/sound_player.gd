@@ -14,6 +14,8 @@ const DEFAULT_MUSIC_VOL: float = 0.5
 @export var sfx_min_vol: float = -10
 @export var music_max_vol: float = 0
 @export var music_min_vol: float = -20
+@export var master_max_vol: float = 0
+@export var master_min_vol: float = -20
 
 @onready var sound_player = preload("res://DONOTEDITME/game/system/sound_effect.tscn")
 @onready var music_player: AudioStreamPlayer = $SongPlayer
@@ -41,7 +43,7 @@ func play_sound(clip: AudioStream, position: Vector2):
 	player.finished.connect(_on_effect_finished.bind(player))
 	
 	# Compute the sfx volume from the settings
-	player.volume_db = compute_sfx_volume()
+	#player.volume_db = compute_sfx_volume()
 	
 	sfx_list.append(player)
 	get_tree().root.add_child(player)
@@ -58,13 +60,19 @@ func _on_effect_finished(player: AudioStreamPlayer2D):
 func compute_sfx_volume() -> float:
 	if sfx_curr_vol == 0 || master_curr_vol == 0:
 		return -20
-	return (sfx_max_vol - sfx_min_vol) * sfx_curr_vol * master_curr_vol + sfx_min_vol
+	return (sfx_max_vol - sfx_min_vol) * sfx_curr_vol + sfx_min_vol
 
 ## NO NEED TO CALL THIS METHOD
 func compute_music_volume() -> float:
 	if music_curr_vol == 0 || master_curr_vol == 0:
 		return -40
-	return (music_max_vol - music_min_vol) * music_curr_vol * master_curr_vol + music_min_vol
+	return (music_max_vol - music_min_vol) * music_curr_vol + music_min_vol
+	
+## NO NEED TO CALL THIS METHOD
+func compute_master_volume() -> float:
+	if master_curr_vol == 0:
+		return -40
+	return (master_max_vol - master_min_vol) * master_curr_vol + master_min_vol
 
 
 ## NO NEED TO CALL THIS METHOD. This is just to update the sound values when the pause menu is modified
@@ -74,17 +82,23 @@ func update_sound(settings: PauseMenu):
 	music_curr_vol = settings.get_music_volume()
 	
 	var sfx_computed_volume = compute_sfx_volume()
-	for sfx in sfx_list:
-		sfx.volume_db = sfx_computed_volume
-		
-	music_player.volume_db = compute_music_volume()
+	var music_computed_volume = compute_music_volume()
+	var master_computed_volume = compute_master_volume()
+	
+	var sfx_idx = AudioServer.get_bus_index("SFX")
+	var music_idx = AudioServer.get_bus_index("Music")
+	var master_idx = AudioServer.get_bus_index("Master")
+	
+	AudioServer.set_bus_volume_db(sfx_idx, sfx_computed_volume)
+	AudioServer.set_bus_volume_db(music_idx, music_computed_volume)
+	AudioServer.set_bus_volume_db(master_idx, master_computed_volume)
 
 # Playing Songs
 
 ##  When a level is loaded this is called. DO NOT CALL THIS
 func load_music_stream(song: AudioStream) -> void:
 	music_fading = false
-	music_player.volume_db = compute_music_volume()
+	music_player.volume_db = 0
 	music_player.stream = song
 	music_player.play()
 

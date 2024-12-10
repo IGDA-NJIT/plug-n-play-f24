@@ -3,3 +3,4 @@
 [node name="SoundEffect" type="AudioStreamPlayer2D"]
 process_mode = 3
 volume_db = -10.0
+bus = &"SFX"

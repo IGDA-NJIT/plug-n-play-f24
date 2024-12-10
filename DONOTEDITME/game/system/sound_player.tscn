@@ -10,3 +10,4 @@ sfx_min_vol = 0.0
 
 [node name="SongPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_o0x4m")
+bus = &"Music"

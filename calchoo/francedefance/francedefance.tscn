@@ -102,6 +102,7 @@ script = ExtResource("2_u4v2n")
 
 [node name="sf" type="AudioStreamPlayer" parent="diaready"]
 stream = ExtResource("3_smifv")
+bus = &"SFX"
 
 [node name="ColorRect" type="ColorRect" parent="."]
 z_index = -10
@@ -260,6 +261,7 @@ polygon = PackedVector2Array(-6, -20, -6, -11, -33, -11, -33, -7, -6, -6, -7, 44
 
 [node name="yell" type="AudioStreamPlayer2D" parent="frenchie"]
 stream = ExtResource("19_17f7d")
+bus = &"SFX"
 
 [node name="frenchie2" type="RigidBody2D" parent="."]
 position = Vector2(627, 490)
@@ -288,6 +290,7 @@ polygon = PackedVector2Array(-6, -20, -6, -11, -33, -11, -33, -7, -6, -6, -7, 44
 
 [node name="yell" type="AudioStreamPlayer2D" parent="frenchie2"]
 stream = ExtResource("19_17f7d")
+bus = &"SFX"
 
 [node name="frenchie3" type="RigidBody2D" parent="."]
 position = Vector2(892, 413)
@@ -316,6 +319,7 @@ polygon = PackedVector2Array(-6, -20, -6, -11, -33, -11, -33, -7, -6, -6, -7, 44
 
 [node name="yell" type="AudioStreamPlayer2D" parent="frenchie3"]
 stream = ExtResource("19_17f7d")
+bus = &"SFX"
 
 [node name="frenchie4" type="RigidBody2D" parent="."]
 position = Vector2(999, 343)
@@ -344,6 +348,7 @@ polygon = PackedVector2Array(-6, -20, -6, -11, -33, -11, -33, -7, -6, -6, -7, 44
 
 [node name="yell" type="AudioStreamPlayer2D" parent="frenchie4"]
 stream = ExtResource("19_17f7d")
+bus = &"SFX"
 
 [node name="frenchie5" type="RigidBody2D" parent="."]
 position = Vector2(323, 301)
@@ -371,6 +376,7 @@ position = Vector2(0, -1)
 polygon = PackedVector2Array(-6, -20, -6, -11, -33, -11, -33, -7, -6, -6, -7, 44, 7, 44, 7, -6, 35, -5, 35, -10, 8, -11, 8, -20, 1, -27)
 
 [node name="yell" type="AudioStreamPlayer2D" parent="frenchie5"]
+bus = &"SFX"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(79, 479)

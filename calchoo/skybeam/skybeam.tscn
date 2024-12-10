@@ -350,10 +350,12 @@ endoflevel = ExtResource("7_3us7a")
 [node name="bgm" type="AudioStreamPlayer" parent="RootNode"]
 stream = ExtResource("7_r0j0q")
 volume_db = -10.0
+bus = &"Music"
 
 [node name="bgm3" type="AudioStreamPlayer" parent="RootNode"]
 stream = ExtResource("8_fkosa")
 volume_db = 10.0
+bus = &"Music"
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="RootNode"]
 environment = SubResource("Environment_25ph3")
@@ -408,6 +410,7 @@ omni_range = 3.0
 [node name="sfx" type="AudioStreamPlayer" parent="RootNode"]
 stream = ExtResource("15_ddh3k")
 volume_db = -5.0
+bus = &"SFX"
 
 [node name="SubViewport" type="SubViewport" parent="."]
 size = Vector2i(1600, 1600)
