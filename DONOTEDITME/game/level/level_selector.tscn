@@ -90,6 +90,12 @@ visible = false
 
 [node name="cartridge_skybeam" parent="SubViewport/GravityCart/CartridgeModel" index="1" instance=ExtResource("1_hygvq")]
 
+[node name="Tutorial" parent="SubViewport" instance=ExtResource("1_kcaf1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -6.79669)
+
+[node name="CartridgeModel" parent="SubViewport/Tutorial" index="0"]
+transform = Transform3D(1, 0, 0, 0, 0.97437, 0.224951, 0, -0.224951, 0.97437, 0, 0, 0)
+
 [node name="CenterPos" type="Node3D" parent="SubViewport"]
 
 [node name="LeftPos" type="Node3D" parent="SubViewport"]
@@ -106,7 +112,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, -30)
 
 [node name="WorldSelector" type="Node" parent="." node_paths=PackedStringArray("cartridge_models", "left_pos", "right_pos", "center_pos", "offscreen_left_pos", "offscreen_right_pos")]
 script = ExtResource("6_an3ix")
-cartridge_models = [NodePath("../SubViewport/FranceDefanceCart"), NodePath("../SubViewport/SebenElebenCart"), NodePath("../SubViewport/GiveThanksCart"), NodePath("../SubViewport/SkybeamCart"), NodePath("../SubViewport/GravityCart")]
+cartridge_models = [NodePath("../SubViewport/FranceDefanceCart"), NodePath("../SubViewport/SebenElebenCart"), NodePath("../SubViewport/GiveThanksCart"), NodePath("../SubViewport/SkybeamCart"), NodePath("../SubViewport/GravityCart"), NodePath("../SubViewport/Tutorial")]
 left_pos = NodePath("../SubViewport/LeftPos")
 right_pos = NodePath("../SubViewport/RightPos")
 center_pos = NodePath("../SubViewport/CenterPos")
@@ -166,3 +172,4 @@ autowrap_mode = 2
 [editable path="SubViewport/SebenElebenCart"]
 [editable path="SubViewport/SkybeamCart"]
 [editable path="SubViewport/GravityCart"]
+[editable path="SubViewport/Tutorial"]

@@ -28,9 +28,12 @@ var sfx_list: Array[AudioStreamPlayer2D] = []
 var music_fading = false
 
 func _enter_tree():
-	sfx_curr_vol = DEFAULT_SFX_VOL
-	master_curr_vol = DEFAULT_MASTER_VOL
-	music_curr_vol = DEFAULT_MUSIC_VOL
+	if not load_sound_data():
+		print_rich("[color=red]Sound data not found! Creating new sound data save")
+		sfx_curr_vol = DEFAULT_SFX_VOL
+		master_curr_vol = DEFAULT_MASTER_VOL
+		music_curr_vol = DEFAULT_MUSIC_VOL
+		save_sound_data()
 
 # Playing Sound Effects
 
@@ -46,9 +49,9 @@ func play_sound(clip: AudioStream, position: Vector2):
 	#player.volume_db = compute_sfx_volume()
 	
 	sfx_list.append(player)
-	get_tree().root.add_child(player)
+	get_tree().root.get_node("Level").add_child(player)
 	player.play()
-	
+
 
 ## Making sure we queue free to clean up the queue of sounds. EVENT HANDLER DO NOT CALL
 func _on_effect_finished(player: AudioStreamPlayer2D):
@@ -92,6 +95,25 @@ func update_sound(settings: PauseMenu):
 	AudioServer.set_bus_volume_db(sfx_idx, sfx_computed_volume)
 	AudioServer.set_bus_volume_db(music_idx, music_computed_volume)
 	AudioServer.set_bus_volume_db(master_idx, master_computed_volume)
+	
+	save_sound_data()
+
+
+func update_sound_nosettings():
+	var sfx_computed_volume = compute_sfx_volume()
+	var music_computed_volume = compute_music_volume()
+	var master_computed_volume = compute_master_volume()
+	
+	var sfx_idx = AudioServer.get_bus_index("SFX")
+	var music_idx = AudioServer.get_bus_index("Music")
+	var master_idx = AudioServer.get_bus_index("Master")
+	
+	AudioServer.set_bus_volume_db(sfx_idx, sfx_computed_volume)
+	AudioServer.set_bus_volume_db(music_idx, music_computed_volume)
+	AudioServer.set_bus_volume_db(master_idx, master_computed_volume)
+	
+	save_sound_data()
+
 
 # Playing Songs
 
@@ -109,3 +131,42 @@ func unload_music_stream() -> void:
 	var tween = get_tree().create_tween()
 	tween.set_pause_mode(Tween.TWEEN_PAUSE_PROCESS)
 	tween.tween_property(music_player, "volume_db", -40, level_loader.LEVEL_END_TIME)
+
+# Saving Data
+func save_sound_data():
+	var save_file = FileAccess.open("user://soundconfig.jmy", FileAccess.WRITE)
+	
+	# Sound data
+	var sound_data = {
+		"master": master_curr_vol,
+		"sfx": sfx_curr_vol,
+		"music": music_curr_vol
+	}
+	# JSON provides a static method to serialized JSON string.
+	var json_string = JSON.stringify(sound_data)
+
+	# Store the save dictionary as a new line in the save file.
+	save_file.store_line(json_string)
+
+
+func load_sound_data():
+	if not FileAccess.file_exists("user://soundconfig.jmy"):
+		return false
+		
+	var load_file = FileAccess.open("user://soundconfig.jmy", FileAccess.READ)
+	
+	var string_data = load_file.get_line()
+	
+	var json = JSON.new()
+
+	# Check if there is any error while parsing the JSON string, skip in case of failure.
+	var parse_result = json.parse(string_data)
+	if not parse_result == OK:
+		print("JSON Parse Error: ", json.get_error_message(), " in ", string_data, " at line ", json.get_error_line())
+		return false
+	
+	var loaded_data = json.data
+	master_curr_vol = loaded_data["master"]
+	sfx_curr_vol = loaded_data["sfx"]
+	music_curr_vol = loaded_data["music"]
+	return true

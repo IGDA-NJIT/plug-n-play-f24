@@ -64,6 +64,7 @@ func _on_animation_finished(anim_name):
 			animation_player.play("OPEN")
 		else:
 			get_tree().paused = false
+			sound_player.update_sound_nosettings()
 			var main_menu = main_menu_scene.instantiate()
 			main_menu.tree_entered.connect(_on_enter_tree.bind(main_menu))
 			get_tree().current_scene.queue_free()

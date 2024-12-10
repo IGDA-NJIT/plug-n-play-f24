@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://xrv5a4vk77ic" path="res://DONOTEDITME/game/player/player_follow_camera.tscn" id="8_p8nqt"]
 [ext_resource type="PackedScene" uid="uid://c50558ro1vrqm" path="res://DONOTEDITME/game/level/parallax_background_sample.tscn" id="10_lb143"]
 
-[node name="TestEnvironment" type="Node2D"]
+[node name="Level" type="Node2D"]
 script = ExtResource("1_gk2hi")
 music_stream = ExtResource("2_ckc6v")
 

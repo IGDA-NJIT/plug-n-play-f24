@@ -19,6 +19,7 @@ func _ready():
 	master_slider.value = master_slider.max_value * sound_player.master_curr_vol
 	music_slider.value = music_slider.max_value * sound_player.music_curr_vol
 	loaded = true
+	sound_player.update_sound(self)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
