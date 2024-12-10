@@ -1,0 +1,38 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://bohtcsp6y06jk"
+path.s3tc="res://.godot/imported/7-11_Part164_diff.png-2bb2cde9e4e571b147a3a5397d9cdae1.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "90eccb5fbea54d40977dc7b23c1f6683"
+}
+
+[deps]
+
+source_file="res://dev/sebeneleben/assets/sebeneleben/7-11_Part164_diff.png"
+dest_files=["res://.godot/imported/7-11_Part164_diff.png-2bb2cde9e4e571b147a3a5397d9cdae1.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

@@ -1,0 +1,441 @@
+[gd_scene load_steps=32 format=4 uid="uid://c7po3fylqhnxo"]
+
+[ext_resource type="Script" path="res://DONOTEDITME/game/system/level.gd" id="1_13t6h"]
+[ext_resource type="Texture2D" uid="uid://cvm82mene88ef" path="res://dev/francedefance/assets/images/uglyspy.jpg" id="2_3nw8e"]
+[ext_resource type="AudioStream" uid="uid://byd5baryck6ga" path="res://dev/francedefance/audio/French meme song (earrape).mp3" id="2_11ebi"]
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/DialogueBox.gd" id="2_pb3br"]
+[ext_resource type="Script" path="res://dev/sebeneleben/diaready.gd" id="2_u4v2n"]
+[ext_resource type="PackedScene" uid="uid://cavhiq8b25tph" path="res://DONOTEDITME/menu/pause_menu.tscn" id="2_x7lj5"]
+[ext_resource type="AudioStream" uid="uid://btkjnv8pms2nn" path="res://dev/sebeneleben/audio/lilguynoise.wav" id="3_smifv"]
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeWait.gd" id="3_tl04m"]
+[ext_resource type="TileSet" uid="uid://b7temyiqwjg58" path="res://DONOTEDITME/game/level/tilesets/kenney_tileset_compilation.tres" id="3_w6i8y"]
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeGhost.gd" id="4_a6r6q"]
+[ext_resource type="PackedScene" uid="uid://xb5i5ynpctpq" path="res://DONOTEDITME/game/player/player.tscn" id="4_c8qcd"]
+[ext_resource type="Resource" uid="uid://7q6sjf4pqgcb" path="res://dev/francedefance/france.tres" id="5_3h7vp"]
+[ext_resource type="PackedScene" uid="uid://xrv5a4vk77ic" path="res://DONOTEDITME/game/player/player_follow_camera.tscn" id="5_jgcih"]
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeMatrix.gd" id="5_jnjk1"]
+[ext_resource type="PackedScene" uid="uid://dq6kf8bcc6qdk" path="res://dev/francedefance/assets/models/frenchguy/french.glb" id="6_g2qdo"]
+[ext_resource type="Script" path="res://dev/sebeneleben/fuck.gd" id="7_4fvok"]
+[ext_resource type="Script" path="res://dev/francedefance/frenchie.gd" id="8_ehcfx"]
+[ext_resource type="Script" path="res://dev/francedefance/countdown.gd" id="8_sdyt7"]
+[ext_resource type="PackedScene" uid="uid://bipl7yj7vdf1m" path="res://DONOTEDITME/game/level/level_end_marker.tscn" id="9_mwv62"]
+[ext_resource type="PackedScene" uid="uid://cfxl447y8mfts" path="res://dev/francedefance/assets/models/baguette.glb" id="9_unwch"]
+[ext_resource type="PackedScene" uid="uid://dk1jvx41lt8wm" path="res://dev/francedefance/assets/models/stand/stand.glb" id="10_ck3g6"]
+[ext_resource type="PackedScene" uid="uid://bl3agpu5ucmfe" path="res://DONOTEDITME/game/level/hazards/tiles/spike.tscn" id="11_cdmlq"]
+[ext_resource type="AudioStream" uid="uid://cwblxmvgcfbh1" path="res://dev/francedefance/audio/spyscream1.ogg" id="19_17f7d"]
+
+[sub_resource type="RichTextEffect" id="RichTextEffect_yx6td"]
+script = ExtResource("3_tl04m")
+
+[sub_resource type="RichTextEffect" id="RichTextEffect_s4sxb"]
+script = ExtResource("4_a6r6q")
+
+[sub_resource type="RichTextEffect" id="RichTextEffect_hn6ma"]
+script = ExtResource("5_jnjk1")
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_vcfk3"]
+rough = true
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_0a88e"]
+viewport_path = NodePath("french")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_umptx"]
+size = Vector2(690, 709.999)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_laaos"]
+viewport_path = NodePath("stand")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qh5q4"]
+size = Vector2(20, 85.067)
+
+[node name="Level" type="Node2D"]
+editor_description = "This is the base scene for your level! Your level must at the very least contain the following objects:
+1. A PauseMenu instance
+2. A level end marker (either as an individual scene or part of a tilemap)
+3. A Player (or some object that extends the Player class)
+4. A PlayerFollowCamera
+
+In addition, you must mark the player as accessible by unique name (Right Click -> Access by unique name) and set its node name to \"Player\". The same has already been done for you with the PauseMenu.
+
+These are the base things you need to do in order for your project to function and be slotted into the final game. Otherwise you have relatively free reign. Be sure to take a look at test_environment.tscn in the DONOTEDITME folder for an example of what a level can look like and some of the features I have already implemented for you. Read the descriptions and documentation for any scenes and objects I have already premade. Ask any questions in the Discord if you have any. DO NOT EDIT ANYTHING IN THE \"DONOTEDITME\" FOLDER. I cannot guarantee I'll be able to merge your level into the final project if you do."
+script = ExtResource("1_13t6h")
+music_stream = ExtResource("2_11ebi")
+
+[node name="Spike" parent="." instance=ExtResource("11_cdmlq")]
+unique_name_in_owner = true
+position = Vector2(533, -82)
+rotation = -3.14159
+scale = Vector2(85.4352, 103.973)
+
+[node name="dailog" type="CanvasLayer" parent="."]
+layer = 128
+
+[node name="Control" type="Control" parent="dailog"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="DialogueBox" type="Panel" parent="dailog/Control"]
+unique_name_in_owner = true
+process_mode = 3
+visible = false
+layout_mode = 0
+offset_left = 299.0
+offset_top = 497.0
+offset_right = 799.0
+offset_bottom = 647.0
+script = ExtResource("2_pb3br")
+data = ExtResource("5_3h7vp")
+hide_portrait = true
+custom_effects = Array[RichTextEffect]([SubResource("RichTextEffect_yx6td"), SubResource("RichTextEffect_s4sxb"), SubResource("RichTextEffect_hn6ma")])
+
+[node name="diaready" type="Control" parent="."]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_u4v2n")
+
+[node name="sf" type="AudioStreamPlayer" parent="diaready"]
+stream = ExtResource("3_smifv")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = -10
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1000.0
+offset_top = -1000.0
+offset_right = 99000.0
+offset_bottom = 99000.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.111344, 0.11952, 0.162857, 1)
+
+[node name="UI\'" type="CanvasLayer" parent="."]
+
+[node name="countdown" type="Label" parent="UI\'"]
+offset_left = 12.0
+offset_top = 10.0
+offset_right = 62.0
+offset_bottom = 33.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+text = "fucker"
+script = ExtResource("8_sdyt7")
+endoflevel = ExtResource("9_mwv62")
+
+[node name="decenter" type="VBoxContainer" parent="UI\'"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -25.0
+offset_right = 20.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+
+[node name="interact" type="Label" parent="UI\'/decenter"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="UI\'/decenter"]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="UI\'/decenter"]
+layout_mode = 2
+
+[node name="lose" type="TextureRect" parent="UI\'"]
+unique_name_in_owner = true
+visible = false
+offset_right = 703.0
+offset_bottom = 675.0
+scale = Vector2(1.64, 1)
+texture = ExtResource("2_3nw8e")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="decenter" type="VBoxContainer" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -25.0
+offset_right = 20.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="interact" type="Label" parent="CanvasLayer/decenter"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="CanvasLayer/decenter"]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="CanvasLayer/decenter"]
+layout_mode = 2
+
+[node name="PauseMenu" parent="." instance=ExtResource("2_x7lj5")]
+unique_name_in_owner = true
+editor_description = "This is the pause menu object instance. You shouldn't need to touch this at all so DO NOT TOUCH THIS."
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+editor_description = "This is a TileMapLayer, each TileMapLayer can have its own sets of tiles at different z layers (so certain layers appear in front of behind of others). I've provided a bunch of tiles for you to experiment with. The only really mandatory thing to put into the level is the Level End Marker which can be placed using this tilemap via the LevelElements tileset in the TileMap settings."
+tile_map_data = PackedByteArray("AAA7AB4AAAAGAAYAAAA9ADAAAQAAAAAAAQA9ACYAAAAHAAcAAAA9ACUAAAAHAAcAAAA9ACQAAAAHAAcAAAA9ACMAAAAHAAcAAAA9ACIAAAAHAAcAAAA9ACEAAAAHAAcAAAA9ACAAAAAHAAcAAAA9AB8AAAAHAAcAAAA9AB4AAAAHAAYAAAA8ADAAAQAAAAAAAQA8ACYAAAAGAAcAAAA8ACUAAAAGAAcAAAA8ACQAAAAGAAcAAAA8ACMAAAAGAAcAAAA8ACIAAAAGAAcAAAA8ACEAAAAGAAcAAAA8ACAAAAAGAAcAAAA8AB8AAAAGAAcAAAA8AB4AAAAGAAYAAAA7ADAAAQAAAAAAAQA7ACYAAAAGAAcAAAA7ACUAAAAGAAcAAAA7ACQAAAAGAAcAAAA7ACMAAAAGAAcAAAA7ACIAAAAGAAcAAAA7ACEAAAAGAAcAAAA7ACAAAAAGAAcAAAA7AB8AAAAGAAcAAAA6ADAAAQAAAAAAAQA6ACYAAAAGAAcAAAA6ACUAAAAGAAcAAAA6ACQAAAAGAAcAAAA6ACMAAAAGAAcAAAA6ACIAAAAGAAcAAAA6ACEAAAAGAAcAAAA6ACAAAAAGAAcAAAA6AB8AAAAGAAcAAAA6AB4AAAAGAAYAAAA5ADAAAQAAAAAAAQA5ACYAAAAGAAcAAAA5ACUAAAAGAAcAAAA5ACQAAAAGAAcAAAA5ACMAAAAGAAcAAAA5ACIAAAAGAAcAAAA5ACEAAAAGAAcAAAA5ACAAAAAGAAcAAAA5AB8AAAAGAAcAAAA5AB4AAAAGAAYAAAA4ADAAAQAAAAAAAQA4ACYAAAAGAAcAAAA4ACUAAAAGAAcAAAA4ACQAAAAGAAcAAAA4ACMAAAAGAAcAAAA4ACIAAAAGAAcAAAA4ACEAAAAGAAcAAAA4ACAAAAAGAAcAAAA4AB8AAAAGAAcAAAA4AB4AAAAGAAYAAAA3ADAAAQAAAAAAAQA3ACYAAAAGAAcAAAA3ACUAAAAGAAcAAAA3ACQAAAAGAAcAAAA3ACMAAAAGAAcAAAA3ACIAAAAGAAcAAAA3ACEAAAAGAAcAAAA3ACAAAAAGAAcAAAA3AB8AAAAGAAcAAAA3AB4AAAAGAAYAAAA2ADAAAQAAAAAAAQA2ACYAAAAGAAcAAAA2ACUAAAAGAAcAAAA2ACQAAAAGAAcAAAA2ACMAAAAGAAcAAAA2ACIAAAAGAAcAAAA2ACEAAAAGAAcAAAA2ACAAAAAGAAcAAAA2AB8AAAAGAAcAAAA2AB4AAAAGAAYAAAA1ADAAAQAAAAAAAQA1ACYAAAAGAAcAAAA1ACUAAAAGAAcAAAA1ACQAAAAGAAcAAAA1ACMAAAAGAAcAAAA1ACIAAAAGAAcAAAA1ACEAAAAGAAcAAAA1ACAAAAAGAAcAAAA1AB8AAAAGAAcAAAA1AB4AAAAGAAYAAAA0ADAAAQAAAAAAAQA0ACYAAAAGAAcAAAA0ACUAAAAGAAcAAAA0ACQAAAAGAAcAAAA0ACMAAAAGAAcAAAA0ACIAAAAGAAcAAAA0ACEAAAAGAAcAAAA0ACAAAAAGAAcAAAA0AB8AAAAGAAcAAAA0AB4AAAAGAAYAAAAzADAAAQAAAAAAAQAzACYAAAAGAAcAAAAzACUAAAAGAAcAAAAzACQAAAAGAAcAAAAzACMAAAAGAAcAAAAzACIAAAAGAAcAAAAzACEAAAAGAAcAAAAzACAAAAAGAAcAAAAzAB8AAAAGAAcAAAAzAB4AAAAGAAYAAAAyADAAAQAAAAAAAQAyACYAAAAGAAcAAAAyACUAAAAGAAcAAAAyACQAAAAGAAcAAAAyACMAAAAGAAcAAAAyACIAAAAGAAcAAAAyACEAAAAGAAcAAAAyACAAAAAGAAcAAAAyAB8AAAAGAAcAAAAyAB4AAAAGAAYAAAAxADAAAQAAAAAAAQAxACYAAAAGAAcAAAAxACUAAAAGAAcAAAAxACQAAAAGAAcAAAAxACMAAAAGAAcAAAAxACIAAAAGAAcAAAAxACEAAAAGAAcAAAAxACAAAAAGAAcAAAAxAB8AAAAGAAcAAAAxAB4AAAAGAAYAAAAwADAAAQAAAAAAAQAwACYAAAAGAAcAAAAwACUAAAAGAAcAAAAwACQAAAAGAAcAAAAwACMAAAAGAAcAAAAwACIAAAAGAAcAAAAwACEAAAAGAAcAAAAwACAAAAAGAAcAAAAwAB8AAAAGAAcAAAAwAB4AAAAGAAYAAAAvADAAAQAAAAAAAQAvACYAAAAGAAcAAAAvACUAAAAGAAcAAAAvACQAAAAGAAcAAAAvACMAAAAGAAcAAAAvACIAAAAGAAcAAAAvACEAAAAGAAcAAAAvACAAAAAGAAcAAAAvAB8AAAAGAAcAAAAvAB4AAAAGAAYAAAAuADAAAQAAAAAAAQAuACYAAAAGAAcAAAAuACUAAAAGAAcAAAAuACQAAAAGAAcAAAAuACMAAAAGAAcAAAAuACIAAAAGAAcAAAAuACEAAAAGAAcAAAAuACAAAAAGAAcAAAAuAB8AAAAGAAcAAAAuAB4AAAAGAAYAAAAtADAAAQAAAAAAAQAtACYAAAAGAAcAAAAtACUAAAAGAAcAAAAtACQAAAAGAAcAAAAtACMAAAAGAAcAAAAtACIAAAAGAAcAAAAtACEAAAAGAAcAAAAtACAAAAAGAAcAAAAtAB8AAAAGAAcAAAAtAB4AAAAGAAYAAAAsADAAAQAAAAAAAQAsACYAAAAGAAcAAAAsACUAAAAGAAcAAAAsACQAAAAGAAcAAAAsACMAAAAGAAcAAAAsACIAAAAGAAcAAAAsACEAAAAGAAcAAAAsACAAAAAGAAcAAAAsAB8AAAAGAAcAAAAsAB4AAAAGAAYAAAArADAAAQAAAAAAAQArACYAAAAGAAcAAAArACUAAAAGAAcAAAArACQAAAAGAAcAAAArACMAAAAGAAcAAAArACIAAAAGAAcAAAArACEAAAAGAAcAAAArACAAAAAGAAcAAAArAB8AAAAGAAcAAAArAB4AAAAGAAYAAAAqADAAAQAAAAAAAQAqACYAAAAGAAcAAAAqACUAAAAGAAcAAAAqACQAAAAGAAcAAAAqACMAAAAGAAcAAAAqACIAAAAGAAcAAAAqACEAAAAGAAcAAAAqACAAAAAGAAcAAAAqAB8AAAAGAAcAAAAqAB4AAAAGAAYAAAApADAAAQAAAAAAAQApACYAAAAGAAcAAAApACUAAAAGAAcAAAApACQAAAAGAAcAAAApACMAAAAGAAcAAAApACIAAAAGAAcAAAApACEAAAAGAAcAAAApACAAAAAGAAcAAAApAB8AAAAGAAcAAAApAB4AAAAGAAYAAAAoADAAAQAAAAAAAQAoACYAAAAGAAcAAAAoACUAAAAGAAcAAAAoACQAAAAGAAcAAAAoACMAAAAGAAcAAAAoACIAAAAGAAcAAAAoACEAAAAGAAcAAAAoACAAAAAGAAcAAAAoAB8AAAAGAAcAAAAoAB4AAAAGAAYAAAAnADAAAQAAAAAAAQAnACYAAAAGAAcAAAAnACUAAAAGAAcAAAAnACQAAAAGAAcAAAAnACMAAAAGAAcAAAAnACIAAAAGAAcAAAAnACEAAAAGAAcAAAAnACAAAAAGAAcAAAAnAB8AAAAGAAcAAAAnAB4AAAAGAAYAAAAmADAAAQAAAAAAAQAmACYAAAAGAAcAAAAmACUAAAAGAAcAAAAmACQAAAAGAAcAAAAmACMAAAAGAAcAAAAmACIAAAAGAAcAAAAmACEAAAAGAAcAAAAmACAAAAAGAAcAAAAmAB8AAAAGAAcAAAAmAB4AAAAGAAYAAAAlADAAAQAAAAAAAQAlACYAAAAGAAcAAAAlACUAAAAGAAcAAAAlACQAAAAGAAcAAAAlACMAAAAGAAcAAAAlACIAAAAGAAcAAAAlACEAAAAGAAcAAAAlACAAAAAGAAcAAAAlAB8AAAAGAAcAAAAlAB4AAAAGAAYAAAAkADAAAQAAAAAAAQAkACYAAAAGAAcAAAAkACUAAAAGAAcAAAAkACQAAAAGAAcAAAAkACMAAAAGAAcAAAAkACIAAAAGAAcAAAAkACEAAAAGAAcAAAAkACAAAAAGAAcAAAAkAB8AAAAGAAcAAAAkAB4AAAAGAAYAAAAjADAAAQAAAAAAAQAjACYAAAAGAAcAAAAjACUAAAAGAAcAAAAjACQAAAAGAAcAAAAjACMAAAAGAAcAAAAjACIAAAAGAAcAAAAjACEAAAAGAAcAAAAjACAAAAAGAAcAAAAjAB8AAAAGAAcAAAAjAB4AAAAGAAYAAAAiADAAAQAAAAAAAQAiACYAAAAGAAcAAAAiACUAAAAGAAcAAAAiACQAAAAGAAcAAAAiACMAAAAGAAcAAAAiACIAAAAGAAcAAAAiACEAAAAGAAcAAAAiACAAAAAGAAcAAAAiAB8AAAAGAAcAAAAiAB4AAAAGAAYAAAAhADAAAQAAAAAAAQAhACYAAAAGAAcAAAAhACUAAAAGAAcAAAAhACQAAAAGAAcAAAAhACMAAAAGAAcAAAAhACIAAAAGAAcAAAAhACEAAAAGAAcAAAAhACAAAAAGAAcAAAAhAB8AAAAGAAcAAAAhAB4AAAAGAAYAAAAgADAAAQAAAAAAAQAgACYAAAAGAAcAAAAgACUAAAAGAAcAAAAgACQAAAAGAAcAAAAgACMAAAAGAAcAAAAgACIAAAAGAAcAAAAgACEAAAAGAAcAAAAgACAAAAAGAAcAAAAgAB8AAAAGAAcAAAAgAB4AAAAGAAYAAAAfADAAAQAAAAAAAQAfACYAAAAGAAcAAAAfACUAAAAGAAcAAAAfACQAAAAGAAcAAAAfACMAAAAGAAcAAAAfACIAAAAGAAcAAAAfACEAAAAGAAcAAAAfACAAAAAGAAcAAAAfAB8AAAAGAAcAAAAfAB4AAAAGAAYAAAAeADAAAQAAAAAAAQAeACYAAAAGAAcAAAAeACUAAAAGAAcAAAAeACQAAAAGAAcAAAAeACMAAAAGAAcAAAAeACIAAAAGAAcAAAAeACEAAAAGAAcAAAAeACAAAAAGAAcAAAAeAB8AAAAGAAcAAAAeAB4AAAAGAAYAAAAdADAAAQAAAAAAAQAdACYAAAAGAAcAAAAdACUAAAAGAAcAAAAdACQAAAAGAAcAAAAdACMAAAAGAAcAAAAdACIAAAAGAAcAAAAdACEAAAAGAAcAAAAdACAAAAAGAAcAAAAdAB8AAAAGAAcAAAAdAB4AAAAGAAYAAAAcADAAAQAAAAAAAQAcACYAAAAGAAcAAAAcACUAAAAGAAcAAAAcACQAAAAGAAcAAAAcACMAAAAGAAcAAAAcACIAAAAGAAcAAAAcACEAAAAGAAcAAAAcACAAAAAGAAcAAAAcAB8AAAAGAAcAAAAcAB4AAAAGAAYAAAAbADAAAQAAAAAAAQAbACYAAAAGAAcAAAAbACUAAAAGAAcAAAAbACQAAAAGAAcAAAAbACMAAAAGAAcAAAAbACIAAAAGAAcAAAAbACEAAAAGAAcAAAAbACAAAAAGAAcAAAAbAB8AAAAGAAcAAAAbAB4AAAAGAAYAAAAaADAAAQAAAAAAAQAaACYAAAAGAAcAAAAaACUAAAAGAAcAAAAaACQAAAAGAAcAAAAaACMAAAAGAAcAAAAaACIAAAAGAAcAAAAaACEAAAAGAAcAAAAaACAAAAAGAAcAAAAaAB8AAAAGAAcAAAAaAB4AAAAGAAYAAAAZADAAAQAAAAAAAQAZACYAAAAGAAcAAAAZACUAAAAGAAcAAAAZACQAAAAGAAcAAAAZACMAAAAGAAcAAAAZACIAAAAGAAcAAAAZACEAAAAGAAcAAAAZACAAAAAGAAcAAAAZAB8AAAAGAAcAAAAZAB4AAAAGAAYAAAAYADAAAQAAAAAAAQAYACYAAAAGAAcAAAAYACUAAAAGAAcAAAAYACQAAAAGAAcAAAAYACMAAAAGAAcAAAAYACIAAAAGAAcAAAAYACEAAAAGAAcAAAAYACAAAAAGAAcAAAAYAB8AAAAGAAcAAAAYAB4AAAAGAAYAAAAXADAAAQAAAAAAAQAXACYAAAAGAAcAAAAXACUAAAAGAAcAAAAXACQAAAAGAAcAAAAXACMAAAAGAAcAAAAXACIAAAAGAAcAAAAXACEAAAAGAAcAAAAXACAAAAAGAAcAAAAXAB8AAAAGAAcAAAAXAB4AAAAGAAYAAAAWADAAAQAAAAAAAQAWACYAAAAGAAcAAAAWACUAAAAGAAcAAAAWACQAAAAGAAcAAAAWACMAAAAGAAcAAAAWACIAAAAGAAcAAAAWACEAAAAGAAcAAAAWACAAAAAGAAcAAAAWAB8AAAAGAAcAAAAWAB4AAAAGAAYAAAAVADAAAQAAAAAAAQAVACYAAAAGAAcAAAAVACUAAAAGAAcAAAAVACQAAAAGAAcAAAAVACMAAAAGAAcAAAAVACIAAAAGAAcAAAAVACEAAAAGAAcAAAAVACAAAAAGAAcAAAAVAB8AAAAGAAcAAAAVAB4AAAAGAAYAAAAUADAAAQAAAAAAAQAUACYAAAAGAAcAAAAUACUAAAAGAAcAAAAUACQAAAAGAAcAAAAUACMAAAAGAAcAAAAUACIAAAAGAAcAAAAUACEAAAAGAAcAAAAUACAAAAAGAAcAAAAUAB8AAAAGAAcAAAAUAB4AAAAGAAYAAAATADAAAQAAAAAAAQATACYAAAAGAAcAAAATACUAAAAGAAcAAAATACQAAAAGAAcAAAATACMAAAAGAAcAAAATACIAAAAGAAcAAAATACEAAAAGAAcAAAATACAAAAAGAAcAAAATAB8AAAAGAAcAAAATAB4AAAAGAAYAAAASADAAAQAAAAAAAQASACYAAAAGAAcAAAASACUAAAAGAAcAAAASACQAAAAGAAcAAAASACMAAAAGAAcAAAASACIAAAAGAAcAAAASACEAAAAGAAcAAAASACAAAAAGAAcAAAASAB8AAAAGAAcAAAASAB4AAAAGAAYAAAARADAAAQAAAAAAAQARACYAAAAGAAcAAAARACUAAAAGAAcAAAARACQAAAAGAAcAAAARACMAAAAGAAcAAAARACIAAAAGAAcAAAARACEAAAAGAAcAAAARACAAAAAGAAcAAAARAB8AAAAGAAcAAAARAB4AAAAGAAYAAAAQADAAAQAAAAAAAQAQACYAAAAGAAcAAAAQACUAAAAGAAcAAAAQACQAAAAGAAcAAAAQACMAAAAGAAcAAAAQACIAAAAGAAcAAAAQACEAAAAGAAcAAAAQACAAAAAGAAcAAAAQAB8AAAAGAAcAAAAQAB4AAAAGAAYAAAAPADAAAQAAAAAAAQAPACYAAAAGAAcAAAAPACUAAAAGAAcAAAAPACQAAAAGAAcAAAAPACMAAAAGAAcAAAAPACIAAAAGAAcAAAAPACEAAAAGAAcAAAAPACAAAAAGAAcAAAAPAB8AAAAGAAcAAAAPAB4AAAAGAAYAAAAOADAAAQAAAAAAAQAOACYAAAAGAAcAAAAOACUAAAAGAAcAAAAOACQAAAAGAAcAAAAOACMAAAAGAAcAAAAOACIAAAAGAAcAAAAOACEAAAAGAAcAAAAOACAAAAAGAAcAAAAOAB8AAAAGAAcAAAAOAB4AAAAGAAYAAAANADAAAQAAAAAAAQANACYAAAAGAAcAAAANACUAAAAGAAcAAAANACQAAAAGAAcAAAANACMAAAAGAAcAAAANACIAAAAGAAcAAAANACEAAAAGAAcAAAANACAAAAAGAAcAAAANAB8AAAAGAAcAAAANAB4AAAAGAAYAAAAMADAAAQAAAAAAAQAMACYAAAAGAAcAAAAMACUAAAAGAAcAAAAMACQAAAAGAAcAAAAMACMAAAAGAAcAAAAMACIAAAAGAAcAAAAMACEAAAAGAAcAAAAMACAAAAAGAAcAAAAMAB8AAAAGAAcAAAAMAB4AAAAGAAYAAAALADAAAQAAAAAAAQALACYAAAAGAAcAAAALACUAAAAGAAcAAAALACQAAAAGAAcAAAALACMAAAAGAAcAAAALACIAAAAGAAcAAAALACEAAAAGAAcAAAALACAAAAAGAAcAAAALAB8AAAAGAAcAAAALAB4AAAAGAAYAAAAKADAAAQAAAAAAAQAKACYAAAAGAAcAAAAKACUAAAAGAAcAAAAKACQAAAAGAAcAAAAKACMAAAAGAAcAAAAKACIAAAAGAAcAAAAKACEAAAAGAAcAAAAKACAAAAAGAAcAAAAKAB8AAAAGAAcAAAAKAB4AAAAGAAYAAAAJADAAAQAAAAAAAQAJACYAAAAGAAcAAAAJACUAAAAGAAcAAAAJACQAAAAGAAcAAAAJACMAAAAGAAcAAAAJACIAAAAGAAcAAAAJACEAAAAGAAcAAAAJACAAAAAGAAcAAAAJAB8AAAAGAAcAAAAJAB4AAAAGAAYAAAAIADAAAQAAAAAAAQAIACYAAAAGAAcAAAAIACUAAAAGAAcAAAAIACQAAAAGAAcAAAAIACMAAAAGAAcAAAAIACIAAAAGAAcAAAAIACEAAAAGAAcAAAAIACAAAAAGAAcAAAAIAB8AAAAGAAcAAAAIAB4AAAAGAAYAAAAHADAAAQAAAAAAAQAHACYAAAAGAAcAAAAHACUAAAAGAAcAAAAHACQAAAAGAAcAAAAHACMAAAAGAAcAAAAHACIAAAAGAAcAAAAHACEAAAAGAAcAAAAHACAAAAAGAAcAAAAHAB8AAAAGAAcAAAAHAB4AAAAGAAYAAAAGADAAAQAAAAAAAQAGACYAAAAGAAcAAAAGACUAAAAGAAcAAAAGACQAAAAGAAcAAAAGACMAAAAGAAcAAAAGACIAAAAGAAcAAAAGACEAAAAGAAcAAAAGACAAAAAGAAcAAAAGAB8AAAAGAAcAAAAGAB4AAAAGAAYAAAAFADAAAQAAAAAAAQAFACYAAAAGAAcAAAAFACUAAAAGAAcAAAAFACQAAAAGAAcAAAAFACMAAAAGAAcAAAAFACIAAAAGAAcAAAAFACEAAAAGAAcAAAAFACAAAAAGAAcAAAAFAB8AAAAGAAcAAAAFAB4AAAAGAAYAAAAEADAAAQAAAAAAAQAEACYAAAAGAAcAAAAEACUAAAAGAAcAAAAEACQAAAAGAAcAAAAEACMAAAAGAAcAAAAEACIAAAAGAAcAAAAEACEAAAAGAAcAAAAEACAAAAAGAAcAAAAEAB8AAAAGAAcAAAAEAB4AAAAGAAYAAAADADAAAQAAAAAAAQADACYAAAAGAAcAAAADACUAAAAGAAcAAAADACQAAAAGAAcAAAADACMAAAAGAAcAAAADACIAAAAGAAcAAAADACEAAAAGAAcAAAADACAAAAAGAAcAAAADAB8AAAAGAAcAAAADAB4AAAAGAAYAAAACADAAAQAAAAAAAQACACYAAAAGAAcAAAACACUAAAAGAAcAAAACACQAAAAGAAcAAAACACMAAAAGAAcAAAACACIAAAAGAAcAAAACACEAAAAGAAcAAAACACAAAAAGAAcAAAACAB8AAAAGAAcAAAACAB4AAAAGAAYAAAABADAAAQAAAAAAAQABACYAAAAGAAcAAAABACUAAAAGAAcAAAABACQAAAAGAAcAAAABACMAAAAGAAcAAAABACIAAAAGAAcAAAABACEAAAAGAAcAAAABACAAAAAGAAcAAAABAB8AAAAGAAcAAAABAB4AAAAGAAYAAAAAADAAAQAAAAAAAQAAACYAAAAFAAcAAAAAACUAAAAFAAcAAAAAACQAAAAFAAcAAAAAACMAAAAFAAcAAAAAACIAAAAFAAcAAAAAACEAAAAFAAcAAAAAACAAAAAFAAcAAAAAAB8AAAAFAAcAAAAAAB4AAAAFAAYAAAAUABQAAAAKAAUAAAATABQAAAAJAAUAAAASABQAAAAJAAUAAAARABQAAAAJAAUAAAAQABQAAAAJAAUAAAAPABQAAAAJAAUAAAAOABQAAAAJAAUAAAANABQAAAAIAAUAAAAPABsAAAAKAAUAAAAOABsAAAAJAAUAAAANABsAAAAJAAUAAAAMABsAAAAIAAUAAAAVABcAAAAKAAUAAAAUABcAAAAJAAUAAAATABcAAAAJAAUAAAASABcAAAAJAAUAAAARABcAAAAIAAUAAADx/zAAAQAAAAAAAQDy/zAAAQAAAAAAAQDz/zAAAQAAAAAAAQD0/zAAAQAAAAAAAQD1/zAAAQAAAAAAAQD2/zAAAQAAAAAAAQD3/zAAAQAAAAAAAQD4/zAAAQAAAAAAAQD5/zAAAQAAAAAAAQD6/zAAAQAAAAAAAQD7/zAAAQAAAAAAAQD8/zAAAQAAAAAAAQD9/zAAAQAAAAAAAQD+/zAAAQAAAAAAAQD//zAAAQAAAAAAAQA+ADAAAQAAAAAAAQA/ADAAAQAAAAAAAQBAADAAAQAAAAAAAQBBADAAAQAAAAAAAQBCADAAAQAAAAAAAQBDADAAAQAAAAAAAQBEADAAAQAAAAAAAQBFADAAAQAAAAAAAQBGADAAAQAAAAAAAQBHADAAAQAAAAAAAQBIADAAAQAAAAAAAQBJADAAAQAAAAAAAQBKADAAAQAAAAAAAQBLADAAAQAAAAAAAQBMADAAAQAAAAAAAQBNADAAAQAAAAAAAQBOADAAAQAAAAAAAQBPADAAAQAAAAAAAQBQADAAAQAAAAAAAQA9ACgAAAAHAAcAAAA9ACcAAAAHAAcAAAA8ACgAAAAGAAcAAAA8ACcAAAAGAAcAAAA7ACgAAAAGAAcAAAA7ACcAAAAGAAcAAAA6ACgAAAAGAAcAAAA6ACcAAAAGAAcAAAA5ACgAAAAGAAcAAAA5ACcAAAAGAAcAAAA4ACgAAAAGAAcAAAA4ACcAAAAGAAcAAAA3ACgAAAAGAAcAAAA3ACcAAAAGAAcAAAA2ACgAAAAGAAcAAAA2ACcAAAAGAAcAAAA1ACgAAAAGAAcAAAA1ACcAAAAGAAcAAAA0ACgAAAAGAAcAAAA0ACcAAAAGAAcAAAAzACgAAAAGAAcAAAAzACcAAAAGAAcAAAAyACgAAAAGAAcAAAAyACcAAAAGAAcAAAAxACgAAAAGAAcAAAAxACcAAAAGAAcAAAAwACgAAAAGAAcAAAAwACcAAAAGAAcAAAAvACgAAAAGAAcAAAAvACcAAAAGAAcAAAAuACgAAAAGAAcAAAAuACcAAAAGAAcAAAAtACgAAAAGAAcAAAAtACcAAAAGAAcAAAAsACgAAAAGAAcAAAAsACcAAAAGAAcAAAArACgAAAAGAAcAAAArACcAAAAGAAcAAAAqACgAAAAGAAcAAAAqACcAAAAGAAcAAAApACgAAAAGAAcAAAApACcAAAAGAAcAAAAoACgAAAAGAAcAAAAoACcAAAAGAAcAAAAnACgAAAAGAAcAAAAnACcAAAAGAAcAAAAmACgAAAAGAAcAAAAmACcAAAAGAAcAAAAlACgAAAAGAAcAAAAlACcAAAAGAAcAAAAkACgAAAAGAAcAAAAkACcAAAAGAAcAAAAjACgAAAAGAAcAAAAjACcAAAAGAAcAAAAiACgAAAAGAAcAAAAiACcAAAAGAAcAAAAhACgAAAAGAAcAAAAhACcAAAAGAAcAAAAgACgAAAAGAAcAAAAgACcAAAAGAAcAAAAfACgAAAAGAAcAAAAfACcAAAAGAAcAAAAeACgAAAAGAAcAAAAeACcAAAAGAAcAAAAdACgAAAAGAAcAAAAdACcAAAAGAAcAAAAcACgAAAAGAAcAAAAcACcAAAAGAAcAAAAbACgAAAAGAAcAAAAbACcAAAAGAAcAAAAaACgAAAAGAAcAAAAaACcAAAAGAAcAAAAZACgAAAAGAAcAAAAZACcAAAAGAAcAAAAYACgAAAAGAAcAAAAYACcAAAAGAAcAAAAXACgAAAAGAAcAAAAXACcAAAAGAAcAAAAWACgAAAAGAAcAAAAWACcAAAAGAAcAAAAVACgAAAAGAAcAAAAVACcAAAAGAAcAAAAUACgAAAAGAAcAAAAUACcAAAAGAAcAAAATACgAAAAGAAcAAAATACcAAAAGAAcAAAASACgAAAAGAAcAAAASACcAAAAGAAcAAAARACgAAAAGAAcAAAARACcAAAAGAAcAAAAQACgAAAAGAAcAAAAQACcAAAAGAAcAAAAPACgAAAAGAAcAAAAPACcAAAAGAAcAAAAOACgAAAAGAAcAAAAOACcAAAAGAAcAAAANACgAAAAGAAcAAAANACcAAAAGAAcAAAAMACgAAAAGAAcAAAAMACcAAAAGAAcAAAALACgAAAAGAAcAAAALACcAAAAGAAcAAAAKACgAAAAGAAcAAAAKACcAAAAGAAcAAAAJACgAAAAGAAcAAAAJACcAAAAGAAcAAAAIACgAAAAGAAcAAAAIACcAAAAGAAcAAAAHACgAAAAGAAcAAAAHACcAAAAGAAcAAAAGACgAAAAGAAcAAAAGACcAAAAGAAcAAAAFACgAAAAGAAcAAAAFACcAAAAGAAcAAAAEACgAAAAGAAcAAAAEACcAAAAGAAcAAAADACgAAAAGAAcAAAADACcAAAAGAAcAAAACACgAAAAGAAcAAAACACcAAAAGAAcAAAABACgAAAAGAAcAAAABACcAAAAGAAcAAAAAACgAAAAFAAcAAAAAACcAAAAFAAcAAAA9ACkAAAAHAAcAAAA8ACkAAAAGAAcAAAA7ACkAAAAGAAcAAAA6ACkAAAAGAAcAAAA5ACkAAAAGAAcAAAA4ACkAAAAGAAcAAAA3ACkAAAAGAAcAAAA2ACkAAAAGAAcAAAA1ACkAAAAGAAcAAAA0ACkAAAAGAAcAAAAzACkAAAAGAAcAAAAyACkAAAAGAAcAAAAxACkAAAAGAAcAAAAwACkAAAAGAAcAAAAvACkAAAAGAAcAAAAuACkAAAAGAAcAAAAtACkAAAAGAAcAAAAsACkAAAAGAAcAAAArACkAAAAGAAcAAAAqACkAAAAGAAcAAAApACkAAAAGAAcAAAAoACkAAAAGAAcAAAAnACkAAAAGAAcAAAAmACkAAAAGAAcAAAAlACkAAAAGAAcAAAAkACkAAAAGAAcAAAAjACkAAAAGAAcAAAAiACkAAAAGAAcAAAAhACkAAAAGAAcAAAAgACkAAAAGAAcAAAAfACkAAAAGAAcAAAAeACkAAAAGAAcAAAAdACkAAAAGAAcAAAAcACkAAAAGAAcAAAAbACkAAAAGAAcAAAAaACkAAAAGAAcAAAAZACkAAAAGAAcAAAAYACkAAAAGAAcAAAAXACkAAAAGAAcAAAAWACkAAAAGAAcAAAAVACkAAAAGAAcAAAAUACkAAAAGAAcAAAATACkAAAAGAAcAAAASACkAAAAGAAcAAAARACkAAAAGAAcAAAAQACkAAAAGAAcAAAAPACkAAAAGAAcAAAAOACkAAAAGAAcAAAANACkAAAAGAAcAAAAMACkAAAAGAAcAAAALACkAAAAGAAcAAAAKACkAAAAGAAcAAAAJACkAAAAGAAcAAAAIACkAAAAGAAcAAAAHACkAAAAGAAcAAAAGACkAAAAGAAcAAAAFACkAAAAGAAcAAAAEACkAAAAGAAcAAAADACkAAAAGAAcAAAACACkAAAAGAAcAAAABACkAAAAGAAcAAAAAACkAAAAFAAcAAAA9ACoAAAAHAAgAAAA8ACoAAAAGAAgAAAA7ACoAAAAGAAgAAAA6ACoAAAAGAAgAAAA5ACoAAAAGAAgAAAA4ACoAAAAGAAgAAAA3ACoAAAAGAAgAAAA2ACoAAAAGAAgAAAA1ACoAAAAGAAgAAAA0ACoAAAAGAAgAAAAzACoAAAAGAAgAAAAyACoAAAAGAAgAAAAxACoAAAAGAAgAAAAwACoAAAAGAAgAAAAvACoAAAAGAAgAAAAuACoAAAAGAAgAAAAtACoAAAAGAAgAAAAsACoAAAAGAAgAAAArACoAAAAGAAgAAAAqACoAAAAGAAgAAAApACoAAAAGAAgAAAAoACoAAAAGAAgAAAAnACoAAAAGAAgAAAAmACoAAAAGAAgAAAAlACoAAAAGAAgAAAAkACoAAAAGAAgAAAAjACoAAAAGAAgAAAAiACoAAAAGAAgAAAAhACoAAAAGAAgAAAAgACoAAAAGAAgAAAAfACoAAAAGAAgAAAAeACoAAAAGAAgAAAAdACoAAAAGAAgAAAAcACoAAAAGAAgAAAAbACoAAAAGAAgAAAAaACoAAAAGAAgAAAAZACoAAAAGAAgAAAAYACoAAAAGAAgAAAAXACoAAAAGAAgAAAAWACoAAAAGAAgAAAAVACoAAAAGAAgAAAAUACoAAAAGAAgAAAATACoAAAAGAAgAAAASACoAAAAGAAgAAAARACoAAAAGAAgAAAAQACoAAAAGAAgAAAAPACoAAAAGAAgAAAAOACoAAAAGAAgAAAANACoAAAAGAAgAAAAMACoAAAAGAAgAAAALACoAAAAGAAgAAAAKACoAAAAGAAgAAAAJACoAAAAGAAgAAAAIACoAAAAGAAgAAAAHACoAAAAGAAgAAAAGACoAAAAGAAgAAAAFACoAAAAGAAgAAAAEACoAAAAGAAgAAAADACoAAAAGAAgAAAACACoAAAAGAAgAAAABACoAAAAGAAgAAAAAACoAAAAFAAgAAAAvABoAAAAIAAUAAAAwABoAAAAJAAUAAAAxABoAAAAJAAUAAAAyABoAAAAJAAUAAAAzABoAAAAJAAUAAAA0ABoAAAAKAAUAAAA1ABYAAAAIAAUAAAA2ABYAAAAJAAUAAAA3ABYAAAAJAAUAAAA4ABYAAAAJAAUAAAA5ABYAAAAKAAUAAAA=")
+tile_set = ExtResource("3_w6i8y")
+
+[node name="Player" parent="." instance=ExtResource("4_c8qcd")]
+unique_name_in_owner = true
+editor_description = "This is a very basic implementation of the player controller which has horizontal movement, jumping, and an animated sprite. DO NOT modify this packed scene or the player.gd script. You should instead create a script that extends the Player class and create a New Inherited Scene (by right clicking the player.tscn file and clicking \"New Inherited Scene\") to create your own custom player functionality.
+
+Feel free to replace this with your own custom Player, I only require that the player node's name must be \"Player\" and it must be made a unique name."
+position = Vector2(115, 484)
+script = ExtResource("7_4fvok")
+max_horizontal_speed = 300.0
+acceleration = 2000.0
+deceleration = 2000.0
+jump_strength = 700.0
+gravity = 3000.0
+max_fall_speed = 500.0
+
+[node name="PlayerFollowCamera" parent="." instance=ExtResource("5_jgcih")]
+editor_description = "This dynamic camera is used to follow the player up to certain bounds. You can see them in engine as a red box if you wanted to tweak the parameters the impact things like the zoom."
+position = Vector2(115, 484)
+
+[node name="french" type="SubViewport" parent="."]
+transparent_bg = true
+size = Vector2i(720, 720)
+
+[node name="french" parent="french" instance=ExtResource("6_g2qdo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.488054, 0, -0.956519)
+
+[node name="Camera3D" type="Camera3D" parent="french"]
+transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, -0.445275, -2.78601, -4.08607)
+projection = 1
+size = 8.0
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="french"]
+transform = Transform3D(1, 0, 0, 0, -0.337769, 0.941229, 0, -0.941229, -0.337769, 0, 0, 0)
+
+[node name="frenchie" type="RigidBody2D" parent="."]
+position = Vector2(253, 411)
+collision_layer = 64
+collision_mask = 67
+mass = 100.0
+physics_material_override = SubResource("PhysicsMaterial_vcfk3")
+script = ExtResource("8_ehcfx")
+
+[node name="frenchman" type="Sprite2D" parent="frenchie"]
+position = Vector2(0.400024, 8.29996)
+scale = Vector2(0.1, 0.1)
+texture = SubResource("ViewportTexture_0a88e")
+
+[node name="Area2D" type="Area2D" parent="frenchie"]
+position = Vector2(0.399994, -7.70001)
+scale = Vector2(0.1, 0.1)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="frenchie/Area2D"]
+position = Vector2(4.99951, 155.001)
+shape = SubResource("RectangleShape2D_umptx")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="frenchie"]
+position = Vector2(0, -1)
+polygon = PackedVector2Array(-6, -20, -6, -11, -33, -11, -33, -7, -6, -6, -7, 44, 7, 44, 7, -6, 35, -5, 35, -10, 8, -11, 8, -20, 1, -27)
+
+[node name="yell" type="AudioStreamPlayer2D" parent="frenchie"]
+stream = ExtResource("19_17f7d")
+
+[node name="frenchie2" type="RigidBody2D" parent="."]
+position = Vector2(627, 490)
+collision_layer = 64
+collision_mask = 67
+mass = 100.0
+physics_material_override = SubResource("PhysicsMaterial_vcfk3")
+script = ExtResource("8_ehcfx")
+
+[node name="frenchman" type="Sprite2D" parent="frenchie2"]
+position = Vector2(0.400024, 8.29996)
+scale = Vector2(0.1, 0.1)
+texture = SubResource("ViewportTexture_0a88e")
+
+[node name="Area2D" type="Area2D" parent="frenchie2"]
+position = Vector2(0.399994, -7.70001)
+scale = Vector2(0.1, 0.1)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="frenchie2/Area2D"]
+position = Vector2(4.99951, 155.001)
+shape = SubResource("RectangleShape2D_umptx")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="frenchie2"]
+position = Vector2(0, -1)
+polygon = PackedVector2Array(-6, -20, -6, -11, -33, -11, -33, -7, -6, -6, -7, 44, 7, 44, 7, -6, 35, -5, 35, -10, 8, -11, 8, -20, 1, -27)
+
+[node name="yell" type="AudioStreamPlayer2D" parent="frenchie2"]
+stream = ExtResource("19_17f7d")
+
+[node name="frenchie3" type="RigidBody2D" parent="."]
+position = Vector2(892, 413)
+collision_layer = 64
+collision_mask = 67
+mass = 100.0
+physics_material_override = SubResource("PhysicsMaterial_vcfk3")
+script = ExtResource("8_ehcfx")
+
+[node name="frenchman" type="Sprite2D" parent="frenchie3"]
+position = Vector2(0.400024, 8.29996)
+scale = Vector2(0.1, 0.1)
+texture = SubResource("ViewportTexture_0a88e")
+
+[node name="Area2D" type="Area2D" parent="frenchie3"]
+position = Vector2(0.399994, -7.70001)
+scale = Vector2(0.1, 0.1)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="frenchie3/Area2D"]
+position = Vector2(4.99951, 155.001)
+shape = SubResource("RectangleShape2D_umptx")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="frenchie3"]
+position = Vector2(0, -1)
+polygon = PackedVector2Array(-6, -20, -6, -11, -33, -11, -33, -7, -6, -6, -7, 44, 7, 44, 7, -6, 35, -5, 35, -10, 8, -11, 8, -20, 1, -27)
+
+[node name="yell" type="AudioStreamPlayer2D" parent="frenchie3"]
+stream = ExtResource("19_17f7d")
+
+[node name="frenchie4" type="RigidBody2D" parent="."]
+position = Vector2(999, 343)
+collision_layer = 64
+collision_mask = 67
+mass = 100.0
+physics_material_override = SubResource("PhysicsMaterial_vcfk3")
+script = ExtResource("8_ehcfx")
+
+[node name="frenchman" type="Sprite2D" parent="frenchie4"]
+position = Vector2(0.400024, 8.29996)
+scale = Vector2(0.1, 0.1)
+texture = SubResource("ViewportTexture_0a88e")
+
+[node name="Area2D" type="Area2D" parent="frenchie4"]
+position = Vector2(0.399994, -7.70001)
+scale = Vector2(0.1, 0.1)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="frenchie4/Area2D"]
+position = Vector2(4.99951, 155.001)
+shape = SubResource("RectangleShape2D_umptx")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="frenchie4"]
+position = Vector2(0, -1)
+polygon = PackedVector2Array(-6, -20, -6, -11, -33, -11, -33, -7, -6, -6, -7, 44, 7, 44, 7, -6, 35, -5, 35, -10, 8, -11, 8, -20, 1, -27)
+
+[node name="yell" type="AudioStreamPlayer2D" parent="frenchie4"]
+stream = ExtResource("19_17f7d")
+
+[node name="frenchie5" type="RigidBody2D" parent="."]
+position = Vector2(323, 301)
+collision_layer = 64
+collision_mask = 67
+mass = 100.0
+physics_material_override = SubResource("PhysicsMaterial_vcfk3")
+script = ExtResource("8_ehcfx")
+
+[node name="frenchman" type="Sprite2D" parent="frenchie5"]
+position = Vector2(0.400024, 8.29996)
+scale = Vector2(0.1, 0.1)
+texture = SubResource("ViewportTexture_0a88e")
+
+[node name="Area2D" type="Area2D" parent="frenchie5"]
+position = Vector2(0.399994, -7.70001)
+scale = Vector2(0.1, 0.1)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="frenchie5/Area2D"]
+position = Vector2(4.99951, 155.001)
+shape = SubResource("RectangleShape2D_umptx")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="frenchie5"]
+position = Vector2(0, -1)
+polygon = PackedVector2Array(-6, -20, -6, -11, -33, -11, -33, -7, -6, -6, -7, 44, 7, 44, 7, -6, 35, -5, 35, -10, 8, -11, 8, -20, 1, -27)
+
+[node name="yell" type="AudioStreamPlayer2D" parent="frenchie5"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(79, 479)
+scale = Vector2(0.2, 0.2)
+texture = SubResource("ViewportTexture_laaos")
+
+[node name="stand" type="SubViewport" parent="."]
+transparent_bg = true
+size = Vector2i(720, 720)
+
+[node name="baguette2" parent="stand" instance=ExtResource("9_unwch")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -30.1778, -0.655703, -9.14986)
+
+[node name="baguette3" parent="stand" instance=ExtResource("9_unwch")]
+transform = Transform3D(-0.915473, 0.402379, -8.00332e-08, 0.402379, 0.915473, 3.51771e-08, 8.74228e-08, 0, -1, -30.5748, -1.42236, -9.79141)
+
+[node name="baguette4" parent="stand" instance=ExtResource("9_unwch")]
+transform = Transform3D(0.169178, -0.985586, 1.479e-08, -0.985586, -0.169178, -8.61626e-08, 8.74228e-08, 0, -1, -32.2489, -1.9173, -8.69864)
+
+[node name="baguette5" parent="stand" instance=ExtResource("9_unwch")]
+transform = Transform3D(-0.99995, 0.0100354, -8.74184e-08, 0.0100354, 0.99995, 8.77332e-10, 8.74228e-08, 1.74059e-15, -1, -31.3959, -1.9173, -8.22548)
+
+[node name="baguette6" parent="stand" instance=ExtResource("9_unwch")]
+transform = Transform3D(-0.940525, -0.339662, 0.00655029, 0.000188189, 0.0187603, 0.999824, -0.339725, 0.940361, -0.0175806, -32.6792, -2.40217, -8.22548)
+
+[node name="stand2" parent="stand" instance=ExtResource("10_ck3g6")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -26.7951, 0, -5.21941)
+
+[node name="Camera3D" type="Camera3D" parent="stand"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -27.7663, 2.01043, -13.1819)
+projection = 1
+size = 13.0
+
+[node name="frenchOut" type="Area2D" parent="."]
+position = Vector2(582, 804)
+scale = Vector2(0.279999, 0.2)
+collision_mask = 65
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="frenchOut"]
+position = Vector2(0, 2102.5)
+scale = Vector2(344.8, 67)
+shape = SubResource("RectangleShape2D_qh5q4")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="frenchOut"]
+position = Vector2(3198.64, -2180)
+rotation = 1.5708
+scale = Vector2(344.8, 11.2)
+shape = SubResource("RectangleShape2D_qh5q4")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="frenchOut"]
+position = Vector2(-3307.16, -2510)
+rotation = 1.5708
+scale = Vector2(344.8, 11.2)
+shape = SubResource("RectangleShape2D_qh5q4")
+
+[connection signal="dialogue_ended" from="dailog/Control/DialogueBox" to="UI\'/countdown" method="_on_dialogue_box_dialogue_ended"]
+[connection signal="body_entered" from="frenchie/Area2D" to="frenchie" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="frenchie/Area2D" to="frenchie" method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="frenchie2/Area2D" to="frenchie2" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="frenchie2/Area2D" to="frenchie2" method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="frenchie3/Area2D" to="frenchie3" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="frenchie3/Area2D" to="frenchie3" method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="frenchie4/Area2D" to="frenchie4" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="frenchie4/Area2D" to="frenchie4" method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="frenchie5/Area2D" to="frenchie5" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="frenchie5/Area2D" to="frenchie5" method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="frenchOut" to="UI\'/countdown" method="_on_french_out_body_entered"]
+[connection signal="body_exited" from="frenchOut" to="UI\'/countdown" method="_on_french_out_body_exited"]

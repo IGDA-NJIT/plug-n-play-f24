@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c8g8tfn5ntsaa"
+path="res://.godot/imported/Nice Shot! - Wii Sports Golf Announcer Voice.mp3-f10a141de933788dc49dd5d2286c51e3.mp3str"
+
+[deps]
+
+source_file="res://dev/givethanks/audio/Nice Shot! - Wii Sports Golf Announcer Voice.mp3"
+dest_files=["res://.godot/imported/Nice Shot! - Wii Sports Golf Announcer Voice.mp3-f10a141de933788dc49dd5d2286c51e3.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

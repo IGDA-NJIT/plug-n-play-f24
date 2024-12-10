@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cgf3cc8p0mlt2"
+path="res://.godot/imported/Samsung notification sound effect ( no copyright).mp3-34fa422b2adca42a1335010f0aee8ecd.mp3str"
+
+[deps]
+
+source_file="res://dev/givethanks/audio/Samsung notification sound effect ( no copyright).mp3"
+dest_files=["res://.godot/imported/Samsung notification sound effect ( no copyright).mp3-34fa422b2adca42a1335010f0aee8ecd.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

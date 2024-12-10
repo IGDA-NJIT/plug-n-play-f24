@@ -1,0 +1,265 @@
+[gd_scene load_steps=29 format=4 uid="uid://fnc5p2ihj01t"]
+
+[ext_resource type="Script" path="res://DONOTEDITME/game/system/level.gd" id="1_vyxgm"]
+[ext_resource type="Script" path="res://dev/sebeneleben/diaready.gd" id="2_8xsbp"]
+[ext_resource type="Script" path="res://dev/sebeneleben/time.gd" id="2_c7fn0"]
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/DialogueBox.gd" id="2_g8hfi"]
+[ext_resource type="PackedScene" uid="uid://cavhiq8b25tph" path="res://DONOTEDITME/menu/pause_menu.tscn" id="2_xuham"]
+[ext_resource type="TileSet" uid="uid://b7temyiqwjg58" path="res://DONOTEDITME/game/level/tilesets/kenney_tileset_compilation.tres" id="3_neepr"]
+[ext_resource type="AudioStream" uid="uid://btkjnv8pms2nn" path="res://dev/sebeneleben/audio/lilguynoise.wav" id="3_qo3dj"]
+[ext_resource type="Resource" uid="uid://b767xki6kh0dm" path="res://dev/sebeneleben/jam/jam.tres" id="3_trxbn"]
+[ext_resource type="PackedScene" uid="uid://xb5i5ynpctpq" path="res://DONOTEDITME/game/player/player.tscn" id="4_7hqc0"]
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeWait.gd" id="5_2fpxp"]
+[ext_resource type="PackedScene" uid="uid://xrv5a4vk77ic" path="res://DONOTEDITME/game/player/player_follow_camera.tscn" id="5_gmhda"]
+[ext_resource type="PackedScene" uid="uid://cx5uiuvi2cqsa" path="res://dev/sebeneleben/assets/sebeneleben/7-11.glb" id="6_3sbeu"]
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeGhost.gd" id="6_6o8xj"]
+[ext_resource type="Script" path="res://dev/sebeneleben/seven'.gd" id="7_02wst"]
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeMatrix.gd" id="7_87xir"]
+[ext_resource type="AudioStream" uid="uid://dj038e4p0cc4p" path="res://dev/sebeneleben/audio/Creative Exercise - Mario Paint.mp3" id="8_dy4qb"]
+[ext_resource type="Script" path="res://dev/sebeneleben/fuck.gd" id="16_wq6mg"]
+[ext_resource type="ArrayMesh" uid="uid://ciep4qp0dr2jj" path="res://dev/sebeneleben/assets/miku/mikuuuu.obj" id="17_ltyrl"]
+[ext_resource type="PackedScene" uid="uid://bipl7yj7vdf1m" path="res://DONOTEDITME/game/level/level_end_marker.tscn" id="20_4ya8x"]
+
+[sub_resource type="RichTextEffect" id="RichTextEffect_yx6td"]
+script = ExtResource("5_2fpxp")
+
+[sub_resource type="RichTextEffect" id="RichTextEffect_s4sxb"]
+script = ExtResource("6_6o8xj")
+
+[sub_resource type="RichTextEffect" id="RichTextEffect_hn6ma"]
+script = ExtResource("7_87xir")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_6ctpr"]
+viewport_path = NodePath("sevenview")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_va0bw"]
+size = Vector2(81, 104.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_db7f4"]
+size = Vector2(17.9626, 23.0109)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y5pj6"]
+size = Vector2(65.6036, 82.5479)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8chco"]
+size = Vector2(66.8565, 8.72279)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lqy7u"]
+size = Vector2(96.2186, 123.574)
+
+[node name="Level" type="Node2D"]
+editor_description = "This is the base scene for your level! Your level must at the very least contain the following objects:
+1. A PauseMenu instance
+2. A level end marker (either as an individual scene or part of a tilemap)
+3. A Player (or some object that extends the Player class)
+4. A PlayerFollowCamera
+
+In addition, you must mark the player as accessible by unique name (Right Click -> Access by unique name) and set its node name to \"Player\". The same has already been done for you with the PauseMenu.
+
+These are the base things you need to do in order for your project to function and be slotted into the final game. Otherwise you have relatively free reign. Be sure to take a look at test_environment.tscn in the DONOTEDITME folder for an example of what a level can look like and some of the features I have already implemented for you. Read the descriptions and documentation for any scenes and objects I have already premade. Ask any questions in the Discord if you have any. DO NOT EDIT ANYTHING IN THE \"DONOTEDITME\" FOLDER. I cannot guarantee I'll be able to merge your level into the final project if you do."
+script = ExtResource("1_vyxgm")
+
+[node name="diaready" type="Control" parent="."]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_8xsbp")
+
+[node name="sf" type="AudioStreamPlayer" parent="diaready"]
+stream = ExtResource("3_qo3dj")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -45000.0
+offset_right = 53304.0
+offset_bottom = 1e+11
+color = Color(0.755199, 0.920855, 1, 1)
+
+[node name="dailog" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="dailog"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="DialogueBox" type="Panel" parent="dailog/Control"]
+unique_name_in_owner = true
+process_mode = 3
+visible = false
+layout_mode = 0
+offset_left = 299.0
+offset_top = 497.0
+offset_right = 799.0
+offset_bottom = 647.0
+script = ExtResource("2_g8hfi")
+data = ExtResource("3_trxbn")
+hide_portrait = true
+custom_effects = Array[RichTextEffect]([SubResource("RichTextEffect_yx6td"), SubResource("RichTextEffect_s4sxb"), SubResource("RichTextEffect_hn6ma")])
+
+[node name="UI\'" type="CanvasLayer" parent="."]
+
+[node name="time" type="Label" parent="UI\'"]
+offset_left = 12.0
+offset_top = 10.0
+offset_right = 62.0
+offset_bottom = 33.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+text = "fucker"
+script = ExtResource("2_c7fn0")
+endoflevel = ExtResource("20_4ya8x")
+
+[node name="decenter" type="VBoxContainer" parent="UI\'"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -25.0
+offset_right = 20.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="interact" type="Label" parent="UI\'/decenter"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="UI\'/decenter"]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="UI\'/decenter"]
+layout_mode = 2
+
+[node name="PauseMenu" parent="." instance=ExtResource("2_xuham")]
+unique_name_in_owner = true
+editor_description = "This is the pause menu object instance. You shouldn't need to touch this at all so DO NOT TOUCH THIS."
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+editor_description = "This is a TileMapLayer, each TileMapLayer can have its own sets of tiles at different z layers (so certain layers appear in front of behind of others). I've provided a bunch of tiles for you to experiment with. The only really mandatory thing to put into the level is the Level End Marker which can be placed using this tilemap via the LevelElements tileset in the TileMap settings."
+position = Vector2(-24, 1)
+tile_map_data = PackedByteArray("AAAZAB8AAAACAAEAAAAYAB8AAAACAAEAAAAXAB8AAAACAAEAAAAWAB8AAAACAAEAAAAVAB8AAAACAAEAAAAUAB8AAAACAAEAAAATAB8AAAACAAEAAAASAB8AAAACAAEAAAARAB8AAAACAAEAAAAQAB8AAAACAAEAAAAPAB8AAAACAAEAAAAOAB8AAAACAAEAAAANAB8AAAACAAEAAAAMAB8AAAACAAEAAAALAB8AAAACAAEAAAAKAB8AAAACAAEAAAAJAB8AAAACAAEAAAAIAB8AAAACAAEAAAAHAB8AAAACAAEAAAAGAB8AAAACAAEAAAAFAB8AAAACAAEAAAAEAB8AAAACAAEAAAADAB8AAAACAAEAAAACAB8AAAACAAEAAAABAB8AAAACAAEAAAAAAB8AAAABAAEAAAAaAB8AAAACAAEAAAAbAB8AAAACAAEAAAAcAB8AAAACAAEAAAAdAB8AAAACAAEAAAAeAB8AAAACAAEAAAAfAB8AAAACAAEAAAAgAB8AAAACAAEAAAAhAB8AAAACAAEAAAAiAB8AAAACAAEAAAAjAB8AAAACAAEAAAAkAB8AAAACAAEAAAAlAB8AAAADAAEAAAAAACAAAAABAAIAAAAAACEAAAABAAIAAAABACEAAAACAAIAAAABACIAAAACAAMAAAACACIAAAACAAMAAAADACIAAAACAAMAAAABACAAAAACAAIAAAAAACIAAAABAAMAAAACACEAAAACAAIAAAACACAAAAACAAIAAAADACAAAAACAAIAAAAEACAAAAACAAIAAAAFACAAAAACAAIAAAAGACAAAAACAAIAAAAHACAAAAACAAIAAAAIACAAAAACAAIAAAAJACAAAAACAAIAAAAKACAAAAACAAIAAAALACAAAAACAAIAAAAMACAAAAACAAIAAAANACAAAAACAAIAAAAOACAAAAACAAIAAAAPACAAAAACAAIAAAAQACAAAAACAAIAAAARACAAAAACAAIAAAASACAAAAACAAIAAAATACAAAAACAAIAAAAUACAAAAACAAIAAAAVACAAAAACAAIAAAAWACAAAAACAAIAAAAXACAAAAACAAIAAAAYACAAAAACAAIAAAAZACAAAAACAAIAAAAaACAAAAACAAIAAAAbACAAAAACAAIAAAAcACAAAAACAAIAAAAdACAAAAACAAIAAAAeACAAAAACAAIAAAAfACAAAAACAAIAAAAgACAAAAACAAIAAAAhACAAAAACAAIAAAAiACAAAAACAAIAAAAjACAAAAACAAIAAAAjACEAAAACAAIAAAAiACEAAAACAAIAAAAhACEAAAACAAIAAAAgACEAAAACAAIAAAAfACEAAAACAAIAAAAeACEAAAACAAIAAAAdACEAAAACAAIAAAAkACEAAAACAAIAAAADACEAAAACAAIAAAAJACEAAAACAAIAAAAIACEAAAACAAIAAAAHACEAAAACAAIAAAAGACEAAAACAAIAAAAFACEAAAACAAIAAAAEACEAAAACAAIAAAAKACEAAAACAAIAAAAMACEAAAACAAIAAAALACEAAAACAAIAAAANACEAAAACAAIAAAAOACEAAAACAAIAAAAPACEAAAACAAIAAAAQACEAAAACAAIAAAARACEAAAACAAIAAAATACEAAAACAAIAAAASACEAAAACAAIAAAAUACEAAAACAAIAAAAVACEAAAACAAIAAAAWACEAAAACAAIAAAAXACEAAAACAAIAAAAYACEAAAACAAIAAAAZACEAAAACAAIAAAAaACEAAAACAAIAAAAcACEAAAACAAIAAAAbACEAAAACAAIAAAAkACIAAAACAAMAAAAiACIAAAACAAMAAAAjACIAAAACAAMAAAAfACIAAAACAAMAAAAgACIAAAACAAMAAAAhACIAAAACAAMAAAAbACIAAAACAAMAAAAcACIAAAACAAMAAAAdACIAAAACAAMAAAAeACIAAAACAAMAAAAZACIAAAACAAMAAAAaACIAAAACAAMAAAAYACIAAAACAAMAAAAXACIAAAACAAMAAAAWACIAAAACAAMAAAAVACIAAAACAAMAAAAUACIAAAACAAMAAAATACIAAAACAAMAAAASACIAAAACAAMAAAARACIAAAACAAMAAAAQACIAAAACAAMAAAAPACIAAAACAAMAAAAOACIAAAACAAMAAAANACIAAAACAAMAAAAMACIAAAACAAMAAAALACIAAAACAAMAAAAKACIAAAACAAMAAAAJACIAAAACAAMAAAAIACIAAAACAAMAAAAHACIAAAACAAMAAAAGACIAAAACAAMAAAAFACIAAAACAAMAAAAEACIAAAACAAMAAAAkACAAAAACAAIAAAAlACAAAAADAAIAAAAlACEAAAADAAIAAAAlACIAAAADAAMAAAAKABoAAAALAAUAAAAJABoAAAALAAUAAAAPABgAAAALAAUAAAAQABgAAAALAAUAAAARABgAAAALAAUAAAASABgAAAALAAUAAAATABgAAAALAAUAAAAUABgAAAALAAUAAAAVABgAAAALAAUAAAAWABgAAAALAAUAAAAXABgAAAALAAUAAAAYABgAAAALAAUAAAAZABgAAAALAAUAAAAaABgAAAALAAUAAAAbABgAAAALAAUAAAAcABgAAAALAAUAAAAdABgAAAALAAUAAAAeABgAAAALAAUAAAAfABgAAAALAAUAAAAgABgAAAALAAUAAAAhABgAAAALAAUAAAA=")
+tile_set = ExtResource("3_neepr")
+
+[node name="Player" parent="." instance=ExtResource("4_7hqc0")]
+unique_name_in_owner = true
+editor_description = "This is a very basic implementation of the player controller which has horizontal movement, jumping, and an animated sprite. DO NOT modify this packed scene or the player.gd script. You should instead create a script that extends the Player class and create a New Inherited Scene (by right clicking the player.tscn file and clicking \"New Inherited Scene\") to create your own custom player functionality.
+
+Feel free to replace this with your own custom Player, I only require that the player node's name must be \"Player\" and it must be made a unique name."
+position = Vector2(32, 545)
+script = ExtResource("16_wq6mg")
+max_horizontal_speed = 300.0
+acceleration = 2000.0
+deceleration = 2000.0
+jump_strength = 700.0
+gravity = 3000.0
+max_fall_speed = 500.0
+
+[node name="PlayerFollowCamera" parent="." instance=ExtResource("5_gmhda")]
+editor_description = "This dynamic camera is used to follow the player up to certain bounds. You can see them in engine as a red box if you wanted to tweak the parameters the impact things like the zoom."
+position = Vector2(32, 545)
+min_x = -10000.0
+max_x = 1e+08
+max_y = 1e+07
+
+[node name="sevenview" type="SubViewport" parent="."]
+transparent_bg = true
+size = Vector2i(1280, 720)
+
+[node name="cam" type="Camera3D" parent="sevenview"]
+unique_name_in_owner = true
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1.5, 1.853, -26)
+projection = 1
+size = 32.531
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="sevenview"]
+transform = Transform3D(1, 0.000211121, 0.000121542, 2.05168e-05, -0.570093, 0.82158, 0.000242741, -0.82158, -0.570093, 0, 19.3314, 0)
+
+[node name="7-11" parent="sevenview" instance=ExtResource("6_3sbeu")]
+
+[node name="Mikuuuu" type="MeshInstance3D" parent="sevenview"]
+transform = Transform3D(-0.6, 0, -9.05975e-08, 0, 0.6, 0, 9.05975e-08, 0, -0.6, 13.7134, 11.9108, -15.3163)
+mesh = ExtResource("17_ltyrl")
+skeleton = NodePath("../../UI\'/decenter")
+
+[node name="seven\'" type="Sprite2D" parent="."]
+position = Vector2(356, 476)
+scale = Vector2(0.685938, 0.687847)
+texture = SubResource("ViewportTexture_6ctpr")
+script = ExtResource("7_02wst")
+
+[node name="door" type="Area2D" parent="seven\'"]
+position = Vector2(26.2415, 100.313)
+scale = Vector2(1.45786, 1.45381)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="seven\'/door"]
+position = Vector2(-16, -39)
+shape = SubResource("RectangleShape2D_va0bw")
+
+[node name="wall1" type="StaticBody2D" parent="seven\'"]
+position = Vector2(-329.476, 0)
+collision_layer = 2
+
+[node name="co1" type="CollisionShape2D" parent="seven\'/wall1"]
+position = Vector2(0, -18.8403)
+scale = Vector2(1, 12.5146)
+shape = SubResource("RectangleShape2D_db7f4")
+disabled = true
+
+[node name="co2" type="CollisionShape2D" parent="seven\'/wall1"]
+position = Vector2(708.519, -18.8995)
+scale = Vector2(5.66515, 12.5146)
+shape = SubResource("RectangleShape2D_db7f4")
+disabled = true
+
+[node name="co3" type="CollisionShape2D" parent="seven\'/wall1"]
+position = Vector2(300.838, -154.677)
+scale = Vector2(32.4065, -0.584982)
+shape = SubResource("RectangleShape2D_db7f4")
+
+[node name="co4" type="CollisionShape2D" parent="seven\'/wall1"]
+position = Vector2(105.695, 95.065)
+shape = SubResource("RectangleShape2D_y5pj6")
+disabled = true
+
+[node name="co5" type="CollisionShape2D" parent="seven\'/wall1"]
+position = Vector2(629.821, 75.2789)
+shape = SubResource("RectangleShape2D_y5pj6")
+disabled = true
+
+[node name="firemusic" type="AudioStreamPlayer2D" parent="seven\'"]
+process_mode = 3
+position = Vector2(4.37358, -87.2287)
+stream = ExtResource("8_dy4qb")
+autoplay = true
+attenuation = 16.0
+
+[node name="topleave" type="Area2D" parent="seven\'"]
+position = Vector2(209.932, -110.49)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="seven\'/topleave"]
+position = Vector2(86.1163, -45.0679)
+shape = SubResource("RectangleShape2D_8chco")
+
+[node name="miku" type="Area2D" parent="seven\'"]
+position = Vector2(-269.704, -242.787)
+
+[node name="miktalk" type="CollisionShape2D" parent="seven\'/miku"]
+position = Vector2(-1.45786, 19.6265)
+shape = SubResource("RectangleShape2D_lqy7u")
+
+[connection signal="dialogue_ended" from="dailog/Control/DialogueBox" to="diaready" method="_on_dialogue_box_dialogue_ended"]
+[connection signal="dialogue_started" from="dailog/Control/DialogueBox" to="diaready" method="_on_dialogue_box_dialogue_started"]
+[connection signal="body_entered" from="seven\'/door" to="seven\'" method="_on_door_body_entered"]
+[connection signal="body_exited" from="seven\'/door" to="seven\'" method="_on_door_body_exited"]
+[connection signal="body_exited" from="seven\'/topleave" to="seven\'" method="_on_topleave_body_exited"]
+[connection signal="body_entered" from="seven\'/miku" to="seven\'" method="_on_miku_body_entered"]
+[connection signal="body_exited" from="seven\'/miku" to="seven\'" method="_on_miku_body_exited"]

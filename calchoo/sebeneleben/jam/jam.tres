@@ -1,0 +1,148 @@
+[gd_resource type="Resource" script_class="DialogueData" load_steps=2 format=3 uid="uid://b767xki6kh0dm"]
+
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/DialogueData.gd" id="1_oovwh"]
+
+[resource]
+script = ExtResource("1_oovwh")
+starts = {
+"1": &"0_1",
+"mik": &"0_3",
+"start": &"0_2"
+}
+nodes = {
+"0_1": {
+"link": &"1_1",
+"offset": Vector2(-174, -176),
+"start_id": "1"
+},
+"0_2": {
+"link": &"1_2",
+"offset": Vector2(-120.714, -358.851),
+"start_id": "start"
+},
+"0_3": {
+"link": &"1_6",
+"offset": Vector2(-240, 160),
+"start_id": "mik"
+},
+"1_1": {
+"dialogue": "what is this music???",
+"offset": Vector2(148, -237),
+"options": {
+0: {
+"condition": {},
+"link": &"1_4",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "Jammy"
+},
+"1_2": {
+"dialogue": "oh my god where am i.",
+"offset": Vector2(100, -560),
+"options": {
+0: {
+"condition": {},
+"link": &"1_3",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "Jammy"
+},
+"1_3": {
+"dialogue": "what the hell is a 7/11????",
+"offset": Vector2(480, -560),
+"options": {
+0: {
+"condition": {},
+"link": &"1_5",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "Jammy"
+},
+"1_4": {
+"dialogue": "its so [b]GOOD![/b]",
+"offset": Vector2(520, -240),
+"options": {
+0: {
+"condition": {},
+"link": "END",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "Jammy"
+},
+"1_5": {
+"dialogue": "...and is that Hatsune Miku?!?",
+"offset": Vector2(840, -560),
+"options": {
+0: {
+"condition": {},
+"link": "END",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "Jammy"
+},
+"1_6": {
+"dialogue": "Hatsune Miku im a huge fan!!!",
+"offset": Vector2(20, 120),
+"options": {
+0: {
+"condition": {},
+"link": &"1_7",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "Jammy"
+},
+"1_7": {
+"dialogue": "mikudayo!",
+"offset": Vector2(360, 120),
+"options": {
+0: {
+"condition": {},
+"link": &"1_8",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "Hatsune Miku"
+},
+"1_8": {
+"dialogue": "she said the thing1!1!!!!!111",
+"offset": Vector2(714.458, 140.037),
+"options": {
+0: {
+"condition": {},
+"link": &"1_9",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "Jammy"
+},
+"1_9": {
+"dialogue": "mikudayo!",
+"offset": Vector2(1060, 140),
+"options": {
+0: {
+"condition": {},
+"link": "END",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "Hatsune Miku"
+}
+}
+variables = {}
+strays = Array[String]([])
+characters = ""

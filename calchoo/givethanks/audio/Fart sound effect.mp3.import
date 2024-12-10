@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bx1b26okmw6r7"
+path="res://.godot/imported/Fart sound effect.mp3-94c3dac58a50c3e75077d128338e133e.mp3str"
+
+[deps]
+
+source_file="res://dev/givethanks/audio/Fart sound effect.mp3"
+dest_files=["res://.godot/imported/Fart sound effect.mp3-94c3dac58a50c3e75077d128338e133e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

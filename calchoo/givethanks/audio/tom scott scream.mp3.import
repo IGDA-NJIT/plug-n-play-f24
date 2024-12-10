@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dso33xile22i4"
+path="res://.godot/imported/tom scott scream.mp3-fc9f5c0f8e3163b89571da0906fe3a0a.mp3str"
+
+[deps]
+
+source_file="res://dev/givethanks/audio/tom scott scream.mp3"
+dest_files=["res://.godot/imported/tom scott scream.mp3-fc9f5c0f8e3163b89571da0906fe3a0a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

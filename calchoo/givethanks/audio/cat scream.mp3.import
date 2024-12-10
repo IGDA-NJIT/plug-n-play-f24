@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bkdiakis0l33w"
+path="res://.godot/imported/cat scream.mp3-d92345f5e4f0e875bfcad813b13fe776.mp3str"
+
+[deps]
+
+source_file="res://dev/givethanks/audio/cat scream.mp3"
+dest_files=["res://.godot/imported/cat scream.mp3-d92345f5e4f0e875bfcad813b13fe776.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

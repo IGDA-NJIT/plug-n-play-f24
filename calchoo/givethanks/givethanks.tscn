@@ -1,0 +1,174 @@
+[gd_scene load_steps=14 format=4 uid="uid://b4e0xkinhu4s2"]
+
+[ext_resource type="Script" path="res://DONOTEDITME/game/system/level.gd" id="1_wwfj7"]
+[ext_resource type="Script" path="res://dev/givethanks/thedoer.gd" id="2_0g07n"]
+[ext_resource type="Texture2D" uid="uid://d1mwmgonjtstr" path="res://dev/givethanks/assets/SQSQAsQAsqaSAD.jpg" id="2_kymia"]
+[ext_resource type="PackedScene" uid="uid://cavhiq8b25tph" path="res://DONOTEDITME/menu/pause_menu.tscn" id="2_v0ysf"]
+[ext_resource type="PackedScene" uid="uid://bipl7yj7vdf1m" path="res://DONOTEDITME/game/level/level_end_marker.tscn" id="3_an7qo"]
+[ext_resource type="TileSet" uid="uid://b7temyiqwjg58" path="res://DONOTEDITME/game/level/tilesets/kenney_tileset_compilation.tres" id="3_sfxq1"]
+[ext_resource type="PackedScene" uid="uid://xb5i5ynpctpq" path="res://DONOTEDITME/game/player/player.tscn" id="4_f3tyl"]
+[ext_resource type="Texture2D" uid="uid://dsvlpbc45y5pe" path="res://dev/givethanks/assets/image.jpg" id="4_ty78e"]
+[ext_resource type="Texture2D" uid="uid://cnutfnh0gp8p3" path="res://dev/givethanks/assets/gibthanks.jpg" id="4_vhk7v"]
+[ext_resource type="PackedScene" uid="uid://xrv5a4vk77ic" path="res://DONOTEDITME/game/player/player_follow_camera.tscn" id="5_bkaht"]
+[ext_resource type="PackedScene" uid="uid://bl3agpu5ucmfe" path="res://DONOTEDITME/game/level/hazards/tiles/spike.tscn" id="7_njiko"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1q6ky"]
+size = Vector2(67, 62)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oce68"]
+size = Vector2(72, 62)
+
+[node name="Level" type="Node2D"]
+editor_description = "This is the base scene for your level! Your level must at the very least contain the following objects:
+1. A PauseMenu instance
+2. A level end marker (either as an individual scene or part of a tilemap)
+3. A Player (or some object that extends the Player class)
+4. A PlayerFollowCamera
+
+In addition, you must mark the player as accessible by unique name (Right Click -> Access by unique name) and set its node name to \"Player\". The same has already been done for you with the PauseMenu.
+
+These are the base things you need to do in order for your project to function and be slotted into the final game. Otherwise you have relatively free reign. Be sure to take a look at test_environment.tscn in the DONOTEDITME folder for an example of what a level can look like and some of the features I have already implemented for you. Read the descriptions and documentation for any scenes and objects I have already premade. Ask any questions in the Discord if you have any. DO NOT EDIT ANYTHING IN THE \"DONOTEDITME\" FOLDER. I cannot guarantee I'll be able to merge your level into the final project if you do."
+script = ExtResource("1_wwfj7")
+
+[node name="bg" type="TextureRect" parent="."]
+offset_left = -199.0
+offset_top = 439.0
+offset_right = 1456.0
+offset_bottom = 1135.0
+scale = Vector2(0.48, 0.5)
+texture = ExtResource("2_kymia")
+
+[node name="logo" type="TextureRect" parent="."]
+offset_left = 117.0
+offset_top = 475.0
+offset_right = 859.0
+offset_bottom = 817.0
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("4_vhk7v")
+
+[node name="PauseMenu" parent="." instance=ExtResource("2_v0ysf")]
+unique_name_in_owner = true
+editor_description = "This is the pause menu object instance. You shouldn't need to touch this at all so DO NOT TOUCH THIS."
+
+[node name="GIVE" type="Area2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(-108, 686)
+
+[node name="ColorRect" type="ColorRect" parent="GIVE"]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -26.0
+offset_top = -46.0
+offset_right = 15.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.64, 1.48)
+color = Color(0.533366, 0, 0, 1)
+
+[node name="Label" type="Label" parent="GIVE"]
+offset_left = -13.0
+offset_top = -47.0
+offset_right = 27.0
+offset_bottom = -24.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+text = "GIVE"
+horizontal_alignment = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GIVE"]
+position = Vector2(7.5, -15)
+shape = SubResource("RectangleShape2D_1q6ky")
+
+[node name="THANKS" type="Area2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(487, 687)
+
+[node name="ColorRect" type="ColorRect" parent="THANKS"]
+offset_left = -36.0
+offset_top = -47.0
+offset_right = 19.0
+offset_bottom = -5.0
+scale = Vector2(1.32, 1.48)
+color = Color(0.777188, 0.0588105, 0.409225, 1)
+
+[node name="Label" type="Label" parent="THANKS"]
+offset_left = -31.0
+offset_top = -48.0
+offset_right = 33.0
+offset_bottom = -25.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+text = "THANKS"
+horizontal_alignment = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="THANKS"]
+position = Vector2(0, -16)
+shape = SubResource("RectangleShape2D_oce68")
+
+[node name="subject" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(194, 634)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("4_ty78e")
+
+[node name="scream" type="AudioStreamPlayer2D" parent="subject"]
+unique_name_in_owner = true
+max_polyphony = 10
+
+[node name="intro" type="AudioStreamPlayer2D" parent="subject"]
+unique_name_in_owner = true
+position = Vector2(-646.667, -2113.33)
+scale = Vector2(3.33333, 3.33333)
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+editor_description = "This is a TileMapLayer, each TileMapLayer can have its own sets of tiles at different z layers (so certain layers appear in front of behind of others). I've provided a bunch of tiles for you to experiment with. The only really mandatory thing to put into the level is the Level End Marker which can be placed using this tilemap via the LevelElements tileset in the TileMap settings."
+tile_map_data = PackedByteArray("AAAAACcAAAAGAAEAAAABACcAAAAGAAEAAAACACcAAAAGAAEAAAADACcAAAAGAAEAAAAEACcAAAAGAAEAAAAFACcAAAAGAAEAAAAHACcAAAAGAAEAAAAGACcAAAAGAAEAAAAIACcAAAAGAAEAAAAJACcAAAAGAAEAAAAKACcAAAAGAAEAAAALACcAAAAGAAEAAAAMACcAAAAGAAEAAAANACcAAAAGAAEAAAAOACcAAAAGAAEAAAAPACcAAAAGAAEAAAAQACcAAAAGAAEAAAARACcAAAAGAAEAAAASACcAAAAGAAEAAAATACcAAAAGAAEAAAAUACcAAAAGAAEAAAAAACgAAAAGAAIAAAAAACkAAAAGAAIAAAAAACoAAAAGAAIAAAAAACsAAAAFAAQAAAAAACwAAAAFAAMAAAABACwAAAAGAAMAAAACACwAAAAGAAMAAAADACwAAAAGAAMAAAAEACwAAAAGAAMAAAAFACwAAAAGAAMAAAAGACwAAAAGAAMAAAAHACwAAAAGAAMAAAAIACwAAAAGAAMAAAAJACwAAAAGAAMAAAAKACwAAAAGAAMAAAALACwAAAAGAAMAAAAMACwAAAAGAAMAAAANACwAAAAGAAMAAAAOACwAAAAGAAMAAAAPACwAAAAGAAMAAAAQACwAAAAGAAMAAAARACwAAAAGAAMAAAASACwAAAAGAAMAAAATACwAAAAGAAMAAAAUACwAAAAHAAMAAAAUACsAAAAEAAQAAAAUACoAAAAGAAIAAAAUACkAAAAGAAIAAAAUACgAAAAGAAIAAAATACsAAAAGAAIAAAATACoAAAAGAAIAAAATACkAAAAGAAIAAAATACgAAAAGAAIAAAASACsAAAAGAAIAAAASACoAAAAGAAIAAAASACkAAAAGAAIAAAASACgAAAAGAAIAAAARACsAAAAGAAIAAAARACoAAAAGAAIAAAARACkAAAAGAAIAAAARACgAAAAGAAIAAAAQACsAAAAGAAIAAAAQACoAAAAGAAIAAAAQACkAAAAGAAIAAAAQACgAAAAGAAIAAAAPACsAAAAGAAIAAAAPACoAAAAGAAIAAAAPACkAAAAGAAIAAAAPACgAAAAGAAIAAAAOACsAAAAGAAIAAAAOACoAAAAGAAIAAAAOACkAAAAGAAIAAAAOACgAAAAGAAIAAAANACsAAAAGAAIAAAANACoAAAAGAAIAAAANACkAAAAGAAIAAAANACgAAAAGAAIAAAAMACsAAAAGAAIAAAAMACoAAAAGAAIAAAAMACkAAAAGAAIAAAAMACgAAAAGAAIAAAALACsAAAAGAAIAAAALACoAAAAGAAIAAAALACkAAAAGAAIAAAALACgAAAAGAAIAAAAKACsAAAAGAAIAAAAKACoAAAAGAAIAAAAKACkAAAAGAAIAAAAKACgAAAAGAAIAAAAJACsAAAAGAAIAAAAJACoAAAAGAAIAAAAJACkAAAAGAAIAAAAJACgAAAAGAAIAAAAIACsAAAAGAAIAAAAIACoAAAAGAAIAAAAIACkAAAAGAAIAAAAIACgAAAAGAAIAAAAHACsAAAAGAAIAAAAHACoAAAAGAAIAAAAHACkAAAAGAAIAAAAHACgAAAAGAAIAAAAGACsAAAAGAAIAAAAGACoAAAAGAAIAAAAGACkAAAAGAAIAAAAGACgAAAAGAAIAAAAFACsAAAAGAAIAAAAFACoAAAAGAAIAAAAFACkAAAAGAAIAAAAFACgAAAAGAAIAAAAEACsAAAAGAAIAAAAEACoAAAAGAAIAAAAEACkAAAAGAAIAAAAEACgAAAAGAAIAAAADACsAAAAGAAIAAAADACoAAAAGAAIAAAADACkAAAAGAAIAAAADACgAAAAGAAIAAAACACsAAAAGAAIAAAACACoAAAAGAAIAAAACACkAAAAGAAIAAAACACgAAAAGAAIAAAABACsAAAAGAAIAAAABACoAAAAGAAIAAAABACkAAAAGAAIAAAABACgAAAAGAAIAAAAeACsAAAAGAAMAAAAeACoAAAAGAAIAAAAeACkAAAAGAAIAAAAeACgAAAAGAAIAAAAeACcAAAAGAAEAAAAdACsAAAAGAAMAAAAdACoAAAAGAAIAAAAdACkAAAAGAAIAAAAdACgAAAAGAAIAAAAdACcAAAAGAAEAAAAcACsAAAAGAAMAAAAcACoAAAAGAAIAAAAcACkAAAAGAAIAAAAcACgAAAAGAAIAAAAcACcAAAAGAAEAAAAbACsAAAAGAAMAAAAbACoAAAAGAAIAAAAbACkAAAAGAAIAAAAbACgAAAAGAAIAAAAbACcAAAAGAAEAAAAaACsAAAAGAAMAAAAaACoAAAAGAAIAAAAaACkAAAAGAAIAAAAaACgAAAAGAAIAAAAaACcAAAAGAAEAAAAZACsAAAAGAAMAAAAZACoAAAAGAAIAAAAZACkAAAAGAAIAAAAZACgAAAAGAAIAAAAZACcAAAAGAAEAAAAYACsAAAAGAAMAAAAYACoAAAAGAAIAAAAYACkAAAAGAAIAAAAYACgAAAAGAAIAAAAYACcAAAAGAAEAAAAXACsAAAAGAAMAAAAXACoAAAAGAAIAAAAXACkAAAAGAAIAAAAXACgAAAAGAAIAAAAXACcAAAAGAAEAAAAWACsAAAAGAAMAAAAWACoAAAAGAAIAAAAWACkAAAAGAAIAAAAWACgAAAAGAAIAAAAWACcAAAAGAAEAAAAVACsAAAAGAAMAAAAVACoAAAAGAAIAAAAVACkAAAAGAAIAAAAVACgAAAAGAAIAAAAVACcAAAAGAAEAAAD//ysAAAAGAAMAAAD//yoAAAAGAAIAAAD//ykAAAAGAAIAAAD//ygAAAAGAAIAAAD//ycAAAAGAAEAAAD+/ysAAAAGAAMAAAD+/yoAAAAGAAIAAAD+/ykAAAAGAAIAAAD+/ygAAAAGAAIAAAD+/ycAAAAGAAEAAAD9/ysAAAAGAAMAAAD9/yoAAAAGAAIAAAD9/ykAAAAGAAIAAAD9/ygAAAAGAAIAAAD9/ycAAAAGAAEAAAD8/ysAAAAGAAMAAAD8/yoAAAAGAAIAAAD8/ykAAAAGAAIAAAD8/ygAAAAGAAIAAAD8/ycAAAAGAAEAAAD7/ysAAAAGAAMAAAD7/yoAAAAGAAIAAAD7/ykAAAAGAAIAAAD7/ygAAAAGAAIAAAD7/ycAAAAGAAEAAAD6/ysAAAAGAAMAAAD6/yoAAAAGAAIAAAD6/ykAAAAGAAIAAAD6/ygAAAAGAAIAAAD6/ycAAAAGAAEAAAD5/ysAAAAGAAMAAAD5/yoAAAAGAAIAAAD5/ykAAAAGAAIAAAD5/ygAAAAGAAIAAAD5/ycAAAAGAAEAAAD4/ysAAAAGAAMAAAD4/yoAAAAGAAIAAAD4/ykAAAAGAAIAAAD4/ygAAAAGAAIAAAD4/ycAAAAGAAEAAAD3/ysAAAAGAAMAAAD3/yoAAAAGAAIAAAD3/ykAAAAGAAIAAAD3/ygAAAAGAAIAAAD3/ycAAAAGAAEAAAAfACsAAAAGAAMAAAAfACoAAAAGAAIAAAAfACkAAAAGAAIAAAAfACgAAAAGAAIAAAAfACcAAAAGAAEAAAD2/ysAAAAGAAMAAAD2/yoAAAAGAAIAAAD2/ykAAAAGAAIAAAD2/ygAAAAGAAIAAAD2/ycAAAAGAAEAAAD1/ysAAAAGAAMAAAD1/yoAAAAGAAIAAAD1/ykAAAAGAAIAAAD1/ygAAAAGAAIAAAD1/ycAAAAGAAEAAAAhACsAAAAHAAMAAAAhACoAAAAHAAIAAAAhACkAAAAHAAIAAAAhACgAAAAHAAIAAAAhACcAAAAHAAEAAAAgACsAAAAGAAMAAAAgACoAAAAGAAIAAAAgACkAAAAGAAIAAAAgACgAAAAGAAIAAAAgACcAAAAGAAEAAAD0/xcAAAAEAAEAAAD0/xgAAAAEAAIAAAD0/xkAAAAEAAIAAAD0/xoAAAAEAAIAAAD0/xsAAAAEAAIAAAD0/xwAAAAEAAIAAAD0/x0AAAAEAAIAAAD0/x4AAAAEAAIAAAD0/x8AAAAEAAIAAAD0/yAAAAAEAAIAAAD0/yEAAAAEAAIAAAD0/yIAAAAEAAIAAAD0/yMAAAAEAAIAAAD0/yQAAAAEAAIAAAD0/yUAAAAEAAIAAAD0/yYAAAAEAAIAAAD0/ycAAAAFAAEAAAD0/ygAAAAFAAIAAAD0/ykAAAAFAAIAAAD0/yoAAAAFAAIAAAD0/ysAAAAFAAMAAAAhABcAAAAEAAEAAAAhABgAAAAEAAIAAAAhABkAAAAEAAIAAAAhABoAAAAEAAIAAAAhABsAAAAEAAIAAAAhABwAAAAEAAIAAAAhAB0AAAAEAAIAAAAhAB4AAAAEAAIAAAAhAB8AAAAEAAIAAAAhACAAAAAEAAIAAAAhACEAAAAEAAIAAAAhACIAAAAEAAIAAAAhACMAAAAEAAIAAAAhACQAAAAEAAIAAAAhACUAAAAEAAIAAAAhACYAAAAEAAIAAAA=")
+tile_set = ExtResource("3_sfxq1")
+
+[node name="Player" parent="." instance=ExtResource("4_f3tyl")]
+unique_name_in_owner = true
+editor_description = "This is a very basic implementation of the player controller which has horizontal movement, jumping, and an animated sprite. DO NOT modify this packed scene or the player.gd script. You should instead create a script that extends the Player class and create a New Inherited Scene (by right clicking the player.tscn file and clicking \"New Inherited Scene\") to create your own custom player functionality.
+
+Feel free to replace this with your own custom Player, I only require that the player node's name must be \"Player\" and it must be made a unique name."
+position = Vector2(123, 686)
+max_horizontal_speed = 300.0
+acceleration = 2000.0
+deceleration = 2000.0
+jump_strength = 700.0
+gravity = 3000.0
+max_fall_speed = 500.0
+
+[node name="PlayerFollowCamera" parent="." instance=ExtResource("5_bkaht")]
+editor_description = "This dynamic camera is used to follow the player up to certain bounds. You can see them in engine as a red box if you wanted to tweak the parameters the impact things like the zoom."
+position = Vector2(123, 600)
+max_x = 300.0
+
+[node name="thedoer" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_0g07n")
+endoflevel = ExtResource("3_an7qo")
+
+[node name="Spike" parent="thedoer" instance=ExtResource("7_njiko")]
+position = Vector2(190, 443)
+rotation = -3.14159
+scale = Vector2(43.38, 26.07)
+
+[node name="omin" type="Label" parent="thedoer"]
+layout_mode = 0
+offset_left = 129.0
+offset_top = 711.0
+offset_right = 259.0
+offset_bottom = 734.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+text = "CHOOSE WISELY."
+horizontal_alignment = 1
+
+[connection signal="body_entered" from="GIVE" to="thedoer" method="_on_give_body_entered"]
+[connection signal="body_entered" from="THANKS" to="thedoer" method="_on_thanks_body_entered"]

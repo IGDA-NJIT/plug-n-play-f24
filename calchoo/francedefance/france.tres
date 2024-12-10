@@ -1,0 +1,77 @@
+[gd_resource type="Resource" script_class="DialogueData" load_steps=2 format=3 uid="uid://7q6sjf4pqgcb"]
+
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/DialogueData.gd" id="1_d7lun"]
+
+[resource]
+script = ExtResource("1_d7lun")
+starts = {
+"lose": &"0_2",
+"start": &"0_1"
+}
+nodes = {
+"0_1": {
+"link": &"1_1",
+"offset": Vector2(-304, -205),
+"start_id": "start"
+},
+"0_2": {
+"link": &"1_2",
+"offset": Vector2(-260, 80),
+"start_id": "lose"
+},
+"1_1": {
+"dialogue": "GET AWAY FROM MY BAGUETTES!!!!!!!!!!",
+"offset": Vector2(-3, -273),
+"options": {
+0: {
+"condition": {},
+"link": &"1_4",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "Jammy"
+},
+"1_2": {
+"dialogue": "HONHONHON ze baguettez are OURS!",
+"offset": Vector2(-20, 20),
+"options": {
+0: {
+"condition": {},
+"link": &"1_3",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "Frenchmen"
+},
+"1_3": {
+"dialogue": "NOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO",
+"offset": Vector2(380, -20),
+"options": {
+0: {
+"condition": {},
+"link": "END",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "Jammy"
+},
+"1_4": {
+"dialogue": "ZEY ARE OURS!!",
+"offset": Vector2(380, -340),
+"options": {
+0: {
+"condition": {},
+"link": "END",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "Frenchmen"
+}
+}
+variables = {}
+strays = Array[String]([])
+characters = ""

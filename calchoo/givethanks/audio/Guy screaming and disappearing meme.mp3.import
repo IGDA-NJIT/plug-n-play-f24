@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://omhgg3o3pimw"
+path="res://.godot/imported/Guy screaming and disappearing meme.mp3-55d9414752e83174b507d82d89aa9b53.mp3str"
+
+[deps]
+
+source_file="res://dev/givethanks/audio/Guy screaming and disappearing meme.mp3"
+dest_files=["res://.godot/imported/Guy screaming and disappearing meme.mp3-55d9414752e83174b507d82d89aa9b53.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c0g5er6w1adw3"
+path="res://.godot/imported/Wii sports wow.mp3-0850eb1ce8550cf9bb00e57986500c9a.mp3str"
+
+[deps]
+
+source_file="res://dev/givethanks/audio/Wii sports wow.mp3"
+dest_files=["res://.godot/imported/Wii sports wow.mp3-0850eb1ce8550cf9bb00e57986500c9a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

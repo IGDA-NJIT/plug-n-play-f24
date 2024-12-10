@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://t6r537u86ncj"
+path="res://.godot/imported/Cr1tikal disappears.mp3-a5dc13f24600bac38271062cf57e4b65.mp3str"
+
+[deps]
+
+source_file="res://dev/givethanks/audio/Cr1tikal disappears.mp3"
+dest_files=["res://.godot/imported/Cr1tikal disappears.mp3-a5dc13f24600bac38271062cf57e4b65.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

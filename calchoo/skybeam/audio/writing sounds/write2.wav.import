@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://qeut5mixwl6y"
+path="res://.godot/imported/write2.wav-d497296643c7660f938a6e5732d5a3bb.sample"
+
+[deps]
+
+source_file="res://dev/skybeam/audio/writing sounds/write2.wav"
+dest_files=["res://.godot/imported/write2.wav-d497296643c7660f938a6e5732d5a3bb.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

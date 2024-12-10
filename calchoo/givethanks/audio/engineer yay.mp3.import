@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dm58s0bvxeqrk"
+path="res://.godot/imported/engineer yay.mp3-09acc884c7753feb0350898ccfdb0f44.mp3str"
+
+[deps]
+
+source_file="res://dev/givethanks/audio/engineer yay.mp3"
+dest_files=["res://.godot/imported/engineer yay.mp3-09acc884c7753feb0350898ccfdb0f44.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b2upk3i5lfwxu"
+path="res://.godot/imported/calvin-scribble-7.mp3-85e46d50ca16d4805254412f1ee9edac.mp3str"
+
+[deps]
+
+source_file="res://dev/skybeam/audio/writing sounds/calvin-scribble-7.mp3"
+dest_files=["res://.godot/imported/calvin-scribble-7.mp3-85e46d50ca16d4805254412f1ee9edac.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
