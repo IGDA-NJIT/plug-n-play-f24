@@ -1,0 +1,115 @@
+[gd_scene load_steps=8 format=3 uid="uid://cvncuctruo4dl"]
+
+[ext_resource type="PackedScene" uid="uid://b5fsvum1kt1ru" path="res://DONOTEDITME/assets/models/cartridge_skybeam.glb" id="1_hygvq"]
+[ext_resource type="PackedScene" uid="uid://bt2c3hjo55so0" path="res://DONOTEDITME/game/world/cartridge_model.tscn" id="1_kcaf1"]
+[ext_resource type="PackedScene" uid="uid://dx7i2p5h26s3w" path="res://DONOTEDITME/assets/models/cartridge_francedefance.glb" id="2_uw302"]
+[ext_resource type="PackedScene" uid="uid://um6koc64pdlh" path="res://DONOTEDITME/assets/models/cartridge_sebeneleben.glb" id="3_lcwta"]
+[ext_resource type="PackedScene" uid="uid://cwrsivolan0eh" path="res://DONOTEDITME/assets/models/cartridge_givethanks.glb" id="4_vp61d"]
+[ext_resource type="Script" path="res://DONOTEDITME/game/world/world_selector.gd" id="6_an3ix"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_kl26e"]
+viewport_path = NodePath("SubViewport")
+
+[node name="LevelSelector" type="Node2D"]
+
+[node name="SubViewport" type="SubViewport" parent="."]
+transparent_bg = true
+size = Vector2i(576, 384)
+
+[node name="Camera3D" type="Camera3D" parent="SubViewport"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4.84581, 0, 0)
+size = 4.85455
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="SubViewport"]
+transform = Transform3D(0.136269, 0, 0.990672, 0, 1, 0, -0.990672, 0, 0.136269, 0, 0, 0)
+light_energy = 0.584
+
+[node name="FranceDefanceCart" parent="SubViewport" instance=ExtResource("1_kcaf1")]
+
+[node name="CartridgeModel" parent="SubViewport/FranceDefanceCart" index="0"]
+transform = Transform3D(1, 0, 0, 0, 0.97437, 0.224951, 0, -0.224951, 0.97437, 0, 0, 0)
+
+[node name="cartridge_base" parent="SubViewport/FranceDefanceCart/CartridgeModel" index="0"]
+visible = false
+
+[node name="cartridge_francedefance" parent="SubViewport/FranceDefanceCart/CartridgeModel" index="1" instance=ExtResource("2_uw302")]
+
+[node name="GiveThanksCart" parent="SubViewport" instance=ExtResource("1_kcaf1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.48481)
+
+[node name="CartridgeModel" parent="SubViewport/GiveThanksCart" index="0"]
+transform = Transform3D(1, 0, 0, 0, 0.97437, 0.224951, 0, -0.224951, 0.97437, 0, 0, 0)
+
+[node name="cartridge_base" parent="SubViewport/GiveThanksCart/CartridgeModel" index="0"]
+visible = false
+
+[node name="cartridge_givethanks" parent="SubViewport/GiveThanksCart/CartridgeModel" index="1" instance=ExtResource("4_vp61d")]
+
+[node name="SebenElebenCart" parent="SubViewport" instance=ExtResource("1_kcaf1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0365416, 1.66263)
+
+[node name="CartridgeModel" parent="SubViewport/SebenElebenCart" index="0"]
+transform = Transform3D(1, 0, 0, 0, 0.97437, 0.224951, 0, -0.224951, 0.97437, 0, 0, 0)
+
+[node name="cartridge_base" parent="SubViewport/SebenElebenCart/CartridgeModel" index="0"]
+visible = false
+
+[node name="cartridge_sebeneleben" parent="SubViewport/SebenElebenCart/CartridgeModel" index="1" instance=ExtResource("3_lcwta")]
+
+[node name="SkybeamCart" parent="SubViewport" instance=ExtResource("1_kcaf1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -6.79669)
+
+[node name="CartridgeModel" parent="SubViewport/SkybeamCart" index="0"]
+transform = Transform3D(1, 0, 0, 0, 0.97437, 0.224951, 0, -0.224951, 0.97437, 0, 0, 0)
+
+[node name="cartridge_base" parent="SubViewport/SkybeamCart/CartridgeModel" index="0"]
+visible = false
+
+[node name="cartridge_skybeam" parent="SubViewport/SkybeamCart/CartridgeModel" index="1" instance=ExtResource("1_hygvq")]
+
+[node name="GravityCart" parent="SubViewport" instance=ExtResource("1_kcaf1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -6.79669)
+
+[node name="CartridgeModel" parent="SubViewport/GravityCart" index="0"]
+transform = Transform3D(1, 0, 0, 0, 0.97437, 0.224951, 0, -0.224951, 0.97437, 0, 0, 0)
+
+[node name="cartridge_base" parent="SubViewport/GravityCart/CartridgeModel" index="0"]
+visible = false
+
+[node name="cartridge_skybeam" parent="SubViewport/GravityCart/CartridgeModel" index="1" instance=ExtResource("1_hygvq")]
+
+[node name="CenterPos" type="Node3D" parent="SubViewport"]
+
+[node name="LeftPos" type="Node3D" parent="SubViewport"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 8)
+
+[node name="OffscreenLeftPos" type="Node3D" parent="SubViewport"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, 30)
+
+[node name="RightPos" type="Node3D" parent="SubViewport"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -8)
+
+[node name="OffscreenRightPos" type="Node3D" parent="SubViewport"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, -30)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 61.0
+offset_top = 45.0
+offset_right = 637.0
+offset_bottom = 429.0
+texture = SubResource("ViewportTexture_kl26e")
+
+[node name="WorldSelector" type="Node" parent="." node_paths=PackedStringArray("cartridge_models", "left_pos", "right_pos", "center_pos", "offscreen_left_pos", "offscreen_right_pos")]
+script = ExtResource("6_an3ix")
+cartridge_models = [NodePath("../SubViewport/FranceDefanceCart"), NodePath("../SubViewport/SebenElebenCart"), NodePath("../SubViewport/GiveThanksCart"), NodePath("../SubViewport/SkybeamCart"), NodePath("../SubViewport/GravityCart")]
+left_pos = NodePath("../SubViewport/LeftPos")
+right_pos = NodePath("../SubViewport/RightPos")
+center_pos = NodePath("../SubViewport/CenterPos")
+offscreen_left_pos = NodePath("../SubViewport/OffscreenLeftPos")
+offscreen_right_pos = NodePath("../SubViewport/OffscreenRightPos")
+
+[editable path="SubViewport/FranceDefanceCart"]
+[editable path="SubViewport/GiveThanksCart"]
+[editable path="SubViewport/SebenElebenCart"]
+[editable path="SubViewport/SkybeamCart"]
+[editable path="SubViewport/GravityCart"]

@@ -1,0 +1,55 @@
+[gd_scene load_steps=5 format=3 uid="uid://bt2c3hjo55so0"]
+
+[ext_resource type="PackedScene" uid="uid://fmriptgdyhyu" path="res://DONOTEDITME/assets/models/cartridge_base.glb" id="1_4wxb7"]
+
+[sub_resource type="Animation" id="Animation_8npyh"]
+resource_name = "ROTATE"
+length = 3.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CartridgeModel:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5, 3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(-0.226893, 0, 0), Vector3(-0.226893, -3.14159, 0), Vector3(-0.226893, -6.28319, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_jyynt"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CartridgeModel:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.226893, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_aboro"]
+_data = {
+"RESET": SubResource("Animation_jyynt"),
+"ROTATE": SubResource("Animation_8npyh")
+}
+
+[node name="SampleCartridge" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5.6639)
+
+[node name="CartridgeModel" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.97437, 0.224951, 0, -0.224951, 0.97437, 0, 0, 0)
+
+[node name="cartridge_base" parent="CartridgeModel" instance=ExtResource("1_4wxb7")]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_aboro")
+}
+autoplay = "ROTATE"
