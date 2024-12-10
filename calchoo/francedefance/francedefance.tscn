@@ -68,7 +68,7 @@ rotation = -3.14159
 scale = Vector2(85.4352, 103.973)
 
 [node name="dailog" type="CanvasLayer" parent="."]
-layer = 128
+process_mode = 1
 
 [node name="Control" type="Control" parent="dailog"]
 layout_mode = 3
@@ -80,8 +80,6 @@ grow_vertical = 2
 
 [node name="DialogueBox" type="Panel" parent="dailog/Control"]
 unique_name_in_owner = true
-process_mode = 3
-visible = false
 layout_mode = 0
 offset_left = 299.0
 offset_top = 497.0
@@ -92,7 +90,13 @@ data = ExtResource("5_3h7vp")
 hide_portrait = true
 custom_effects = Array[RichTextEffect]([SubResource("RichTextEffect_yx6td"), SubResource("RichTextEffect_s4sxb"), SubResource("RichTextEffect_hn6ma")])
 
+[node name="PauseMenu" parent="." instance=ExtResource("2_x7lj5")]
+unique_name_in_owner = true
+editor_description = "This is the pause menu object instance. You shouldn't need to touch this at all so DO NOT TOUCH THIS."
+layer = 2
+
 [node name="diaready" type="Control" parent="."]
+unique_name_in_owner = true
 process_mode = 3
 layout_mode = 3
 anchors_preset = 0
@@ -104,20 +108,8 @@ script = ExtResource("2_u4v2n")
 stream = ExtResource("3_smifv")
 bus = &"SFX"
 
-[node name="ColorRect" type="ColorRect" parent="."]
-z_index = -10
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -1000.0
-offset_top = -1000.0
-offset_right = 99000.0
-offset_bottom = 99000.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0.111344, 0.11952, 0.162857, 1)
-
 [node name="UI\'" type="CanvasLayer" parent="."]
+layer = -2
 
 [node name="countdown" type="Label" parent="UI\'"]
 offset_left = 12.0
@@ -156,7 +148,23 @@ layout_mode = 2
 [node name="Label2" type="Label" parent="UI\'/decenter"]
 layout_mode = 2
 
-[node name="lose" type="TextureRect" parent="UI\'"]
+[node name="ColorRect" type="ColorRect" parent="UI\'"]
+z_index = -10
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1000.0
+offset_top = -1000.0
+offset_right = 99000.0
+offset_bottom = 99000.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.111344, 0.11952, 0.162857, 1)
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+layer = 0
+
+[node name="lose" type="TextureRect" parent="CanvasLayer2"]
 unique_name_in_owner = true
 visible = false
 offset_right = 703.0
@@ -165,6 +173,7 @@ scale = Vector2(1.64, 1)
 texture = ExtResource("2_3nw8e")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 0
 
 [node name="decenter" type="VBoxContainer" parent="CanvasLayer"]
 anchors_preset = 8
@@ -191,10 +200,6 @@ layout_mode = 2
 
 [node name="Label2" type="Label" parent="CanvasLayer/decenter"]
 layout_mode = 2
-
-[node name="PauseMenu" parent="." instance=ExtResource("2_x7lj5")]
-unique_name_in_owner = true
-editor_description = "This is the pause menu object instance. You shouldn't need to touch this at all so DO NOT TOUCH THIS."
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 editor_description = "This is a TileMapLayer, each TileMapLayer can have its own sets of tiles at different z layers (so certain layers appear in front of behind of others). I've provided a bunch of tiles for you to experiment with. The only really mandatory thing to put into the level is the Level End Marker which can be placed using this tilemap via the LevelElements tileset in the TileMap settings."

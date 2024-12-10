@@ -4,15 +4,18 @@ extends Control
 var miku = load("res://calchoo/sebeneleben/audio/mikudayo.wav")
 var jam = load("res://calchoo/sebeneleben/audio/lilguynoise.wav")
 var french = load("res://calchoo/francedefance/audio/Snort_ (Spy Voice Lines).mp3")
+var dialogue_button = null
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	%DialogueBox.custom_effects[0].char_displayed.connect(_on_char_displayed)
-	
+	dialogue_button = %DialogueBox.get_children()[0].get_children()[0].get_children()[1].get_children()[2].get_children()[0]
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	if not get_tree().paused:
+		dialogue_button.grab_focus()
+
 
 func _on_char_displayed(idx):
 	# you can use the idx parameter to check the index of the character displayed
