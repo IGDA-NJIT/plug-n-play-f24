@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="LevelData" load_steps=2 format=3 uid="uid://crmm6r5tmxvgp"]
+
+[ext_resource type="Script" path="res://DONOTEDITME/game/world/level_data.gd" id="1_raqy0"]
+
+[resource]
+script = ExtResource("1_raqy0")
+level_name = "Seben Eleben"
+level_description = "Wut da hell? Miku at da seben eleben"

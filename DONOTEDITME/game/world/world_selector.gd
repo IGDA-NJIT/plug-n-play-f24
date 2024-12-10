@@ -14,12 +14,22 @@ const OFF_POS = Vector3(0, 0, 20)
 @export_category("Transition Config")
 @export var transition_time: float = 1
 
-@export_category("Level References")
-@export var levels: Array[Level]
+@export_category("Data References")
+@export var level_data: Array[LevelData]
+@export var desc_label: Label
+@export var title_label: Label
+@export var flash_anim_player: AnimationPlayer
 
 var index = 0
 var changeable = true
 var curr_tween: Tween
+
+func update_crt() -> void:
+	flash_anim_player.play("FLASH")
+	var data = level_data[index]
+	desc_label.text = data.level_description
+	title_label.text = data.level_name
+
 
 func change_index(d: int) -> int:
 	var idx = index
@@ -52,10 +62,12 @@ func _ready() -> void:
 	l.position = left_pos.global_position
 	r.position = right_pos.global_position
 	
+	update_crt()
+	
 
 func _process(delta: float) -> void:
 	if changeable:
-		if (Input.is_action_just_pressed("player_left")):
+		if (Input.is_action_just_pressed("player_right")):
 			changeable = false
 			var rr = cartridge_models[change_index(2)]
 			var r = cartridge_models[change_index(1)]
@@ -71,8 +83,9 @@ func _process(delta: float) -> void:
 			curr_tween.parallel().tween_property(l, "position", offscreen_left_pos.global_position, transition_time).set_trans(Tween.TRANS_SINE)
 			curr_tween.finished.connect(_on_tween_end)
 			curr_tween.play()
+			update_crt()
 			
-		elif (Input.is_action_just_pressed("player_right")):
+		elif (Input.is_action_just_pressed("player_left")):
 			changeable = false
 			
 			var ll = cartridge_models[change_index(-2)]
@@ -89,6 +102,7 @@ func _process(delta: float) -> void:
 			curr_tween.parallel().tween_property(l, "position", center_pos.global_position, transition_time).set_trans(Tween.TRANS_SINE)
 			curr_tween.finished.connect(_on_tween_end)
 			curr_tween.play()
+			update_crt()
 			
 		elif (Input.is_action_just_pressed("player_input_1")):
 			level_loader.load_level(index)

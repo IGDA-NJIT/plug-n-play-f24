@@ -26,10 +26,22 @@ func reload_level() -> void:
 
 ## Method stub for me to implement later when stringing all the levels together
 func load_level(index: int) -> void:
+	print("Loading " + str(index))
 	get_tree().paused = true
 	loading = true
 	level_loaded = index
 	animation_player.play("CLOSE")
+
+
+## This method just takes us back to the title screen
+func return_to_title():
+	get_tree().paused = true
+	sound_player.unload_music_stream()
+	level_loaded = -1
+	
+	#sound_player.play_sound(load("res://DONOTEDITME/assets/sounds/sfx/win_fx.ogg"), Vector2(0, 0))
+	var end_timer = get_tree().create_timer(LEVEL_END_TIME / 3.0)
+	end_timer.timeout.connect(level_end_timer_end)
 
 
 ## This method is called when a level is ended
@@ -81,7 +93,7 @@ func _on_enter_tree(scene):
 	
 
 
-func _on_scene_loaded(level: Level):
+func _on_scene_loaded(level):
 	get_tree().paused = false
 	animation_player.play("OPEN")
 

@@ -209,4 +209,5 @@ autoplay = "RESET"
 [connection signal="pressed" from="MenuElements/ColorRect/VBoxContainer/FullScreenButton" to="." method="_on_fullscreen_press"]
 [connection signal="pressed" from="MenuElements/ColorRect/VBoxContainer/RestartButton" to="." method="_on_restart_press"]
 [connection signal="pressed" from="MenuElements/ColorRect/VBoxContainer/ContinueButton" to="." method="_on_continue_press"]
+[connection signal="pressed" from="MenuElements/ColorRect/VBoxContainer/ReturnButton" to="." method="_on_return_to_title_press"]
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_finished"]

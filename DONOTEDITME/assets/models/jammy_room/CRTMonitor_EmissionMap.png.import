@@ -1,0 +1,38 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://duabq61j2s5ri"
+path.s3tc="res://.godot/imported/CRTMonitor_EmissionMap.png-84acf0fb817f80b923783d58a149fd1b.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "88186d91221eb3695a9c1707894bceab"
+}
+
+[deps]
+
+source_file="res://DONOTEDITME/assets/models/jammy_room/CRTMonitor_EmissionMap.png"
+dest_files=["res://.godot/imported/CRTMonitor_EmissionMap.png-84acf0fb817f80b923783d58a149fd1b.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

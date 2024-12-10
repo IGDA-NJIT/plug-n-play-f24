@@ -341,7 +341,7 @@ scale_max = 1.1
 color_initial_ramp = SubResource("GradientTexture1D_jc7sg")
 collision_mode = 2
 
-[node name="the trees" type="Node2D"]
+[node name="Level" type="Node2D"]
 editor_description = "This is the base scene for your level! Your level must at the very least contain the following objects:
 1. A PauseMenu instance
 2. A level end marker (either as an individual scene or part of a tilemap)

@@ -13,6 +13,10 @@ class_name MainMenu
 # Animation player
 @onready var menu_anim_player: AnimationPlayer = $MenuTransitionAnimationPlayer
 
+# Credits Buttons
+@onready var credits_return_button: Button = $Credits/CreditsReturnButton
+@onready var credits_button: Button = $Main/VBoxContainer/CreditsButton
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	play_button.grab_focus()
@@ -26,6 +30,16 @@ func _process(delta):
 func _on_settings_pressed():
 	menu_anim_player.play("SETTINGS")
 	settings_return_button.grab_focus()
+
+
+func _on_credits_pressed():
+	menu_anim_player.play("CREDITS")
+	credits_return_button.grab_focus()
+
+
+func _on_credits_return_pressed():
+	menu_anim_player.play_backwards("CREDITS")
+	credits_button.grab_focus()
 
 
 func _on_play_pressed():

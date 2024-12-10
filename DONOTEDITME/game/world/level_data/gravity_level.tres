@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="LevelData" load_steps=2 format=3 uid="uid://f6m26db5e3sy"]
+
+[ext_resource type="Script" path="res://DONOTEDITME/game/world/level_data.gd" id="1_k88mn"]
+
+[resource]
+script = ExtResource("1_k88mn")
+level_name = "Alligatorforest"
+level_description = "A level by Alligator Forest all about light and gravity"

@@ -102,10 +102,6 @@ layer = 2
 [node name="MenuElements" parent="PauseMenu" index="1"]
 layer = 3
 
-[node name="ColorRect" parent="PauseMenu/MenuElements" index="0"]
-offset_top = -924.0
-offset_bottom = -424.0
-
 [node name="diaready" type="Control" parent="."]
 unique_name_in_owner = true
 process_mode = 3

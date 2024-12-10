@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="LevelData" load_steps=2 format=3 uid="uid://cn28cotn2owci"]
+
+[ext_resource type="Script" path="res://DONOTEDITME/game/world/level_data.gd" id="1_u03eu"]
+
+[resource]
+script = ExtResource("1_u03eu")
+level_name = "Demo Level"
+level_description = "A demo level made by yours truly"

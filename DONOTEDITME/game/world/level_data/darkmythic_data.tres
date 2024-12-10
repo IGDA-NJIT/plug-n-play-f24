@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="LevelData" load_steps=2 format=3 uid="uid://b14vi16ghhj0"]
+
+[ext_resource type="Script" path="res://DONOTEDITME/game/world/level_data.gd" id="1_lisbv"]
+
+[resource]
+script = ExtResource("1_lisbv")
+level_name = "DarkMythic Level"
+level_description = "Level desc"

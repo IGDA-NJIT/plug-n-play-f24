@@ -73,3 +73,6 @@ func _on_continue_press() -> void:
 
 func _on_restart_press() -> void:
 	level_loader.reload_level()
+
+func _on_return_to_title_press() -> void:
+	level_loader.return_to_title()

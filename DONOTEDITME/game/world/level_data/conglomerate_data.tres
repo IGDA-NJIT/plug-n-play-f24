@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="LevelData" load_steps=2 format=3 uid="uid://gxs4sqgp42hj"]
+
+[ext_resource type="Script" path="res://DONOTEDITME/game/world/level_data.gd" id="1_3i2xm"]
+
+[resource]
+script = ExtResource("1_3i2xm")
+level_name = "Conglomerate Level"
+level_description = "TBA"

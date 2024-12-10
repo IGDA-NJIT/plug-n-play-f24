@@ -18,7 +18,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w2heg"]
 size = Vector2(5063, 290)
 
-[node name="TestEnvironment" type="Node2D"]
+[node name="Level" type="Node2D"]
 script = ExtResource("1_p04rt")
 music_stream = ExtResource("2_8rv15")
 
