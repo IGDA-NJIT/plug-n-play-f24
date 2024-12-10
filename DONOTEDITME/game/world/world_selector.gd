@@ -104,7 +104,7 @@ func _process(delta: float) -> void:
 			curr_tween.play()
 			update_crt()
 			
-		elif (Input.is_action_just_pressed("player_input_1")):
+		elif (Input.is_action_just_pressed("player_input_1") or Input.is_action_just_pressed("ui_accept")):
 			level_loader.load_level(index)
 
 func _on_tween_end():

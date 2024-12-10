@@ -1,4 +1,4 @@
-[gd_scene load_steps=58 format=4 uid="uid://cvncuctruo4dl"]
+[gd_scene load_steps=57 format=4 uid="uid://cvncuctruo4dl"]
 
 [ext_resource type="Script" path="res://DONOTEDITME/game/level/level_selector_level.gd" id="1_avojk"]
 [ext_resource type="PackedScene" uid="uid://b5fsvum1kt1ru" path="res://DONOTEDITME/assets/models/cartridge_skybeam.glb" id="1_hygvq"]
@@ -27,7 +27,6 @@
 [ext_resource type="Resource" uid="uid://b13pjwaxn065p" path="res://DONOTEDITME/game/world/level_data/osid_data.tres" id="16_uy030"]
 [ext_resource type="Resource" uid="uid://b14vi16ghhj0" path="res://DONOTEDITME/game/world/level_data/darkmythic_data.tres" id="17_g4eet"]
 [ext_resource type="Shader" path="res://DONOTEDITME/assets/shaders/crt.gdshader" id="17_v864q"]
-[ext_resource type="VideoStream" path="res://DONOTEDITME/assets/video/converted.ogv" id="18_nh2s0"]
 [ext_resource type="Resource" uid="uid://gxs4sqgp42hj" path="res://DONOTEDITME/game/world/level_data/conglomerate_data.tres" id="18_rgdy8"]
 [ext_resource type="Script" path="res://DONOTEDITME/menu/pause_menu.gd" id="30_cusku"]
 [ext_resource type="Shader" path="res://DONOTEDITME/assets/shaders/gaussian_blur.gdshader" id="31_kv3d4"]
@@ -623,7 +622,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-stream = ExtResource("18_nh2s0")
 autoplay = true
 loop = true
 
