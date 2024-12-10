@@ -1,0 +1,57 @@
+[gd_scene load_steps=8 format=3 uid="uid://cf1xnwcweeskn"]
+
+[ext_resource type="Script" path="res://alligator_forest/Enemies/light_boss.gd" id="1_wg3kv"]
+[ext_resource type="Texture2D" uid="uid://8o3jadyhldst" path="res://icon.svg" id="2_gpeat"]
+[ext_resource type="PackedScene" uid="uid://dywv6ndb2tqwc" path="res://alligator_forest/light.tscn" id="3_v0pep"]
+[ext_resource type="Script" path="res://DONOTEDITME/game/level/hazards/enemies/enemy_hitbox.gd" id="4_b3cy1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hmaoe"]
+size = Vector2(64, 64)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ykxx3"]
+size = Vector2(128, 128)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_46qtc"]
+size = Vector2(48, 44)
+
+[node name="LightBoss" type="CharacterBody2D"]
+collision_mask = 2
+script = ExtResource("1_wg3kv")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_gpeat")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_hmaoe")
+
+[node name="Light" parent="." instance=ExtResource("3_v0pep")]
+starting_light = 10.0
+
+[node name="EnemyContactHitbox" type="Area2D" parent="."]
+editor_description = "This is one of two enemy hitboxes that the LegallyDistinctEnemyType has. This hitbox is specifically tailored to detect and handle player contact damage. Hence it is
+
+1. A one-way collider so it only triggers when the player jumps on the enemy
+
+2. Only the Player bit is selected in the collision mask (this only detects player colliders, not player projectiles)"
+visible = false
+collision_layer = 4
+collision_mask = 40
+script = ExtResource("4_b3cy1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EnemyContactHitbox"]
+shape = SubResource("RectangleShape2D_ykxx3")
+debug_color = Color(1.68458e-06, 0.636292, 0.406711, 0.42)
+
+[node name="EnemyHurtbox" type="Area2D" parent="."]
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EnemyHurtbox"]
+shape = SubResource("RectangleShape2D_46qtc")
+debug_color = Color(0.984526, 0, 0.342716, 0.42)
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
