@@ -1,0 +1,25 @@
+[gd_scene load_steps=6 format=3 uid="uid://budkcmn5djw2y"]
+
+[ext_resource type="Shader" path="res://dev - osid/shaders/float.gdshader" id="1_fbahl"]
+[ext_resource type="Texture2D" uid="uid://bcdpd4nm0cfcd" path="res://dev - osid/src/sprites/fruit.png" id="1_gqiq7"]
+[ext_resource type="Script" path="res://dev - osid/scripts/fruit.gd" id="1_wtuao"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_thycw"]
+shader = ExtResource("1_fbahl")
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3xlsw"]
+radius = 6.08276
+
+[node name="fruit" type="Area2D"]
+collision_layer = 0
+script = ExtResource("1_wtuao")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_thycw")
+texture = ExtResource("1_gqiq7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 2)
+shape = SubResource("CircleShape2D_3xlsw")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
