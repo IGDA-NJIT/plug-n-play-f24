@@ -1,4 +1,4 @@
-[gd_scene load_steps=57 format=4 uid="uid://cvncuctruo4dl"]
+[gd_scene load_steps=61 format=4 uid="uid://cvncuctruo4dl"]
 
 [ext_resource type="Script" path="res://DONOTEDITME/game/level/level_selector_level.gd" id="1_avojk"]
 [ext_resource type="PackedScene" uid="uid://b5fsvum1kt1ru" path="res://DONOTEDITME/assets/models/cartridge_skybeam.glb" id="1_hygvq"]
@@ -9,14 +9,18 @@
 [ext_resource type="PackedScene" uid="uid://cwrsivolan0eh" path="res://DONOTEDITME/assets/models/cartridge_givethanks.glb" id="4_vp61d"]
 [ext_resource type="Script" path="res://DONOTEDITME/game/world/world_selector.gd" id="6_an3ix"]
 [ext_resource type="Theme" uid="uid://dicrejglob83v" path="res://DONOTEDITME/assets/menu/ui_theme.tres" id="8_3n0ot"]
+[ext_resource type="PackedScene" uid="uid://dt7ts8tfby5vr" path="res://DONOTEDITME/assets/models/cartridge_lightsup.glb" id="8_68lbw"]
 [ext_resource type="PackedScene" uid="uid://dcwg5crr8vyi2" path="res://DONOTEDITME/assets/models/jammy_room/JammyTable.glb" id="9_0q1nm"]
+[ext_resource type="PackedScene" uid="uid://cwxp6hjkrkprj" path="res://DONOTEDITME/assets/models/cartridge_thetrees.glb" id="9_2ruy4"]
 [ext_resource type="Script" path="res://DONOTEDITME/game/world/level_data.gd" id="9_cgn2m"]
 [ext_resource type="Shader" path="res://DONOTEDITME/game/level/fade_edge.gdshader" id="9_hxxp0"]
+[ext_resource type="PackedScene" uid="uid://bkuoc5lwh6740" path="res://DONOTEDITME/assets/models/cartridge_bubbles.glb" id="10_d3va8"]
 [ext_resource type="Texture2D" uid="uid://dxmx3jd88kot1" path="res://DONOTEDITME/assets/models/jammy_room/CRTMonitor_CRTAlbedoCuts.png" id="10_g0u8s"]
 [ext_resource type="Resource" uid="uid://dcr45x0tjw1be" path="res://DONOTEDITME/game/world/level_data/francedefance_data.tres" id="10_nrhwd"]
 [ext_resource type="PackedScene" uid="uid://5r3x0pthh7w1" path="res://DONOTEDITME/assets/models/jammy_room/JammyFinalRoom.glb" id="10_t1lnw"]
 [ext_resource type="Resource" uid="uid://crmm6r5tmxvgp" path="res://DONOTEDITME/game/world/level_data/sebeneleben_data.tres" id="11_666f1"]
 [ext_resource type="Texture2D" uid="uid://duabq61j2s5ri" path="res://DONOTEDITME/assets/models/jammy_room/CRTMonitor_EmissionMap.png" id="11_q7mmr"]
+[ext_resource type="PackedScene" uid="uid://14cqiyce4jk8" path="res://DONOTEDITME/assets/models/cartridge_dash.glb" id="11_yapis"]
 [ext_resource type="Resource" uid="uid://c0y8ounvregje" path="res://DONOTEDITME/game/world/level_data/givethanks_data.tres" id="12_53gy8"]
 [ext_resource type="Texture2D" uid="uid://bkg0xuap4artu" path="res://DONOTEDITME/assets/models/jammy_room/CRTMonitor_CRTMetal-roughness.png" id="12_hoah5"]
 [ext_resource type="ArrayMesh" uid="uid://ciep4qp0dr2jj" path="res://calchoo/sebeneleben/assets/miku/mikuuuu.obj" id="12_jusqf"]
@@ -437,10 +441,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -6.79669)
 [node name="CartridgeModel" parent="CartridgeWorld/GravityCart" index="0"]
 transform = Transform3D(1, 0, 0, 0, 0.97437, 0.224951, 0, -0.224951, 0.97437, 0, 0, 0)
 
-[node name="cartridge_base" parent="CartridgeWorld/GravityCart/CartridgeModel" index="0"]
+[node name="cartridge_lightsup" parent="CartridgeWorld/GravityCart/CartridgeModel" index="0" instance=ExtResource("8_68lbw")]
+
+[node name="cartridge_base" parent="CartridgeWorld/GravityCart/CartridgeModel" index="1"]
 visible = false
 
-[node name="cartridge_skybeam" parent="CartridgeWorld/GravityCart/CartridgeModel" index="1" instance=ExtResource("1_hygvq")]
+[node name="cartridge_skybeam" parent="CartridgeWorld/GravityCart/CartridgeModel" index="2" instance=ExtResource("1_hygvq")]
+visible = false
 
 [node name="Tutorial" parent="CartridgeWorld" instance=ExtResource("1_kcaf1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -6.79669)
@@ -454,17 +461,32 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -6.79669)
 [node name="CartridgeModel" parent="CartridgeWorld/OSIDLevelCart" index="0"]
 transform = Transform3D(1, 0, 0, 0, 0.97437, 0.224951, 0, -0.224951, 0.97437, 0, 0, 0)
 
+[node name="cartridge_thetrees" parent="CartridgeWorld/OSIDLevelCart/CartridgeModel" index="0" instance=ExtResource("9_2ruy4")]
+
+[node name="cartridge_base" parent="CartridgeWorld/OSIDLevelCart/CartridgeModel" index="1"]
+visible = false
+
 [node name="DarkMythicLevelCart" parent="CartridgeWorld" instance=ExtResource("1_kcaf1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -6.79669)
 
 [node name="CartridgeModel" parent="CartridgeWorld/DarkMythicLevelCart" index="0"]
 transform = Transform3D(1, 0, 0, 0, 0.97437, 0.224951, 0, -0.224951, 0.97437, 0, 0, 0)
 
+[node name="cartridge_bubbles" parent="CartridgeWorld/DarkMythicLevelCart/CartridgeModel" index="0" instance=ExtResource("10_d3va8")]
+
+[node name="cartridge_base" parent="CartridgeWorld/DarkMythicLevelCart/CartridgeModel" index="1"]
+visible = false
+
 [node name="ConglomerateLevelCart" parent="CartridgeWorld" instance=ExtResource("1_kcaf1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -6.79669)
 
 [node name="CartridgeModel" parent="CartridgeWorld/ConglomerateLevelCart" index="0"]
 transform = Transform3D(1, 0, 0, 0, 0.97437, 0.224951, 0, -0.224951, 0.97437, 0, 0, 0)
+
+[node name="cartridge_dash" parent="CartridgeWorld/ConglomerateLevelCart/CartridgeModel" index="0" instance=ExtResource("11_yapis")]
+
+[node name="cartridge_base" parent="CartridgeWorld/ConglomerateLevelCart/CartridgeModel" index="1"]
+visible = false
 
 [node name="CenterPos" type="Node3D" parent="CartridgeWorld"]
 
@@ -482,13 +504,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, -30)
 
 [node name="WorldSelector" type="Node" parent="." node_paths=PackedStringArray("cartridge_models", "left_pos", "right_pos", "center_pos", "offscreen_left_pos", "offscreen_right_pos", "desc_label", "title_label", "flash_anim_player")]
 script = ExtResource("6_an3ix")
-cartridge_models = [NodePath("../CartridgeWorld/FranceDefanceCart"), NodePath("../CartridgeWorld/SebenElebenCart"), NodePath("../CartridgeWorld/GiveThanksCart"), NodePath("../CartridgeWorld/SkybeamCart"), NodePath("../CartridgeWorld/GravityCart"), NodePath("../CartridgeWorld/Tutorial"), NodePath("../CartridgeWorld/OSIDLevelCart"), NodePath("../CartridgeWorld/ConglomerateLevelCart"), NodePath("../CartridgeWorld/DarkMythicLevelCart")]
+cartridge_models = [NodePath("../CartridgeWorld/FranceDefanceCart"), NodePath("../CartridgeWorld/SebenElebenCart"), NodePath("../CartridgeWorld/GiveThanksCart"), NodePath("../CartridgeWorld/SkybeamCart"), NodePath("../CartridgeWorld/GravityCart"), NodePath("../CartridgeWorld/Tutorial"), NodePath("../CartridgeWorld/DarkMythicLevelCart"), NodePath("../CartridgeWorld/ConglomerateLevelCart"), NodePath("../CartridgeWorld/OSIDLevelCart")]
 left_pos = NodePath("../CartridgeWorld/LeftPos")
 right_pos = NodePath("../CartridgeWorld/RightPos")
 center_pos = NodePath("../CartridgeWorld/CenterPos")
 offscreen_left_pos = NodePath("../CartridgeWorld/OffscreenLeftPos")
 offscreen_right_pos = NodePath("../CartridgeWorld/OffscreenRightPos")
-level_data = Array[ExtResource("9_cgn2m")]([ExtResource("10_nrhwd"), ExtResource("11_666f1"), ExtResource("12_53gy8"), ExtResource("13_ltjyu"), ExtResource("14_xgxy4"), ExtResource("15_mga3b"), ExtResource("16_uy030"), ExtResource("18_rgdy8"), ExtResource("17_g4eet")])
+level_data = Array[ExtResource("9_cgn2m")]([ExtResource("10_nrhwd"), ExtResource("11_666f1"), ExtResource("12_53gy8"), ExtResource("13_ltjyu"), ExtResource("14_xgxy4"), ExtResource("15_mga3b"), ExtResource("17_g4eet"), ExtResource("18_rgdy8"), ExtResource("16_uy030")])
 desc_label = NodePath("../DisplayViewport/TVScreen/Description")
 title_label = NodePath("../DisplayViewport/TVScreen/Title")
 flash_anim_player = NodePath("../DisplayViewport/TVScreen/AnimationPlayer")

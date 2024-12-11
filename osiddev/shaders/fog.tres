@@ -1,0 +1,92 @@
+[gd_resource type="VisualShader" load_steps=7 format=3 uid="uid://yoyjvgaqsbj"]
+
+[ext_resource type="Texture2D" uid="uid://d245x27m4f6kl" path="res://osiddev/shaders/fogNoise.tres" id="1_vfrr8"]
+
+[sub_resource type="VisualShaderNodeTexture" id="VisualShaderNodeTexture_xnidr"]
+expanded_output_ports = [0]
+texture = ExtResource("1_vfrr8")
+texture_type = 1
+
+[sub_resource type="Gradient" id="Gradient_letnc"]
+offsets = PackedFloat32Array(0, 0.505747)
+colors = PackedColorArray(0.8, 0.8, 0.8, 0.392157, 0.8, 0.8, 0.8, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_uj341"]
+gradient = SubResource("Gradient_letnc")
+fill_from = Vector2(1, 1)
+
+[sub_resource type="VisualShaderNodeTexture" id="VisualShaderNodeTexture_3t7jl"]
+expanded_output_ports = [0]
+texture = SubResource("GradientTexture2D_uj341")
+texture_type = 1
+
+[sub_resource type="VisualShaderNodeColorOp" id="VisualShaderNodeColorOp_xcce3"]
+operator = 4
+
+[resource]
+code = "shader_type canvas_item;
+render_mode blend_mix;
+
+uniform sampler2D tex_frg_4 : source_color;
+uniform sampler2D tex_frg_2 : source_color;
+
+
+
+void fragment() {
+// Texture2D:4
+	vec4 n_out4p0 = texture(tex_frg_4, UV);
+	float n_out4p4 = n_out4p0.a;
+
+
+// Texture2D:2
+	vec4 n_out2p0 = texture(tex_frg_2, UV);
+	float n_out2p4 = n_out2p0.a;
+
+
+	vec3 n_out7p0;
+// ColorOp:7
+	{
+		float base = vec3(n_out4p4).x;
+		float blend = vec3(n_out2p4).x;
+		if (base < 0.5) {
+			n_out7p0.x = 2.0 * base * blend;
+		} else {
+			n_out7p0.x = 1.0 - 2.0 * (1.0 - blend) * (1.0 - base);
+		}
+	}
+	{
+		float base = vec3(n_out4p4).y;
+		float blend = vec3(n_out2p4).y;
+		if (base < 0.5) {
+			n_out7p0.y = 2.0 * base * blend;
+		} else {
+			n_out7p0.y = 1.0 - 2.0 * (1.0 - blend) * (1.0 - base);
+		}
+	}
+	{
+		float base = vec3(n_out4p4).z;
+		float blend = vec3(n_out2p4).z;
+		if (base < 0.5) {
+			n_out7p0.z = 2.0 * base * blend;
+		} else {
+			n_out7p0.z = 1.0 - 2.0 * (1.0 - blend) * (1.0 - base);
+		}
+	}
+
+
+// Output:0
+	COLOR.a = n_out7p0.x;
+
+
+}
+"
+mode = 1
+flags/light_only = false
+nodes/fragment/0/position = Vector2(840, 320)
+nodes/fragment/2/node = SubResource("VisualShaderNodeTexture_xnidr")
+nodes/fragment/2/position = Vector2(260, 540)
+nodes/fragment/4/node = SubResource("VisualShaderNodeTexture_3t7jl")
+nodes/fragment/4/position = Vector2(260, 100)
+nodes/fragment/7/node = SubResource("VisualShaderNodeColorOp_xcce3")
+nodes/fragment/7/position = Vector2(580, 320)
+nodes/fragment/connections = PackedInt32Array(7, 0, 0, 1, 4, 4, 7, 0, 2, 4, 7, 1)

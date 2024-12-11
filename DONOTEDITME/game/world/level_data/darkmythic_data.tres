@@ -4,5 +4,5 @@
 
 [resource]
 script = ExtResource("1_lisbv")
-level_name = "DarkMythic Level"
-level_description = "Level desc"
+level_name = "Bubbles"
+level_description = "To make his way through this level, Jammy has been granted the power to create bubble shields so long as he has the energy to do so. A level by thatmysticshadow"

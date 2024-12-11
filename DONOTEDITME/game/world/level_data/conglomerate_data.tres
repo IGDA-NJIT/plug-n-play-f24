@@ -4,5 +4,5 @@
 
 [resource]
 script = ExtResource("1_3i2xm")
-level_name = "Conglomerate Level"
-level_description = "TBA"
+level_name = "Dash and Don't Die"
+level_description = "Jammy needs to make his way to the top of this obstacle course by dashing. A level by Conglomerate"

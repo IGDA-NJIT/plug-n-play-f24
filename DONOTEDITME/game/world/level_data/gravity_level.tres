@@ -4,5 +4,5 @@
 
 [resource]
 script = ExtResource("1_k88mn")
-level_name = "Alligatorforest"
-level_description = "A level by Alligator Forest all about light and gravity"
+level_name = "Lights Up on Jammy!"
+level_description = "Jammy absorbs light and manipulates gravity to ascend to the surface. Watch out for light-infested bugs! A level by alligator-forest"
