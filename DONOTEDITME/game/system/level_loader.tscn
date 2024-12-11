@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://dajyvpt4404ft"]
+[gd_scene load_steps=16 format=3 uid="uid://dajyvpt4404ft"]
 
 [ext_resource type="Script" path="res://DONOTEDITME/game/system/level_loader.gd" id="1_uvpqj"]
 [ext_resource type="Shader" path="res://DONOTEDITME/assets/shaders/diamond_sweep.gdshader" id="2_4icfv"]
@@ -9,8 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://fnc5p2ihj01t" path="res://calchoo/sebeneleben/seben.tscn" id="5_56bg1"]
 [ext_resource type="PackedScene" uid="uid://b4e0xkinhu4s2" path="res://calchoo/givethanks/givethanks.tscn" id="6_2f36x"]
 [ext_resource type="PackedScene" uid="uid://o064mbwgbynj" path="res://calchoo/skybeam/skybeam.tscn" id="7_61p1c"]
-[ext_resource type="PackedScene" uid="uid://c2mqcqump028e" path="res://thatmysticshadow/level/level.tscn" id="8_ocxwa"]
-[ext_resource type="PackedScene" uid="uid://bga43ujp1m117" path="res://conglomerate/MYLevel.tscn" id="11_wcft7"]
+[ext_resource type="PackedScene" uid="uid://c2mqcqump028e" path="res://dev/level.tscn" id="8_ocxwa"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_v61qb"]
 shader = ExtResource("2_4icfv")
@@ -77,7 +76,7 @@ layer = 3
 script = ExtResource("1_uvpqj")
 main_menu_scene = ExtResource("2_12xsm")
 world_map_scene = ExtResource("3_371jh")
-level_array = Array[PackedScene]([ExtResource("4_04byv"), ExtResource("5_56bg1"), ExtResource("6_2f36x"), ExtResource("7_61p1c"), ExtResource("8_ocxwa"), ExtResource("3_bf328"), ExtResource("8_ocxwa"), ExtResource("11_wcft7"), ExtResource("8_ocxwa")])
+level_array = Array[PackedScene]([ExtResource("4_04byv"), ExtResource("5_56bg1"), ExtResource("6_2f36x"), ExtResource("7_61p1c"), ExtResource("8_ocxwa"), ExtResource("3_bf328")])
 
 [node name="Sweep" type="ColorRect" parent="."]
 material = SubResource("ShaderMaterial_v61qb")

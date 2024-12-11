@@ -52,7 +52,10 @@ func _on_door_body_entered(_body: Node2D) -> void:
 
 
 func _on_door_body_exited(_body: Node2D) -> void:
+	if %interact == null:
+		return
 	entered = false
+	
 	%interact.text = ""
 
 
