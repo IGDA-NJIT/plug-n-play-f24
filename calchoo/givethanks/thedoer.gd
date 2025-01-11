@@ -84,7 +84,7 @@ func _process(_delta: float) -> void:
 				down = 1
 			else:
 				var leave = endoflevel.instantiate()
-				get_tree().root.call_deferred("add_child",leave)
+				get_tree().root.get_node("Level").call_deferred("add_child",leave)
 				leave.position = Vector2(194,650)
 				once2 = true
 		die = false
