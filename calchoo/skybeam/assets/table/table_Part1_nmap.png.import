@@ -2,14 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://sb8nyf03sjqe"
+uid="uid://cl2w7w0qny5ts"
 path.s3tc="res://.godot/imported/table_Part1_nmap.png-0a310cef23f9b7fc7d2e132bc4920c99.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
-}
-generator_parameters={
-"md5": "85768b10b556fc197449f909c87a90ff"
 }
 
 [deps]
@@ -27,8 +24,8 @@ compress/normal_map=1
 compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
-roughness/mode=1
-roughness/src_normal="res://dev/skybeam/assets/table/table_Part1_nmap.png"
+roughness/mode=0
+roughness/src_normal=""
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/normal_map_invert_y=false

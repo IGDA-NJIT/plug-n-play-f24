@@ -2,14 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dkgd86ii8fthk"
+uid="uid://dj3gl4voou8by"
 path.s3tc="res://.godot/imported/french_Meshpart1_diff.png-383a52aed60e16caf8788e70b52849b4.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
-}
-generator_parameters={
-"md5": "a02cd909bf14c28fc9a99d7c3bf2afdd"
 }
 
 [deps]
