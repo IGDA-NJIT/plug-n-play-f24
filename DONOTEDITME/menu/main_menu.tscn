@@ -1,10 +1,10 @@
 [gd_scene load_steps=19 format=3 uid="uid://frfab2iw5pom"]
 
 [ext_resource type="Texture2D" uid="uid://dck54f5ajpuuo" path="res://DONOTEDITME/assets/menu/main_menu/title.png" id="1_it7dx"]
-[ext_resource type="Script" path="res://DONOTEDITME/menu/main_menu.gd" id="1_uyluv"]
+[ext_resource type="Script" uid="uid://blmuhwhch5f7c" path="res://DONOTEDITME/menu/main_menu.gd" id="1_uyluv"]
 [ext_resource type="Theme" uid="uid://dicrejglob83v" path="res://DONOTEDITME/assets/menu/ui_theme.tres" id="2_vyy2r"]
 [ext_resource type="PackedScene" uid="uid://b4vi3t5tdfr67" path="res://DONOTEDITME/menu/background_effect/game_jam_jar.glb" id="3_7lmgf"]
-[ext_resource type="Shader" path="res://DONOTEDITME/menu/background_effect/repeat_pan.gdshader" id="4_xw2a2"]
+[ext_resource type="Shader" uid="uid://b2gtratufxhak" path="res://DONOTEDITME/menu/background_effect/repeat_pan.gdshader" id="4_xw2a2"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_fl52y"]
 shader = ExtResource("4_xw2a2")
@@ -39,8 +39,8 @@ tracks/0/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_uk0mp"]
 _data = {
-"JAR_ROTATION": SubResource("Animation_hrh2g"),
-"RESET": SubResource("Animation_7skhc")
+&"JAR_ROTATION": SubResource("Animation_hrh2g"),
+&"RESET": SubResource("Animation_7skhc")
 }
 
 [sub_resource type="Animation" id="Animation_tvop5"]
@@ -95,8 +95,8 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_65jcl"]
 _data = {
-"OPEN": SubResource("Animation_tvop5"),
-"RESET": SubResource("Animation_1xsjs")
+&"OPEN": SubResource("Animation_tvop5"),
+&"RESET": SubResource("Animation_1xsjs")
 }
 
 [sub_resource type="LabelSettings" id="LabelSettings_2kpfm"]
@@ -456,9 +456,9 @@ tracks/9/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_bbhq7"]
 _data = {
-"CREDITS": SubResource("Animation_ysddb"),
-"RESET": SubResource("Animation_onmj0"),
-"SETTINGS": SubResource("Animation_adti8")
+&"CREDITS": SubResource("Animation_ysddb"),
+&"RESET": SubResource("Animation_onmj0"),
+&"SETTINGS": SubResource("Animation_adti8")
 }
 
 [node name="MainMenu" type="CanvasLayer"]
@@ -549,13 +549,13 @@ size = 3.65486
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Main/VBoxContainer/SubViewport"]
 libraries = {
-"": SubResource("AnimationLibrary_uk0mp")
+&"": SubResource("AnimationLibrary_uk0mp")
 }
 autoplay = "JAR_ROTATION"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Main"]
 libraries = {
-"": SubResource("AnimationLibrary_65jcl")
+&"": SubResource("AnimationLibrary_65jcl")
 }
 autoplay = "OPEN"
 
@@ -659,7 +659,7 @@ label_settings = SubResource("LabelSettings_2kpfm")
 
 [node name="MenuTransitionAnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_bbhq7")
+&"": SubResource("AnimationLibrary_bbhq7")
 }
 autoplay = "RESET"
 
