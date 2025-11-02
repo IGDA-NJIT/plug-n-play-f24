@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://44mqrj5kr4ql"]
+
+[ext_resource type="PackedScene" uid="uid://xrv5a4vk77ic" path="res://DONOTEDITME/game/player/player_follow_camera.tscn" id="1_tl13n"]
+[ext_resource type="Script" path="res://reich/minimal-jammy/jump_sensitive_player_follow_camera.gd" id="2_imnm2"]
+
+[node name="PlayerFollowCamera" instance=ExtResource("1_tl13n")]
+offset = Vector2(0, -100)
+script = ExtResource("2_imnm2")

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dy67nqq2n1sq4"
+path="res://.godot/imported/Viscid - 4.48.mp3-8450ee02687dda92b76f98c18e6c2051.mp3str"
+
+[deps]
+
+source_file="res://reich/Viscid - 4.48.mp3"
+dest_files=["res://.godot/imported/Viscid - 4.48.mp3-8450ee02687dda92b76f98c18e6c2051.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

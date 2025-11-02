@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://52of50p1bwqn"]
+
+[ext_resource type="PackedScene" uid="uid://xb5i5ynpctpq" path="res://DONOTEDITME/game/player/player.tscn" id="1_olibu"]
+[ext_resource type="Script" path="res://reich/minimal-jammy/minimal_player.gd" id="2_fks4i"]
+[ext_resource type="Texture2D" uid="uid://cqyf2w3dvru76" path="res://reich/minimal-jammy/jammy.png" id="2_rmdyq"]
+
+[node name="Player" instance=ExtResource("1_olibu")]
+script = ExtResource("2_fks4i")
+max_horizontal_speed = 250.0
+acceleration = 1000.0
+jump_strength = 600.0
+gravity = 2000.0
+max_fall_speed = 3000.0
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_rmdyq")
+
+[node name="AnimationPlayer" parent="." index="4"]
+speed_scale = 2.0

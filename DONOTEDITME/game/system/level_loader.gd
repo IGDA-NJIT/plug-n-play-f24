@@ -18,7 +18,8 @@ var level_array: Array[PackedScene] = [
 	preload("res://DONOTEDITME/game/level/test_environment.tscn"),
 	preload("res://mysticshadowdev/level/level.tscn"),
 	preload("res://conglomerate/MYLevel.tscn"),
-	preload("res://osiddev/scenes/level.tscn")]
+	preload("res://osiddev/scenes/level.tscn"),
+	preload("res://reich/minimal-level.tscn")]
 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 

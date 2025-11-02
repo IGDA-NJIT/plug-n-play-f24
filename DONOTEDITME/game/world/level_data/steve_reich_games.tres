@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="LevelData" load_steps=2 format=3 uid="uid://0ue74u30f87t"]
+
+[ext_resource type="Script" path="res://DONOTEDITME/game/world/level_data.gd" id="1_mosjn"]
+
+[resource]
+script = ExtResource("1_mosjn")
+level_name = "what if steve reich made games?"
+level_description = ""
