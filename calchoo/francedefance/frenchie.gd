@@ -68,12 +68,12 @@ func wait():
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	jam = body
 	print(body)
-	if body is PlayerLegacy:
+	if body is Player:
 		interact = true
 		%interact.text = "J to grab"
 
 func _on_area_2d_body_exited(body: Node2D) -> void:
 	jam = body
-	if body is PlayerLegacy:
+	if body is Player:
 		interact = false
 		%interact.text = ""

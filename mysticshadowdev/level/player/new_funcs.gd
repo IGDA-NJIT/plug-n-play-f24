@@ -1,4 +1,4 @@
-extends PlayerLegacy
+extends Player
 
 @export_category("Sound Config")
 
@@ -35,11 +35,11 @@ func get_source_damage() -> float:
 func check_death() -> void:
 	if(current_health == 1.0):
 		sound_player.play_sound(player_hit_sound, global_position)
-		print_rich("[color=pink]PlayerLegacy has lost shield")
+		print_rich("[color=pink]Player has lost shield")
 		shield_bounce()
 	if current_health <= 0.0:
 		sound_player.play_sound(death_sound, global_position)
-		print_rich("[color=red]PlayerLegacy has died")
+		print_rich("[color=red]Player has died")
 		level_loader.reload_level()
 
 ## Overwrites update_animation to also check if the player is falling and update the animation

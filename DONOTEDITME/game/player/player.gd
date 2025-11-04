@@ -1,14 +1,11 @@
 extends CharacterBody2D
-## @deprecated: This Player class is an outdated template class which you are discouraged
-## from using or extending. An improved player class will be created in its place
-##
-## This PlayerLegacy class represents the basic player controller and builds off of 
+## This Player class represents the basic player controller and builds off of 
 ## CharacterBody2D functionality. This class provides a variety of methods for you to be
 ## able to extend and override if you wanted to modify the player's functionality, as well as
 ## several quantities for you to tweak to change the feel of the player controller.
-## DO NOT modify this script. Instead you should create a new script that extends the PlayerLegacy class
+## DO NOT modify this script. Instead you should create a new script that extends the Player class
 ## if you want to create custom player functionality.
-class_name PlayerLegacy
+class_name Player
 
 ## This quantity represents the threshold by which input is considered to be 0
 const INPUT_THRESHOLD: float = 0.01
@@ -59,11 +56,11 @@ const STOP_VELOCITY_THRSHOLD: float = 0.01
 @onready var anim_player: AnimationPlayer = $AnimationPlayer
 @onready var sprite: Sprite2D = $Sprite2D
 
-# PlayerLegacy State
+# Player State
 var current_health: float
 var footstep_time: float
 
-## This method is called on the first frame that the PlayerLegacy is active in the scene tree, and by default
+## This method is called on the first frame that the Player is active in the scene tree, and by default
 ## does not do anything. Feel free to override this method if you need to execute any code on the first
 ## frame.
 func _ready():
@@ -164,7 +161,7 @@ func damage(amount: float) -> void:
 ## functionality
 func check_death() -> void:
 	if current_health <= 0.0:
-		print_rich("[color=pink]PlayerLegacy has died")
+		print_rich("[color=pink]Player has died")
 		level_loader.reload_level()
 
 

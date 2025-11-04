@@ -6,5 +6,5 @@ func _ready() -> void:
 	$AnimatedSprite2D.play("NotClaimed")
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
-	if area.get_parent() is PlayerLegacy:
+	if area.get_parent() is Player:
 		$AnimatedSprite2D.play("Claimed")

@@ -1,4 +1,4 @@
-extends "res://DONOTEDITME/game/player/player_legacy.gd"
+extends "res://DONOTEDITME/game/player/player.gd"
 
 
 

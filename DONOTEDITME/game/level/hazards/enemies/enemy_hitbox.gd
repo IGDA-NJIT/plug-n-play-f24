@@ -34,7 +34,7 @@ func _on_hitbox_entered(other: Area2D):
 		"\" that does not have a get_source_damage() method has entered the " + str(enemy_reference.name) + " hitbox>")
 
 
-## Extra code to show an editor warning if this is not attached to a PlayerLegacy object
+## Extra code to show an editor warning if this is not attached to a Player object
 func _get_configuration_warnings():
 	if not (get_parent().has_method("damage")):
 		return ["The parent of this EnemyHitbox component does not have a damage function"]

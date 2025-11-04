@@ -1,4 +1,4 @@
-extends PlayerLegacy
+extends Player
 
 func _physics_process(delta: float) -> void:
 	if !%DialogueBox.visible:

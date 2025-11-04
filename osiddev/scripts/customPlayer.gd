@@ -1,4 +1,4 @@
-extends PlayerLegacy
+extends Player
 
 #allows jumping down from a branch
 func _process(_delta):

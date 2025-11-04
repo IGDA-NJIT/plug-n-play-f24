@@ -4,4 +4,4 @@ extends Area2D
 
 #plays sound when entering water
 func _on_body_entered(_body: Node2D) -> void:
-	sound_player.play_sound(sfx,%PlayerLegacy.position)
+	sound_player.play_sound(sfx,%Player.position)
