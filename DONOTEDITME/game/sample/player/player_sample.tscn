@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://xb5i5ynpctpq"]
 
-[ext_resource type="Script" uid="uid://cviowfvj6frq" path="res://DONOTEDITME/game/sample/player/player.gd" id="2_ebjth"]
+[ext_resource type="Script" uid="uid://cviowfvj6frq" path="res://DONOTEDITME/game/sample/player/player_sample.gd" id="2_ebjth"]
 [ext_resource type="Texture2D" uid="uid://ofoqedjacn88" path="res://DONOTEDITME/assets/sprites/player/jammy.png" id="2_tdwd0"]
 [ext_resource type="PackedScene" uid="uid://c1jwyvxr2ohvb" path="res://DONOTEDITME/game/sample/player/player_hitbox.tscn" id="3_oihoa"]
 [ext_resource type="Script" uid="uid://ba1jqafgte36v" path="res://DONOTEDITME/game/sample/player/player_hitbox.gd" id="4_u5s6u"]

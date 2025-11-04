@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=4 uid="uid://dl58qldrbrnkn"]
 
 [ext_resource type="Script" uid="uid://dm52hqu27lrbd" path="res://DONOTEDITME/game/system/level.gd" id="1_gk2hi"]
-[ext_resource type="PackedScene" uid="uid://xb5i5ynpctpq" path="res://DONOTEDITME/game/sample/player/player.tscn" id="1_uj18h"]
+[ext_resource type="PackedScene" uid="uid://xb5i5ynpctpq" path="res://DONOTEDITME/game/sample/player/player_sample.tscn" id="1_uj18h"]
 [ext_resource type="AudioStream" uid="uid://c87t4mso8y1dw" path="res://DONOTEDITME/assets/sounds/music/Monkeys_Spinning_Monkeys_by_Kevin_MacLeod.ogg" id="2_ckc6v"]
 [ext_resource type="AudioStream" uid="uid://d36on0uv7ae4c" path="res://DONOTEDITME/assets/sounds/sfx/footstep_grass_004.ogg" id="3_gibkq"]
 [ext_resource type="AudioStream" uid="uid://bqxwc7jke7atw" path="res://DONOTEDITME/assets/sounds/sfx/jump.ogg" id="4_i172r"]
