@@ -1,9 +1,9 @@
 [gd_scene load_steps=13 format=3 uid="uid://tnaq4ikjcj78"]
 
-[ext_resource type="Script" path="res://DONOTEDITME/game/level/hazards/enemies/basic enemies/walking_enemy.gd" id="1_0q0t7"]
+[ext_resource type="Script" uid="uid://c6b1ddpptrw1y" path="res://DONOTEDITME/game/sample/hazards/enemies/basic enemies/walking_enemy.gd" id="1_0q0t7"]
 [ext_resource type="Texture2D" uid="uid://d0yopaahkep05" path="res://DONOTEDITME/assets/sprites/tilesheets/tilemap-characters.png" id="2_b0hdx"]
-[ext_resource type="Script" path="res://DONOTEDITME/game/level/hazards/enemies/enemy_hitbox.gd" id="3_g21vx"]
-[ext_resource type="Script" path="res://DONOTEDITME/game/level/hazards/enemies/enemy_one_way_hitbox.gd" id="4_85cpe"]
+[ext_resource type="Script" uid="uid://jhheisykocn8" path="res://DONOTEDITME/game/sample/hazards/enemies/enemy_hitbox.gd" id="3_g21vx"]
+[ext_resource type="Script" uid="uid://cdh7hn4qls1di" path="res://DONOTEDITME/game/sample/hazards/enemies/enemy_one_way_hitbox.gd" id="4_85cpe"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_60pxy"]
 

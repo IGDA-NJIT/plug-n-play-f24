@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://bipl7yj7vdf1m"]
 
-[ext_resource type="Script" path="res://DONOTEDITME/game/level/level_end_marker.gd" id="1_meh7v"]
+[ext_resource type="Script" uid="uid://00hwd1olo4f8" path="res://DONOTEDITME/game/sample/level_end_marker.gd" id="1_meh7v"]
 [ext_resource type="Texture2D" uid="uid://idiuh5cvdvnn" path="res://DONOTEDITME/assets/sprites/tilesheets/tilemap.png" id="2_vtte5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dstn7"]

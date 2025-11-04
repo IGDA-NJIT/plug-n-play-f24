@@ -81,6 +81,9 @@ func update_sound(settings: PauseMenu):
 
 # Playing Songs
 
+## Call this function to change the music
+
+
 ##  When a level is loaded this is called. DO NOT CALL THIS
 func load_music_stream(song: AudioStream) -> void:
 	music_fading = false

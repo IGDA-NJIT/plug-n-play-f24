@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=4 uid="uid://c2mqcqump028e"]
 
 [ext_resource type="PackedScene" uid="uid://cavhiq8b25tph" path="res://DONOTEDITME/menu/pause_menu.tscn" id="1_1g07d"]
-[ext_resource type="Script" path="res://DONOTEDITME/game/system/level.gd" id="1_fnfqx"]
-[ext_resource type="TileSet" uid="uid://b7temyiqwjg58" path="res://DONOTEDITME/game/level/tilesets/kenney_tileset_compilation.tres" id="3_vjomw"]
+[ext_resource type="Script" uid="uid://dm52hqu27lrbd" path="res://DONOTEDITME/game/system/level.gd" id="1_fnfqx"]
+[ext_resource type="TileSet" uid="uid://b7temyiqwjg58" path="res://DONOTEDITME/game/sample/tilesets/kenney_tileset_compilation.tres" id="3_vjomw"]
 [ext_resource type="PackedScene" uid="uid://xb5i5ynpctpq" path="res://DONOTEDITME/game/player/player.tscn" id="4_jtnki"]
 [ext_resource type="PackedScene" uid="uid://xrv5a4vk77ic" path="res://DONOTEDITME/game/player/player_follow_camera.tscn" id="5_iu87s"]
 

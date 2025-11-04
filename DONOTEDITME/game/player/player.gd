@@ -1,14 +1,11 @@
 extends CharacterBody2D
-## @deprecated: This Player class is an outdated template class which you are discouraged
-## from using or extending. An improved player class will be created in its place
-##
 ## This PlayerLegacy class represents the basic player controller and builds off of 
 ## CharacterBody2D functionality. This class provides a variety of methods for you to be
 ## able to extend and override if you wanted to modify the player's functionality, as well as
 ## several quantities for you to tweak to change the feel of the player controller.
 ## DO NOT modify this script. Instead you should create a new script that extends the PlayerLegacy class
 ## if you want to create custom player functionality.
-class_name PlayerLegacy
+class_name Playe
 
 ## This quantity represents the threshold by which input is considered to be 0
 const INPUT_THRESHOLD: float = 0.01

@@ -7,7 +7,7 @@ extends Area2D
 ## the hitbox simply checks if the opposing hurtbox has a "get_source_damage()" method.
 class_name PlayerHitbox
 
-@onready var player_reference: Player = $"../"
+@onready var player_reference: PlayerSample = $"../"
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -27,11 +27,11 @@ func _on_hitbox_entered(other: Area2D):
 		player_reference.damage(source.get_source_damage())
 	else:
 		print_rich("[color=yellow]<WARNING: A potential damage source \"" + str(source.name) + 
-		"\" that does not have a get_source_damage() method has entered the Player hitbox>")
+		"\" that does not have a get_source_damage() method has entered the PlayerSample hitbox>")
 
 
-## Extra code to show an editor warning if this is not attached to a Player object
+## Extra code to show an editor warning if this is not attached to a PlayerSample object
 func _get_configuration_warnings():
-	if not (get_parent() is Player):
-		return ["This PlayerHurtbox component must be a child of a Player object"]
+	if not (get_parent() is PlayerSample):
+		return ["This PlayerHurtbox component must be a child of a PlayerSample object"]
 	return []
