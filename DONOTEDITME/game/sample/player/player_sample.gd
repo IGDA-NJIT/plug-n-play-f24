@@ -1,9 +1,9 @@
 extends CharacterBody2D
-## This PlayerLegacy class represents the basic player controller and builds off of 
+## This PlayerSample class represents the basic player controller and builds off of 
 ## CharacterBody2D functionality. This class provides a variety of methods for you to be
 ## able to extend and override if you wanted to modify the player's functionality, as well as
 ## several quantities for you to tweak to change the feel of the player controller.
-## DO NOT modify this script. Instead you should create a new script that extends the PlayerLegacy class
+## DO NOT modify this script. Instead you should create a new script that extends the PlayerSample class
 ## if you want to create custom player functionality.
 class_name PlayerSample
 
@@ -56,11 +56,11 @@ const STOP_VELOCITY_THRSHOLD: float = 0.01
 @onready var anim_player: AnimationPlayer = $AnimationPlayer
 @onready var sprite: Sprite2D = $Sprite2D
 
-# PlayerLegacy State
+# PlayerSample State
 var current_health: float
 var footstep_time: float
 
-## This method is called on the first frame that the PlayerLegacy is active in the scene tree, and by default
+## This method is called on the first frame that the PlayerSample is active in the scene tree, and by default
 ## does not do anything. Feel free to override this method if you need to execute any code on the first
 ## frame.
 func _ready():
@@ -161,7 +161,7 @@ func damage(amount: float) -> void:
 ## functionality
 func check_death() -> void:
 	if current_health <= 0.0:
-		print_rich("[color=pink]PlayerLegacy has died")
+		print_rich("[color=pink]PlayerSample has died")
 		level_loader.reload_level()
 
 

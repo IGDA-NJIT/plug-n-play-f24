@@ -1,15 +1,15 @@
 [gd_resource type="TileSet" load_steps=14 format=3 uid="uid://dqnn2khcym5vo"]
 
 [ext_resource type="Texture2D" uid="uid://c2r6tbugyj2r" path="res://DONOTEDITME/assets/sprites/tilesheets/ground_tilemap.png" id="1_pn57y"]
-[ext_resource type="PackedScene" uid="uid://bl3agpu5ucmfe" path="res://DONOTEDITME/game/level/hazards/tiles/spike.tscn" id="2_sb48y"]
+[ext_resource type="PackedScene" uid="uid://bl3agpu5ucmfe" path="res://DONOTEDITME/game/sample/hazards/tiles/spike.tscn" id="2_sb48y"]
 [ext_resource type="PackedScene" uid="uid://bbu1jdgq7nujn" path="res://conglomerate/spikeDown.tscn" id="3_g35lh"]
 [ext_resource type="PackedScene" uid="uid://b14px7w61sa02" path="res://conglomerate/spikeRight.tscn" id="4_3ilqb"]
-[ext_resource type="PackedScene" uid="uid://y44bnrolxlle" path="res://DONOTEDITME/game/level/hazards/enemies/basic enemies/legally_distinct_enemy.tscn" id="5_g3thb"]
-[ext_resource type="PackedScene" uid="uid://tnaq4ikjcj78" path="res://DONOTEDITME/game/level/hazards/enemies/basic enemies/legally_distinct_enemy_2.tscn" id="6_n4noj"]
-[ext_resource type="PackedScene" uid="uid://ddtvqrmkrbqmi" path="res://DONOTEDITME/game/level/hazards/enemies/basic enemies/legally_distinct_enemy_3.tscn" id="7_rb3fx"]
-[ext_resource type="PackedScene" uid="uid://cqw3mdhele7pq" path="res://DONOTEDITME/game/level/hazards/enemies/basic enemies/legally_distinct_enemy_4.tscn" id="8_xilrw"]
+[ext_resource type="PackedScene" uid="uid://y44bnrolxlle" path="res://DONOTEDITME/game/sample/hazards/enemies/basic enemies/legally_distinct_enemy.tscn" id="5_g3thb"]
+[ext_resource type="PackedScene" uid="uid://tnaq4ikjcj78" path="res://DONOTEDITME/game/sample/hazards/enemies/basic enemies/legally_distinct_enemy_2.tscn" id="6_n4noj"]
+[ext_resource type="PackedScene" uid="uid://ddtvqrmkrbqmi" path="res://DONOTEDITME/game/sample/hazards/enemies/basic enemies/legally_distinct_enemy_3.tscn" id="7_rb3fx"]
+[ext_resource type="PackedScene" uid="uid://cqw3mdhele7pq" path="res://DONOTEDITME/game/sample/hazards/enemies/basic enemies/legally_distinct_enemy_4.tscn" id="8_xilrw"]
 [ext_resource type="PackedScene" uid="uid://cbl35idurvy23" path="res://conglomerate/spikeLeft.tscn" id="9_50c1d"]
-[ext_resource type="PackedScene" uid="uid://bipl7yj7vdf1m" path="res://DONOTEDITME/game/level/level_end_marker.tscn" id="10_tcrin"]
+[ext_resource type="PackedScene" uid="uid://bipl7yj7vdf1m" path="res://DONOTEDITME/game/sample/level_end_marker.tscn" id="10_tcrin"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1yibq"]
 texture = ExtResource("1_pn57y")

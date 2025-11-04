@@ -8,14 +8,14 @@ class_name LevelLoader
 const LEVEL_END_TIME: float = 1
 
 @export var main_menu_scene: PackedScene
-@export var world_map_scene: PackedScene
+@export var world_map_scene: PackedScene = preload("res://DONOTEDITME/game/sample/level_selector.tscn")
 var level_array: Array[PackedScene] = [
 	preload("res://calchoo/francedefance/francedefance.tscn"),
 	preload("res://calchoo/sebeneleben/seben.tscn"),
 	preload("res://calchoo/givethanks/givethanks.tscn"),
 	preload("res://calchoo/skybeam/skybeam.tscn"),
 	preload("res://alligator_forest/level.tscn"),
-	preload("res://DONOTEDITME/game/level/test_environment.tscn"),
+	preload("res://DONOTEDITME/game/sample/test_environment.tscn"),
 	preload("res://mysticshadowdev/level/level.tscn"),
 	preload("res://conglomerate/MYLevel.tscn"),
 	preload("res://osiddev/scenes/level.tscn"),

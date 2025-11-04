@@ -1,5 +1,5 @@
 @tool
-extends "res://DONOTEDITME/game/player/player_follow_camera.gd"
+extends "res://DONOTEDITME/game/sample/player/player_follow_camera.gd"
 
 const UPPER_THRESHOLD = -120
 const LOWER_THRESHOLD = 30

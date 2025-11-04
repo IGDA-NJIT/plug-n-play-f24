@@ -1,20 +1,20 @@
 [gd_scene load_steps=66 format=4 uid="uid://cvncuctruo4dl"]
 
-[ext_resource type="Script" path="res://DONOTEDITME/game/level/level_selector_level.gd" id="1_avojk"]
+[ext_resource type="Script" uid="uid://bwy2cymxorjvl" path="res://DONOTEDITME/game/sample/level_selector_level.gd" id="1_avojk"]
 [ext_resource type="PackedScene" uid="uid://b5fsvum1kt1ru" path="res://DONOTEDITME/assets/models/cartridge_skybeam.glb" id="1_hygvq"]
 [ext_resource type="PackedScene" uid="uid://bt2c3hjo55so0" path="res://DONOTEDITME/game/world/cartridge_model.tscn" id="1_kcaf1"]
 [ext_resource type="Texture2D" uid="uid://cqy2ujaow7jfc" path="res://DONOTEDITME/assets/models/jammy_room/photo_studio_loft_hall_4k.exr" id="2_6p7ap"]
 [ext_resource type="PackedScene" uid="uid://dx7i2p5h26s3w" path="res://DONOTEDITME/assets/models/cartridge_francedefance.glb" id="2_uw302"]
 [ext_resource type="PackedScene" uid="uid://um6koc64pdlh" path="res://DONOTEDITME/assets/models/cartridge_sebeneleben.glb" id="3_lcwta"]
 [ext_resource type="PackedScene" uid="uid://cwrsivolan0eh" path="res://DONOTEDITME/assets/models/cartridge_givethanks.glb" id="4_vp61d"]
-[ext_resource type="Script" path="res://DONOTEDITME/game/world/world_selector.gd" id="6_an3ix"]
+[ext_resource type="Script" uid="uid://n3wbex340u2j" path="res://DONOTEDITME/game/world/world_selector.gd" id="6_an3ix"]
 [ext_resource type="Theme" uid="uid://dicrejglob83v" path="res://DONOTEDITME/assets/menu/ui_theme.tres" id="8_3n0ot"]
 [ext_resource type="PackedScene" uid="uid://dt7ts8tfby5vr" path="res://DONOTEDITME/assets/models/cartridge_lightsup.glb" id="8_68lbw"]
 [ext_resource type="PackedScene" uid="uid://dcwg5crr8vyi2" path="res://DONOTEDITME/assets/models/jammy_room/JammyTable.glb" id="9_0q1nm"]
 [ext_resource type="PackedScene" uid="uid://cwxp6hjkrkprj" path="res://DONOTEDITME/assets/models/cartridge_thetrees.glb" id="9_2ruy4"]
 [ext_resource type="Texture2D" uid="uid://d0rksdpc0kaoh" path="res://DONOTEDITME/assets/models/jammy_room/cartridge_reich.png" id="9_b7c8r"]
-[ext_resource type="Script" path="res://DONOTEDITME/game/world/level_data.gd" id="9_cgn2m"]
-[ext_resource type="Shader" path="res://DONOTEDITME/game/level/fade_edge.gdshader" id="9_hxxp0"]
+[ext_resource type="Script" uid="uid://besqoa3i8w7ur" path="res://DONOTEDITME/game/world/level_data.gd" id="9_cgn2m"]
+[ext_resource type="Shader" uid="uid://bia1qunrmbnng" path="res://DONOTEDITME/game/sample/fade_edge.gdshader" id="9_hxxp0"]
 [ext_resource type="PackedScene" uid="uid://bkuoc5lwh6740" path="res://DONOTEDITME/assets/models/cartridge_bubbles.glb" id="10_d3va8"]
 [ext_resource type="Texture2D" uid="uid://dxmx3jd88kot1" path="res://DONOTEDITME/assets/models/jammy_room/CRTMonitor_CRTAlbedoCuts.png" id="10_g0u8s"]
 [ext_resource type="Resource" uid="uid://dcr45x0tjw1be" path="res://DONOTEDITME/game/world/level_data/francedefance_data.tres" id="10_nrhwd"]
@@ -25,17 +25,17 @@
 [ext_resource type="Resource" uid="uid://c0y8ounvregje" path="res://DONOTEDITME/game/world/level_data/givethanks_data.tres" id="12_53gy8"]
 [ext_resource type="Texture2D" uid="uid://bkg0xuap4artu" path="res://DONOTEDITME/assets/models/jammy_room/CRTMonitor_CRTMetal-roughness.png" id="12_hoah5"]
 [ext_resource type="ArrayMesh" uid="uid://ciep4qp0dr2jj" path="res://calchoo/sebeneleben/assets/miku/mikuuuu.obj" id="12_jusqf"]
-[ext_resource type="Shader" path="res://DONOTEDITME/assets/shaders/tv_display.gdshader" id="13_3vsks"]
+[ext_resource type="Shader" uid="uid://ch6clyr8yy1pk" path="res://DONOTEDITME/assets/shaders/tv_display.gdshader" id="13_3vsks"]
 [ext_resource type="Resource" uid="uid://cg71l4h0u0ju" path="res://DONOTEDITME/game/world/level_data/skybeam_data.tres" id="13_ltjyu"]
 [ext_resource type="Resource" uid="uid://f6m26db5e3sy" path="res://DONOTEDITME/game/world/level_data/gravity_level.tres" id="14_xgxy4"]
 [ext_resource type="Resource" uid="uid://cn28cotn2owci" path="res://DONOTEDITME/game/world/level_data/tutorial_data.tres" id="15_mga3b"]
 [ext_resource type="Resource" uid="uid://b13pjwaxn065p" path="res://DONOTEDITME/game/world/level_data/osid_data.tres" id="16_uy030"]
 [ext_resource type="Resource" uid="uid://b14vi16ghhj0" path="res://DONOTEDITME/game/world/level_data/darkmythic_data.tres" id="17_g4eet"]
-[ext_resource type="Shader" path="res://DONOTEDITME/assets/shaders/crt.gdshader" id="17_v864q"]
+[ext_resource type="Shader" uid="uid://cye6mkx0xh5gp" path="res://DONOTEDITME/assets/shaders/crt.gdshader" id="17_v864q"]
 [ext_resource type="Resource" uid="uid://gxs4sqgp42hj" path="res://DONOTEDITME/game/world/level_data/conglomerate_data.tres" id="18_rgdy8"]
 [ext_resource type="Resource" uid="uid://0ue74u30f87t" path="res://DONOTEDITME/game/world/level_data/steve_reich_games.tres" id="23_vmkeu"]
-[ext_resource type="Script" path="res://DONOTEDITME/menu/pause_menu.gd" id="30_cusku"]
-[ext_resource type="Shader" path="res://DONOTEDITME/assets/shaders/gaussian_blur.gdshader" id="31_kv3d4"]
+[ext_resource type="Script" uid="uid://drkka4yh5t8hg" path="res://DONOTEDITME/menu/pause_menu.gd" id="30_cusku"]
+[ext_resource type="Shader" uid="uid://d0es5khfveflc" path="res://DONOTEDITME/assets/shaders/gaussian_blur.gdshader" id="31_kv3d4"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_m2iyc"]
 panorama = ExtResource("2_6p7ap")
@@ -318,13 +318,13 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_v1iax"]
 _data = {
-"FLASH": SubResource("Animation_54b16"),
-"RESET": SubResource("Animation_kjtu1")
+&"FLASH": SubResource("Animation_54b16"),
+&"RESET": SubResource("Animation_kjtu1")
 }
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_eg130"]
 shader = ExtResource("31_kv3d4")
-shader_parameter/screen_offset = null
+shader_parameter/screen_offset = Vector2(0, 0)
 shader_parameter/strength = 0.0
 
 [sub_resource type="Animation" id="Animation_igjy2"]
@@ -406,9 +406,9 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_47jph"]
 _data = {
-"CLOSE": SubResource("Animation_igjy2"),
-"OPEN": SubResource("Animation_fjdi3"),
-"RESET": SubResource("Animation_ickw8")
+&"CLOSE": SubResource("Animation_igjy2"),
+&"OPEN": SubResource("Animation_fjdi3"),
+&"RESET": SubResource("Animation_ickw8")
 }
 
 [node name="LevelSelector" type="Node3D"]
@@ -435,7 +435,7 @@ light_energy = 0.584
 [node name="FranceDefanceCart" parent="CartridgeWorld" instance=ExtResource("1_kcaf1")]
 
 [node name="CartridgeModel" parent="CartridgeWorld/FranceDefanceCart" index="0"]
-transform = Transform3D(1, 0, 0, 0, 0.97437, 0.224951, 0, -0.224951, 0.97437, 0, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 0.97436994, 0.22495122, 0, -0.22495122, 0.97436994, 0, 0, 0)
 
 [node name="cartridge_base" parent="CartridgeWorld/FranceDefanceCart/CartridgeModel" index="0"]
 visible = false
@@ -446,7 +446,7 @@ visible = false
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.48481)
 
 [node name="CartridgeModel" parent="CartridgeWorld/GiveThanksCart" index="0"]
-transform = Transform3D(1, 0, 0, 0, 0.97437, 0.224951, 0, -0.224951, 0.97437, 0, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 0.97436994, 0.22495122, 0, -0.22495122, 0.97436994, 0, 0, 0)
 
 [node name="cartridge_base" parent="CartridgeWorld/GiveThanksCart/CartridgeModel" index="0"]
 visible = false
@@ -457,7 +457,7 @@ visible = false
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0365416, 1.66263)
 
 [node name="CartridgeModel" parent="CartridgeWorld/SebenElebenCart" index="0"]
-transform = Transform3D(1, 0, 0, 0, 0.97437, 0.224951, 0, -0.224951, 0.97437, 0, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 0.97436994, 0.22495122, 0, -0.22495122, 0.97436994, 0, 0, 0)
 
 [node name="cartridge_base" parent="CartridgeWorld/SebenElebenCart/CartridgeModel" index="0"]
 visible = false
@@ -468,7 +468,7 @@ visible = false
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -6.79669)
 
 [node name="CartridgeModel" parent="CartridgeWorld/SkybeamCart" index="0"]
-transform = Transform3D(1, 0, 0, 0, 0.97437, 0.224951, 0, -0.224951, 0.97437, 0, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 0.97436994, 0.22495122, 0, -0.22495122, 0.97436994, 0, 0, 0)
 
 [node name="cartridge_base" parent="CartridgeWorld/SkybeamCart/CartridgeModel" index="0"]
 visible = false
@@ -479,7 +479,7 @@ visible = false
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -6.79669)
 
 [node name="CartridgeModel" parent="CartridgeWorld/GravityCart" index="0"]
-transform = Transform3D(1, 0, 0, 0, 0.97437, 0.224951, 0, -0.224951, 0.97437, 0, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 0.97436994, 0.22495122, 0, -0.22495122, 0.97436994, 0, 0, 0)
 
 [node name="cartridge_lightsup" parent="CartridgeWorld/GravityCart/CartridgeModel" index="0" instance=ExtResource("8_68lbw")]
 
@@ -493,7 +493,7 @@ visible = false
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -6.79669)
 
 [node name="CartridgeModel" parent="CartridgeWorld/ReichCart" index="0"]
-transform = Transform3D(1, 0, 0, 0, 0.97437, 0.224951, 0, -0.224951, 0.97437, 0, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 0.97436994, 0.22495122, 0, -0.22495122, 0.97436994, 0, 0, 0)
 
 [node name="cartridge_lightsup" parent="CartridgeWorld/ReichCart/CartridgeModel" index="0" instance=ExtResource("8_68lbw")]
 
@@ -507,13 +507,13 @@ visible = false
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -6.79669)
 
 [node name="CartridgeModel" parent="CartridgeWorld/Tutorial" index="0"]
-transform = Transform3D(1, 0, 0, 0, 0.97437, 0.224951, 0, -0.224951, 0.97437, 0, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 0.97436994, 0.22495122, 0, -0.22495122, 0.97436994, 0, 0, 0)
 
 [node name="OSIDLevelCart" parent="CartridgeWorld" instance=ExtResource("1_kcaf1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -6.79669)
 
 [node name="CartridgeModel" parent="CartridgeWorld/OSIDLevelCart" index="0"]
-transform = Transform3D(1, 0, 0, 0, 0.97437, 0.224951, 0, -0.224951, 0.97437, 0, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 0.97436994, 0.22495122, 0, -0.22495122, 0.97436994, 0, 0, 0)
 
 [node name="cartridge_thetrees" parent="CartridgeWorld/OSIDLevelCart/CartridgeModel" index="0" instance=ExtResource("9_2ruy4")]
 
@@ -524,7 +524,7 @@ visible = false
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -6.79669)
 
 [node name="CartridgeModel" parent="CartridgeWorld/DarkMythicLevelCart" index="0"]
-transform = Transform3D(1, 0, 0, 0, 0.97437, 0.224951, 0, -0.224951, 0.97437, 0, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 0.97436994, 0.22495122, 0, -0.22495122, 0.97436994, 0, 0, 0)
 
 [node name="cartridge_bubbles" parent="CartridgeWorld/DarkMythicLevelCart/CartridgeModel" index="0" instance=ExtResource("10_d3va8")]
 
@@ -535,7 +535,7 @@ visible = false
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -6.79669)
 
 [node name="CartridgeModel" parent="CartridgeWorld/ConglomerateLevelCart" index="0"]
-transform = Transform3D(1, 0, 0, 0, 0.97437, 0.224951, 0, -0.224951, 0.97437, 0, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 0.97436994, 0.22495122, 0, -0.22495122, 0.97436994, 0, 0, 0)
 
 [node name="cartridge_dash" parent="CartridgeWorld/ConglomerateLevelCart/CartridgeModel" index="0" instance=ExtResource("11_yapis")]
 
@@ -712,7 +712,7 @@ grow_vertical = 2
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="DisplayViewport/TVScreen"]
 libraries = {
-"": SubResource("AnimationLibrary_v1iax")
+&"": SubResource("AnimationLibrary_v1iax")
 }
 autoplay = "RESET"
 
@@ -818,7 +818,7 @@ text = "Return to Title"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="PauseMenu"]
 libraries = {
-"": SubResource("AnimationLibrary_47jph")
+&"": SubResource("AnimationLibrary_47jph")
 }
 autoplay = "RESET"
 

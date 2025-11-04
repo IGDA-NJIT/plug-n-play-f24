@@ -1,4 +1,4 @@
-extends Player
+extends PlayerSample
 
 func _physics_process(delta: float) -> void:
 	if !%DialogueBox.visible:

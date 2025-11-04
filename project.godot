@@ -10,12 +10,8 @@ config_version=5
 
 [application]
 
-<<<<<<< HEAD
 config/name="IGDA Plug n Play F24"
 run/main_scene="res://DONOTEDITME/menu/main_menu.tscn"
-=======
-config/name="IGDA Plug n Play F24 Base"
->>>>>>> base
 config/features=PackedStringArray("4.5", "Forward Plus")
 boot_splash/bg_color=Color(0.0889109, 0.165117, 0.0125631, 1)
 boot_splash/image="res://boot_icon.png"

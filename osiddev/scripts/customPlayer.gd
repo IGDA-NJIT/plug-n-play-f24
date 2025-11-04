@@ -1,4 +1,4 @@
-extends Player
+extends PlayerSample
 
 #allows jumping down from a branch
 func _process(_delta):

@@ -1,6 +1,6 @@
 [gd_resource type="TileSet" load_steps=10 format=3 uid="uid://dqj2oso6foxxu"]
 
-[ext_resource type="PackedScene" uid="uid://bipl7yj7vdf1m" path="res://DONOTEDITME/game/level/level_end_marker.tscn" id="7_6brm0"]
+[ext_resource type="PackedScene" uid="uid://bipl7yj7vdf1m" path="res://DONOTEDITME/game/sample/level_end_marker.tscn" id="7_6brm0"]
 [ext_resource type="Texture2D" uid="uid://bts3csn5isvnl" path="res://reich/minimal.png" id="8_gm3dv"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_xikdg"]
