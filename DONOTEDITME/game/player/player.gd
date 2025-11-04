@@ -7,10 +7,11 @@ extends CharacterBody2D
 ## if you want to create custom player functionality.
 class_name Player
 
+@export_category("Movement Constants")
 ## This quantity represents the threshold by which input is considered to be 0
-const INPUT_THRESHOLD: float = 0.01
+@export var INPUT_THRESHOLD: float = 0.01
 ## This quantity represents the threshold for player speed under which player speed is considered to be 0
-const STOP_VELOCITY_THRSHOLD: float = 0.01
+@export var STOP_VELOCITY_THRSHOLD: float = 0.01
 
 @export_category("Movement Config")
 ## This quantity represents the player's maximum horizontal speed in pixels/sec
@@ -114,7 +115,7 @@ func move_horizontal(input: float, delta: float) -> void:
 		velocity.x += -sign(velocity.x) * deceleration * delta
 		if abs(velocity.x) < STOP_VELOCITY_THRSHOLD:
 			velocity.x = 0
-	elif abs(velocity.x) < max_horizontal_speed:
+	elif abs(velocity.x) < max_horizontal_speed or sign(input) != sign(velocity.x):
 		velocity.x += input * acceleration * delta
 		if abs(velocity.x) > max_horizontal_speed:
 			velocity.x = sign(input) * max_horizontal_speed
