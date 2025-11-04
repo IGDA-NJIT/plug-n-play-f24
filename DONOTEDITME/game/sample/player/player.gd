@@ -5,7 +5,7 @@ extends CharacterBody2D
 ## several quantities for you to tweak to change the feel of the player controller.
 ## DO NOT modify this script. Instead you should create a new script that extends the PlayerLegacy class
 ## if you want to create custom player functionality.
-class_name Playe
+class_name PlayerSample
 
 ## This quantity represents the threshold by which input is considered to be 0
 const INPUT_THRESHOLD: float = 0.01

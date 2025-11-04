@@ -1,14 +1,14 @@
 [gd_scene load_steps=11 format=4 uid="uid://dl58qldrbrnkn"]
 
 [ext_resource type="Script" uid="uid://dm52hqu27lrbd" path="res://DONOTEDITME/game/system/level.gd" id="1_gk2hi"]
-[ext_resource type="PackedScene" uid="uid://xb5i5ynpctpq" path="res://DONOTEDITME/game/player/player.tscn" id="1_uj18h"]
+[ext_resource type="PackedScene" uid="uid://xb5i5ynpctpq" path="res://DONOTEDITME/game/sample/player/player.tscn" id="1_uj18h"]
 [ext_resource type="AudioStream" uid="uid://c87t4mso8y1dw" path="res://DONOTEDITME/assets/sounds/music/Monkeys_Spinning_Monkeys_by_Kevin_MacLeod.ogg" id="2_ckc6v"]
 [ext_resource type="AudioStream" uid="uid://d36on0uv7ae4c" path="res://DONOTEDITME/assets/sounds/sfx/footstep_grass_004.ogg" id="3_gibkq"]
 [ext_resource type="AudioStream" uid="uid://bqxwc7jke7atw" path="res://DONOTEDITME/assets/sounds/sfx/jump.ogg" id="4_i172r"]
 [ext_resource type="TileSet" uid="uid://b7temyiqwjg58" path="res://DONOTEDITME/game/sample/tilesets/kenney_tileset_compilation.tres" id="5_63qax"]
 [ext_resource type="AudioStream" uid="uid://ib4vciyhnfon" path="res://DONOTEDITME/assets/sounds/sfx/punch.ogg" id="5_c0c6g"]
 [ext_resource type="PackedScene" uid="uid://cavhiq8b25tph" path="res://DONOTEDITME/menu/pause_menu.tscn" id="8_n5aro"]
-[ext_resource type="PackedScene" uid="uid://xrv5a4vk77ic" path="res://DONOTEDITME/game/player/player_follow_camera.tscn" id="8_p8nqt"]
+[ext_resource type="PackedScene" uid="uid://xrv5a4vk77ic" path="res://DONOTEDITME/game/sample/player/player_follow_camera.tscn" id="8_p8nqt"]
 [ext_resource type="PackedScene" uid="uid://c50558ro1vrqm" path="res://DONOTEDITME/game/sample/parallax_background_sample.tscn" id="10_lb143"]
 
 [node name="TestEnvironment" type="Node2D"]

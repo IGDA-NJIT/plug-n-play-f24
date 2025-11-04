@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://xrv5a4vk77ic"]
 
-[ext_resource type="Script" path="res://DONOTEDITME/game/player/player_follow_camera.gd" id="1_fvgqy"]
+[ext_resource type="Script" uid="uid://bg2vucvaxcnr4" path="res://DONOTEDITME/game/sample/player/player_follow_camera.gd" id="1_fvgqy"]
 
 [node name="PlayerFollowCamera" type="Camera2D"]
 position = Vector2(279, 386)
