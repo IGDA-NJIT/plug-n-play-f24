@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://s0u01e5ioj4r"]
 
-[ext_resource type="Script" path="res://DONOTEDITME/game/level/hazards/tiles/hazard_tile.gd" id="1_ejh50"]
+[ext_resource type="Script" uid="uid://1n6gcu4wrpfi" path="res://DONOTEDITME/game/sample/hazards/tiles/hazard_tile.gd" id="1_ejh50"]
 [ext_resource type="Texture2D" uid="uid://idiuh5cvdvnn" path="res://DONOTEDITME/assets/sprites/tilesheets/tilemap.png" id="2_a7dvi"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lme01"]

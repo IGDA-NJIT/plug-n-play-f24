@@ -1,8 +1,8 @@
 [gd_scene load_steps=12 format=3 uid="uid://mjfq63tn5qdl"]
 
-[ext_resource type="Script" path="res://alligator_forest/Enemies/light_enemy.gd" id="1_y2k5n"]
+[ext_resource type="Script" uid="uid://c3tjwkc8cfb11" path="res://alligator_forest/Enemies/light_enemy.gd" id="1_y2k5n"]
 [ext_resource type="Texture2D" uid="uid://d0yopaahkep05" path="res://DONOTEDITME/assets/sprites/tilesheets/tilemap-characters.png" id="2_j3wlo"]
-[ext_resource type="Script" path="res://DONOTEDITME/game/level/hazards/enemies/enemy_hitbox.gd" id="3_wrung"]
+[ext_resource type="Script" uid="uid://bybcm5a6j08kt" path="res://DONOTEDITME/game/sample/hazards/enemies/enemy_hitbox.gd" id="3_wrung"]
 [ext_resource type="PackedScene" uid="uid://dywv6ndb2tqwc" path="res://alligator_forest/light.tscn" id="4_4iixo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_60pxy"]

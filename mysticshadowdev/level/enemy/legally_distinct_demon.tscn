@@ -1,8 +1,8 @@
 [gd_scene load_steps=10 format=3 uid="uid://c1y5hk70qdc58"]
 
-[ext_resource type="Script" path="res://mysticshadowdev/level/enemy/flying_enemy.gd" id="1_phe2n"]
+[ext_resource type="Script" uid="uid://bj8ij5pu2430d" path="res://mysticshadowdev/level/enemy/flying_enemy.gd" id="1_phe2n"]
 [ext_resource type="Texture2D" uid="uid://c7pyuc2g1ydox" path="res://mysticshadowdev/sprites/enemy.png" id="2_uxyfe"]
-[ext_resource type="Script" path="res://DONOTEDITME/game/level/hazards/enemies/enemy_hitbox.gd" id="3_nd6kc"]
+[ext_resource type="Script" uid="uid://bybcm5a6j08kt" path="res://DONOTEDITME/game/sample/hazards/enemies/enemy_hitbox.gd" id="3_nd6kc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5s3de"]
 size = Vector2(14, 18)

@@ -1,9 +1,9 @@
 [gd_scene load_steps=15 format=3 uid="uid://c7nv6vtotwntg"]
 
-[ext_resource type="Script" path="res://alligator_forest/jammy_son_son_vallano.gd" id="1_mj8ga"]
+[ext_resource type="Script" uid="uid://dqth5ofh16m2m" path="res://alligator_forest/jammy_son_son_vallano.gd" id="1_mj8ga"]
 [ext_resource type="Texture2D" uid="uid://cwuy4hyn4clmm" path="res://alligator_forest/assets/jammy.png" id="2_45mdm"]
-[ext_resource type="PackedScene" uid="uid://c1jwyvxr2ohvb" path="res://DONOTEDITME/game/player/player_hitbox.tscn" id="3_ql4o1"]
-[ext_resource type="Script" path="res://DONOTEDITME/game/player/player_hitbox.gd" id="4_cj7ry"]
+[ext_resource type="PackedScene" uid="uid://c1jwyvxr2ohvb" path="res://DONOTEDITME/game/sample/player/player_hitbox.tscn" id="3_ql4o1"]
+[ext_resource type="Script" uid="uid://cgjhv4bo2htgw" path="res://DONOTEDITME/game/sample/player/player_hitbox.gd" id="4_cj7ry"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_md56h"]
 size = Vector2(22, 24)
