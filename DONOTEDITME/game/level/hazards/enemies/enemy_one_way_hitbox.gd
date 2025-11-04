@@ -21,7 +21,7 @@ func _on_hitbox_entered(other: Area2D):
 	if global_position.y - other.global_position.y < 15:
 		return
 	
-	if other.get_parent() is Player and other.get_parent().velocity.y <= 0:
+	if other.get_parent() is PlayerLegacy and other.get_parent().velocity.y <= 0:
 		return
 	
 	var source = other.get_parent()

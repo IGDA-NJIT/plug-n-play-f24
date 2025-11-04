@@ -1,9 +1,9 @@
 [gd_scene load_steps=12 format=3 uid="uid://xb5i5ynpctpq"]
 
-[ext_resource type="Script" path="res://DONOTEDITME/game/player/player.gd" id="2_ebjth"]
+[ext_resource type="Script" uid="uid://bm5sw7vu63sdd" path="res://DONOTEDITME/game/player/player_legacy.gd" id="2_ebjth"]
 [ext_resource type="Texture2D" uid="uid://ofoqedjacn88" path="res://DONOTEDITME/assets/sprites/player/jammy.png" id="2_tdwd0"]
 [ext_resource type="PackedScene" uid="uid://c1jwyvxr2ohvb" path="res://DONOTEDITME/game/player/player_hitbox.tscn" id="3_oihoa"]
-[ext_resource type="Script" path="res://DONOTEDITME/game/player/player_hitbox.gd" id="4_u5s6u"]
+[ext_resource type="Script" uid="uid://b1ixy6y2xwfp4" path="res://DONOTEDITME/game/player/player_hitbox.gd" id="4_u5s6u"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_md56h"]
 size = Vector2(22, 24)

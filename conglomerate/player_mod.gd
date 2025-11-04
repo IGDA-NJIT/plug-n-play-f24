@@ -1,4 +1,4 @@
-extends Player
+extends PlayerLegacy
 
 ##MY ADDITIONS BEGIN
 ##Dash velocity x and y should create an arch.
@@ -12,7 +12,7 @@ extends Player
 var dashCheck: float =1#0 means no more dash.
 ##MY ADDITIONS END
 
-## This method is called on the first frame that the Player is active in the scene tree, and by default
+## This method is called on the first frame that the PlayerLegacy is active in the scene tree, and by default
 ## does not do anything. Feel free to override this method if you need to execute any code on the first
 ## frame.
 func _ready():
@@ -129,7 +129,7 @@ func damage(amount: float) -> void:
 ## functionality
 func check_death() -> void:
 	if current_health <= 0.0:
-		print_rich("[color=pink]Player has died")
+		print_rich("[color=pink]PlayerLegacy has died")
 		level_loader.reload_level()
 
 

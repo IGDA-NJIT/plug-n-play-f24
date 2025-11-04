@@ -15,7 +15,7 @@ uniform sampler2D wind_noise; // Periln FBM Noise looks Best
 uniform float wind_noise_size: hint_range(0.0, 1.0, 0.001) = 0.05; // high values dont work well
 uniform float wind_noise_speed: hint_range(0.0, 1.0, 0.001) = 0.1;
 
-// Instance the Player Position through a GDScript in the _physics_process
+// Instance the PlayerLegacy Position through a GDScript in the _physics_process
 instance uniform vec3 player_position;
 
 void vertex() {
@@ -30,7 +30,7 @@ void vertex() {
 	
 	vec3 player_push_vector = (vec4(normalize(push_direction), 0.0) * MODEL_MATRIX).xyz;
 	
-	// Apply Player Position displacement
+	// Apply PlayerLegacy Position displacement
 	VERTEX += player_push_vector * (1.0 - UV.y) * player_position_factor * player_displacement_strength * player_height;
 	// Apply Wind displacement linearly
 	VERTEX += wind_vector * (1.0 - UV.y) * (1.0 - player_position_factor * 0.7);

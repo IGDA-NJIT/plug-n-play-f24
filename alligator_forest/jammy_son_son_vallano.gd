@@ -1,4 +1,4 @@
-extends Player
+extends PlayerLegacy
 
 @export var max_stormlight = 100.0 ##The maximum stormlight Jammy can hold at any given time
 @export var starting_stormlight = 0.0 ##The amount of stormlight that Jammy begins each scene with.

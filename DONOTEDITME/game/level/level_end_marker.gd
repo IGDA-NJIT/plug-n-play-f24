@@ -12,6 +12,6 @@ func _ready():
 
 
 func _on_area_entered(other):
-	if other is Player:
+	if other is PlayerLegacy:
 		level_loader.end_level()
 		print_rich("[color=green]You have cleared this level")
