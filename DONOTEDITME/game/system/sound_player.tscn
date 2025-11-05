@@ -7,6 +7,9 @@
 process_mode = 3
 script = ExtResource("1_w7ell")
 sfx_min_vol = 0.0
+music_vol_mult = 0.7
+sfx_vol_mult = 5.0
 
 [node name="SongPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_o0x4m")
+bus = &"Music"
