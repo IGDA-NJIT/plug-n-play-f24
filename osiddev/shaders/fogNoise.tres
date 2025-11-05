@@ -9,7 +9,7 @@ colors = PackedColorArray(0.8, 0.8, 0.8, 0.784314, 0.8, 0.8, 0.8, 0)
 [resource]
 width = 950
 height = 690
-in_3d_space = true
-seamless = true
-color_ramp = SubResource("Gradient_letnc")
 noise = SubResource("FastNoiseLite_7h0fk")
+color_ramp = SubResource("Gradient_letnc")
+seamless = true
+in_3d_space = true

@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://dajyvpt4404ft"]
 
-[ext_resource type="Script" path="res://DONOTEDITME/game/system/level_loader.gd" id="1_uvpqj"]
-[ext_resource type="Shader" path="res://DONOTEDITME/assets/shaders/diamond_sweep.gdshader" id="2_4icfv"]
+[ext_resource type="Script" uid="uid://clkmgur51oopo" path="res://DONOTEDITME/game/system/level_loader.gd" id="1_uvpqj"]
+[ext_resource type="Shader" uid="uid://bevaigr08s15u" path="res://DONOTEDITME/assets/shaders/diamond_sweep.gdshader" id="2_4icfv"]
 [ext_resource type="PackedScene" uid="uid://frfab2iw5pom" path="res://DONOTEDITME/menu/main_menu.tscn" id="2_12xsm"]
 [ext_resource type="PackedScene" uid="uid://cvncuctruo4dl" path="res://DONOTEDITME/game/level/level_selector.tscn" id="3_371jh"]
 
@@ -59,9 +59,9 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ras5j"]
 _data = {
-"CLOSE": SubResource("Animation_1ch6n"),
-"OPEN": SubResource("Animation_slfxu"),
-"RESET": SubResource("Animation_kuom1")
+&"CLOSE": SubResource("Animation_1ch6n"),
+&"OPEN": SubResource("Animation_slfxu"),
+&"RESET": SubResource("Animation_kuom1")
 }
 
 [node name="LevelLoader" type="CanvasLayer"]
@@ -82,7 +82,7 @@ color = Color(0, 0, 0, 1)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_ras5j")
+&"": SubResource("AnimationLibrary_ras5j")
 }
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_finished"]
