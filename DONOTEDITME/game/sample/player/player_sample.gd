@@ -114,7 +114,7 @@ func move_horizontal(input: float, delta: float) -> void:
 		velocity.x += -sign(velocity.x) * deceleration * delta
 		if abs(velocity.x) < STOP_VELOCITY_THRSHOLD:
 			velocity.x = 0
-	elif abs(velocity.x) < max_horizontal_speed:
+	elif abs(velocity.x) <= max_horizontal_speed:
 		velocity.x += input * acceleration * delta
 		if abs(velocity.x) > max_horizontal_speed:
 			velocity.x = sign(input) * max_horizontal_speed
